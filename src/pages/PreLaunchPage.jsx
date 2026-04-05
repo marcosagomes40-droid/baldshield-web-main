@@ -114,7 +114,7 @@ const PreLaunchPage = () => {
     >
       <div className="w-full flex justify-center">
         <span className="mb-4 block text-sm font-semibold uppercase tracking-[0.35em] text-primary opacity-90">
-          TESTE CENTRALIZADO AGORA
+          TESTE 123 CENTRALIZADO
         </span>
       </div>
 
