@@ -38,11 +38,11 @@ const PreLaunchPage = () => {
               </p>
 
               <h1 className="mb-6 text-5xl font-bold leading-tight md:text-6xl">
-                Você não precisa aceitar o brilho.
+                Controle de brilho para quem é careca.
               </h1>
 
               <p className="mb-8 max-w-xl text-lg text-gray-300">
-                Uma solução simples e discreta para manter o controle ao longo do dia.
+                Uma solução simples, rápida e discreta para o seu dia a dia.
               </p>
 
               <div className="mb-6 flex flex-wrap gap-4">
@@ -50,7 +50,7 @@ const PreLaunchPage = () => {
                   href="#lista"
                   className="rounded-2xl bg-primary px-8 py-4 font-semibold text-black transition hover:scale-105"
                 >
-                  Quero entrar na lista VIP
+                  Quero acesso antecipado
                 </a>
 
                 <a
@@ -113,14 +113,14 @@ const PreLaunchPage = () => {
       className="mb-12"
     >
       <div className="w-full flex justify-center">
-        <span className="mb-4 block text-sm font-semibold uppercase tracking-[0.35em] text-primary opacity-90">
-          TESTE 123 CENTRALIZADO
+        <span className="mb-6 block text-base md:text-lg font-semibold uppercase tracking-[0.4em] text-primary text-center">
+          Se você é careca, você sabe
         </span>
       </div>
 
       <div className="w-full flex justify-center">
         <h2 className="max-w-4xl text-center text-4xl font-bold leading-tight md:text-5xl">
-          Existem situações que ninguém fala sobre isso.
+          Existem situações que ninguém fala sobre.
         </h2>
       </div>
     </motion.div>
@@ -151,7 +151,7 @@ const PreLaunchPage = () => {
         {/* EM BREVE */}
 <div className="mx-auto max-w-5xl rounded-[2rem] border border-white/10 bg-white/5 p-8 text-center md:p-12">
   <div className="w-full flex justify-center">
-    <span className="mb-4 block text-sm font-semibold uppercase tracking-[0.35em] text-primary opacity-90">
+    <span className="mb-6 block text-base md:text-lg font-semibold uppercase tracking-[0.4em] text-primary text-center">
       Em breve
     </span>
   </div>
@@ -173,7 +173,7 @@ const PreLaunchPage = () => {
   <div className="mx-auto max-w-4xl rounded-[2rem] border border-primary/20 bg-card p-8 shadow-2xl md:p-12">
     <div className="mb-8">
       <div className="w-full flex justify-center">
-        <span className="mb-4 block text-sm font-semibold uppercase tracking-[0.35em] text-primary opacity-90">
+        <span className="mb-6 block text-base md:text-lg font-semibold uppercase tracking-[0.4em] text-primary text-center">
           Lista de espera
         </span>
       </div>
