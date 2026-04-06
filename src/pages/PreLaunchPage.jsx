@@ -169,28 +169,29 @@ const PreLaunchPage = () => {
 </div>
 
         {/* LISTA */}
-<div className="mx-auto max-w-4xl rounded-[2rem] border border-primary/20 bg-card p-8 shadow-2xl md:p-12">
-  <div className="mb-8">
-    <div className="w-full flex justify-center">
-      <span className="mb-4 block text-sm font-semibold uppercase tracking-[0.35em] text-primary opacity-90">
-        Lista de espera
-      </span>
+<section id="lista" className="bg-black px-6 py-20 md:px-12 lg:px-20">
+  <div className="mx-auto max-w-4xl rounded-[2rem] border border-primary/20 bg-card p-8 shadow-2xl md:p-12">
+    <div className="mb-8">
+      <div className="w-full flex justify-center">
+        <span className="mb-4 block text-sm font-semibold uppercase tracking-[0.35em] text-primary opacity-90">
+          Lista de espera
+        </span>
+      </div>
+
+      <div className="w-full flex justify-center">
+        <h2 className="mb-4 max-w-4xl text-center text-4xl font-bold leading-tight md:text-5xl">
+          Quero ser um dos primeiros
+        </h2>
+      </div>
+
+      <p className="text-center text-gray-300">
+        Preencha abaixo para receber novidades, prioridade e acesso ao lançamento.
+      </p>
     </div>
 
-    <div className="w-full flex justify-center">
-      <h2 className="mb-4 max-w-4xl text-center text-4xl font-bold leading-tight md:text-5xl">
-        Quero ser um dos primeiros
-      </h2>
-    </div>
-
-    <p className="text-center text-gray-300">
-      Preencha abaixo para receber novidades, prioridade e acesso ao lançamento.
-    </p>
+    <ContactForm />
   </div>
-
-  <ContactForm />
-</div>
-        </section>
+</section>
 
         <Footer />
       </div>
