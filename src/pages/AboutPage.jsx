@@ -35,7 +35,7 @@ const AboutPage = () => {
               <h2 className="text-3xl md:text-5xl lg:text-6xl font-bold leading-tight md:leading-[1.05] mb-6">
                 Mais do que proteção solar.<br />
                 Uma nova categoria de cuidado<br />
-                para homens carecas.
+                para o couro cabeludo exposto.
               </h2>
             </div>
 
@@ -47,7 +47,7 @@ const AboutPage = () => {
 
               <p className="text-white/75 text-lg leading-relaxed">
                 Queimaduras, manchas, sensibilidade e desconforto fazem parte da rotina de
-                muitos homens carecas no Brasil. E mesmo assim, quase não existem soluções
+                muitos pessoas carecas no Brasil. E mesmo assim, quase não existem soluções
                 pensadas especificamente para isso.
               </p>
             </div>
@@ -74,7 +74,7 @@ const AboutPage = () => {
 
               <p className="text-white/75 text-lg leading-relaxed">
                 Nossa missão é criar soluções específicas para a saúde do couro cabeludo,
-                com performance, praticidade e identidade para o homem careca moderno.
+                com performance, praticidade e identidade para o careca moderno.
               </p>
             </div>
           </div>
@@ -86,7 +86,7 @@ const AboutPage = () => {
               <div className="border border-white/10 rounded-2xl p-8 bg-white/[0.02]">
                 <h3 className="text-xl font-semibold mb-4 text-orange-500">Missão</h3>
                 <p className="text-white/75 leading-relaxed">
-                  Desenvolver proteção solar pensada para a realidade de quem é careca,
+                  Desenvolver proteção e cuidados pensados para a realidade de quem tem o couro cabeludo exposto,
                   trazendo mais cuidado, conforto e consciência.
                 </p>
               </div>
@@ -94,7 +94,7 @@ const AboutPage = () => {
               <div className="border border-white/10 rounded-2xl p-8 bg-white/[0.02]">
                 <h3 className="text-xl font-semibold mb-4 text-orange-500">Visão</h3>
                 <p className="text-white/75 leading-relaxed">
-                  Ser a marca referência em saúde do couro cabeludo para homens carecas no Brasil.
+                  Ser a marca referência em saúde do couro cabeludo exposto no Brasil.
                 </p>
               </div>
 
@@ -116,7 +116,7 @@ const AboutPage = () => {
         </p>
 
         <h2 className="text-3xl md:text-5xl lg:text-6xl font-bold leading-[1.05] mb-6">
-          Mais do que proteção solar. Uma nova categoria de cuidado para homens carecas.
+          Mais do que proteção solar. Uma nova categoria de cuidado para o estilo careca de ser.
         </h2>
 
         <p className="text-white/75 text-lg leading-relaxed mb-12">
