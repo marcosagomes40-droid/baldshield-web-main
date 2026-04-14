@@ -8,6 +8,8 @@ import Header from '@/components/Header.jsx';
 import Footer from '@/components/Footer.jsx';
 import BenefitCard from '@/components/BenefitCard.jsx';
 import CTASection from '@/components/CTASection.jsx';
+import SectionHeader from '@/components/SectionHeader.jsx';
+
 
 const HomePage = () => {
   const benefits = [
@@ -55,98 +57,111 @@ const HomePage = () => {
       <div className="min-h-screen bg-black">
         <Header />
 
-        {/* Hero Section */}
-        <section className="relative min-h-[100dvh] flex items-center overflow-hidden">
-          <div className="absolute inset-0">
-            <img
-              src="https://images.unsplash.com/photo-1570175186172-df2efb259145"
-              alt="Homem careca ao ar livre representando proteção e cuidado com o couro cabeludo"
-              className="w-full h-full object-cover"
-              loading="eager"
-            />
-            <div className="absolute inset-0 bg-gradient-to-r from-black via-black/90 to-black/70" />
-          </div>
+{/* New Hero Section */}
+<section className="relative overflow-hidden bg-black">
+  <div className="absolute inset-0 bg-gradient-to-b from-black via-black to-zinc-950" />
 
-          <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-28">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-              {/* Hero Content */}
-              <motion.div
-                initial={{ opacity: 0, x: -50 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.8 }}
-                className="space-y-8"
-              >
-                <p className="text-sm md:text-base uppercase tracking-[0.35em] text-primary font-semibold">
-                  O PRIMEIRO PROTETOR SOLAR PARA CARECAS NO BRASIL
-                </p>
+  <div className="relative mx-auto grid min-h-[90vh] max-w-7xl items-center gap-12 px-6 py-20 md:px-10 lg:grid-cols-2 lg:gap-16 lg:py-28">
+    
+    {/* TEXTO */}
+    <div className="max-w-2xl space-y-6">
+      <span className="inline-block text-xs font-semibold uppercase tracking-[0.35em] text-primary">
+        BaldShield
+      </span>
 
-                <h1
-                  className="text-5xl md:text-6xl lg:text-7xl font-bold text-foreground leading-[0.95]"
-                  style={{ fontFamily: 'Playfair Display, serif' }}
-                >
-                  Proteção solar feita para quem é careca
-                </h1>
+      <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight">
+        Assumir a careca é estilo.
+        <span className="block text-primary">
+          Cuidar dela é o próximo passo.
+        </span>
+      </h1>
 
-                <p
-                  className="text-2xl md:text-3xl text-foreground/90 leading-tight max-w-2xl"
-                  style={{ fontFamily: 'Playfair Display, serif' }}
-                >
-                  Evite queimaduras, manchas e envelhecimento precoce no couro cabeludo.
-                </p>
+      <p className="text-lg text-zinc-300 max-w-xl">
+       A primeira marca brasileira criada para cuidar do couro cabeludo de homens carecas.
+       </p>
 
-                <p className="text-lg text-secondary leading-relaxed max-w-xl">
-                  FPS 50+, toque seco e resistência à água para proteger o couro cabeludo com conforto, segurança e alta performance no dia a dia.
-                </p>
+      <p className="text-sm uppercase tracking-[0.25em] text-zinc-400">
+        Sem brilho. Sem queimadura. Sem improviso.
+      </p>
 
-                <div className="text-sm text-muted-foreground space-y-1">
-                  <p>✔ Testado dermatologicamente</p>
-                  <p>✔ Desenvolvido especialmente para o couro cabeludo</p>
-                  <p>✔ Ideal para rotina ao sol</p>
-                </div>
+      <div className="flex flex-col sm:flex-row gap-4 pt-4">
+        <Link
+          to="/products"
+          className="inline-flex items-center justify-center rounded-full bg-primary hover:bg-primary/90 px-8 py-4 text-sm font-semibold text-black"
+        >
+          Quero ser avisado no lançamento
+        </Link>
 
-                <div className="flex flex-col sm:flex-row gap-4 pt-2">
-                  <Button
-                    asChild
-                    size="lg"
-                    className="bg-primary hover:bg-primary/90 text-white font-semibold text-lg px-10 py-6 h-auto transition-all duration-200 active:scale-[0.98]"
-                  >
-                    <Link to="/products">
-                      Quero testar primeiro
-                      <ArrowRight className="w-5 h-5 ml-2" />
-                    </Link>
-                  </Button>
+        <Link
+          to="/benefits"
+          className="inline-flex items-center justify-center rounded-full border border-white/20 px-8 py-4 text-sm font-semibold text-white hover:border-primary hover:text-primary transition"
+        >
+          Conhecer a proposta
+        </Link>
+      </div>
+    </div>
 
-                  <Button
-                    asChild
-                    variant="outline"
-                    size="lg"
-                    className="border-2 border-primary text-primary hover:bg-primary hover:text-white font-semibold text-lg px-10 py-6 h-auto transition-all duration-200 active:scale-[0.98]"
-                  >
-                    <Link to="/benefits">Por que usar BaldShield</Link>
-                  </Button>
-                </div>
-              </motion.div>
+    {/* IMAGEM */}
+    <div className="relative">
+      <div className="absolute inset-0 bg-primary/10 blur-3xl" />
 
-              {/* Product Mockup */}
-              <motion.div
-                initial={{ opacity: 0, x: 50 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.8, delay: 0.2 }}
-                className="relative"
-              >
-                <div className="relative rounded-2xl overflow-hidden shadow-2xl">
-                  <img
-                    src="https://horizons-cdn.hostinger.com/0dff2f89-11ee-409c-8d36-778d795a7ee2/homem-demonstrando-baldshield-fundo-escuro-4wz3v.png"
-                    alt="Homem careca segurando o protetor solar BaldShield para couro cabeludo"
-                    className="w-full h-auto"
-                    loading="lazy"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
-                </div>
-              </motion.div>
-            </div>
-          </div>
-        </section>
+      <div className="relative overflow-hidden rounded-2xl border border-white/10 shadow-[0_20px_60px_rgba(0,0,0,0.6)]">
+        <img
+          src="/hero-careca-premium.png"
+          alt="Homem careca estilo premium BaldShield"
+          className="w-full h-[650px] object-cover object-[center_8%]"
+        />
+      </div>
+    </div>
+
+  </div>
+</section>
+
+{/* Identificação / Dor */}
+
+<section className="bg-black py-20">
+  <div className="mx-auto max-w-4xl px-6 text-center">
+
+    <SectionHeader
+      title="Quem é careca sabe."
+      subtitle="Poucos minutos no sol já incomodam."
+    />
+    <div className="mt-4 space-y-3 text-zinc-300 text-lg sm:text-xl text-center">
+      <p className="text-primary font-medium">O brilho aparece rápido.</p>
+      <p className="text-white/80">O desconforto faz parte da rotina.</p>
+    </div>
+
+  </div>
+</section>
+
+{/* Quebra de padrão */}
+<section className="bg-black py-32">
+  <div className="max-w-4xl mx-auto px-6 text-center">
+
+    <SectionHeader
+  label="A VERDADE É SIMPLES"
+  
+/>
+
+    <h2
+  className="text-4xl md:text-5xl font-bold leading-tight"
+  style={{ fontFamily: 'Playfair Display, serif' }}
+>
+  Durante anos, ninguém pensou no cuidado do couro cabeludo de quem não tem cabelo.{" "}
+  
+  </h2>
+
+    <p className="mt-8 text-lg text-white/70 max-w-2xl mx-auto leading-relaxed">
+      Produtos existem para cabelo. Para barba. Para pele.
+      Mas não para quem decidiu assumir a careca como estilo.
+    </p>
+
+    <p className="mt-4 text-lg text-white/70 max-w-2xl mx-auto leading-relaxed">
+      A BaldShield nasce para mudar isso.
+    </p>
+
+  </div>
+</section>
 
         {/* Quem Somos Section */}
         <section className="py-28 bg-gradient-to-b from-black to-card">
@@ -159,7 +174,7 @@ const HomePage = () => {
               className="text-4xl md:text-5xl font-bold text-foreground mb-6"
               style={{ fontFamily: 'Playfair Display, serif' }}
             >
-              Mais do que proteção. Uma nova forma de cuidar da careca.
+              Mais do que proteção. Uma nova forma de cuidar do couro cabeludo.
             </h2>
 
             <p className="text-lg md:text-xl text-secondary leading-relaxed max-w-3xl mx-auto mb-6">
@@ -171,7 +186,98 @@ const HomePage = () => {
             </p>
           </div>
         </section>
+        {/* Rotina BaldShield */}
+<section className="bg-black py-32">
+  <div className="mx-auto max-w-6xl px-6">
 
+    {/* Header */}
+    <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center mb-20">
+      <p className="text-lg md:text-xl uppercase tracking-[0.7em] text-primary mb-10 font-semibold">
+        BALDSHIELD
+      </p>
+
+      <h2
+        className="text-4xl md:text-5xl font-bold text-white mb-6"
+        style={{ fontFamily: 'Playfair Display, serif' }}
+      >
+        Uma rotina completa para o couro cabeludo.
+      </h2>
+
+      <p className="text-lg text-white/70 max-w-2xl mx-auto leading-relaxed">
+        Estamos construindo uma linha pensada para quem assumiu a careca como estilo —
+        com proteção, controle de brilho e cuidado diário.
+      </p>
+    </div>
+
+    {/* Grid */}
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+
+      {/* Card 1 */}
+      <div className="rounded-2xl border border-primary/50 bg-gradient-to-b from-primary/10 to-transparent p-6 transition hover:bg-primary/10 shadow-[0_0_40px_rgba(255,115,0,0.12)]">
+        <p className="text-xs uppercase tracking-[0.3em] text-primary mb-4 font-semibold">
+          Primeiro lançamento
+        </p>
+        <h3 className="text-xl font-semibold text-white mb-3">
+          Proteção solar
+        </h3>
+        <p className="text-white/75 text-sm leading-relaxed">
+          Proteção UVA/UVB com toque seco, pensada para o couro cabeludo exposto.
+        </p>
+      </div>
+
+      {/* Card 2 */}
+      <div className="rounded-2xl border border-white/10 p-6 bg-white/5 hover:bg-white/10 transition">
+        <p className="text-xs uppercase tracking-[0.3em] text-white/40 mb-4">
+          Em desenvolvimento
+        </p>
+        <h3 className="text-xl font-semibold text-white mb-3">
+          Controle de brilho
+        </h3>
+        <p className="text-white/60 text-sm leading-relaxed">
+          Lenços antibrilho para remover a oleosidade instantaneamente.
+        </p>
+      </div>
+
+      {/* Card 3 */}
+      <div className="rounded-2xl border border-white/10 p-6 bg-white/5 hover:bg-white/10 transition">
+        <p className="text-xs uppercase tracking-[0.3em] text-white/40 mb-4">
+          Em desenvolvimento
+        </p>
+        <h3 className="text-xl font-semibold text-white mb-3">
+          Hidratação
+        </h3>
+        <p className="text-white/60 text-sm leading-relaxed">
+          Hidratação leve para manter conforto, equilíbrio e saúde da pele.
+        </p>
+      </div>
+
+      {/* Card 4 */}
+      <div className="rounded-2xl border border-white/10 p-6 bg-white/5 hover:bg-white/10 transition">
+        <p className="text-xs uppercase tracking-[0.3em] text-white/40 mb-4">
+          Em desenvolvimento
+        </p>
+        <h3 className="text-xl font-semibold text-white mb-3">
+          Limpeza e renovação
+        </h3>
+        <p className="text-white/60 text-sm leading-relaxed">
+          Esfoliação suave para remover impurezas e renovar a pele.
+        </p>
+      </div>
+
+    </div>
+
+    {/* CTA opcional */}
+    <div className="text-center mt-14">
+      <Link
+        to="/products"
+        className="inline-flex items-center justify-center rounded-full border border-primary px-8 py-4 text-sm font-semibold text-primary transition hover:bg-primary hover:text-black"
+      >
+        Conhecer a linha BaldShield
+      </Link>
+    </div>
+
+  </div>
+</section>
         {/* Benefits Preview Section */}
         <section className="py-24 bg-gradient-to-b from-black to-card">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
