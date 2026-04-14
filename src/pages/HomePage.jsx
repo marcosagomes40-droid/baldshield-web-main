@@ -64,57 +64,70 @@ const HomePage = () => {
   <div className="relative mx-auto grid min-h-[90vh] max-w-7xl items-center gap-12 px-6 py-20 md:px-10 lg:grid-cols-2 lg:gap-16 lg:py-28">
     
     {/* TEXTO */}
-    <div className="max-w-2xl space-y-6">
-      <span className="inline-block text-xs font-semibold uppercase tracking-[0.35em] text-primary">
-        BaldShield
-      </span>
+<div className="max-w-2xl space-y-6">
+  <span className="inline-block text-xs font-semibold uppercase tracking-[0.35em] text-primary">
+    BaldShield
+  </span>
 
-      <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight">
-        Assumir a careca é estilo.
-        <span className="block text-primary">
-          Cuidar dela é o próximo passo.
-        </span>
-      </h1>
+  <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight">
+    Assumir a careca é estilo.
+    <span className="block text-primary">
+      Cuidar dela é o próximo passo.
+    </span>
+  </h1>
 
-      <p className="text-lg text-zinc-300 max-w-xl">
-       A primeira marca brasileira criada para cuidar do couro cabeludo de homens carecas.
-       </p>
+  <p className="text-lg text-zinc-300 max-w-xl">
+    A primeira marca brasileira criada para cuidar do couro cabeludo de homens carecas.
+  </p>
 
-      <p className="text-sm uppercase tracking-[0.25em] text-zinc-400">
-        Sem brilho. Sem queimadura. Sem improviso.
-      </p>
+  <p className="text-sm uppercase tracking-[0.25em] text-zinc-400">
+    Sem brilho. Sem queimadura. Sem improviso.
+  </p>
 
-      <div className="flex flex-col sm:flex-row gap-4 pt-4">
-        <Link
-          to="/products"
-          className="inline-flex items-center justify-center rounded-full bg-primary hover:bg-primary/90 px-8 py-4 text-sm font-semibold text-black"
-        >
-          Quero ser avisado no lançamento
-        </Link>
+  {/* CTA + Conversão */}
+  <div className="pt-4">
+    <div className="flex flex-col items-start gap-4 sm:flex-row">
+      <Link
+        to="/products"
+        className="inline-flex items-center justify-center rounded-full bg-primary px-8 py-4 text-sm font-semibold text-black hover:bg-primary/90"
+      >
+        Garantir acesso antecipado
+      </Link>
 
-        <Link
-          to="/benefits"
-          className="inline-flex items-center justify-center rounded-full border border-white/20 px-8 py-4 text-sm font-semibold text-white hover:border-primary hover:text-primary transition"
-        >
-          Conhecer a proposta
-        </Link>
-      </div>
+      <Link
+        to="/benefits"
+        className="inline-flex items-center justify-center rounded-full border border-white/20 px-8 py-4 text-sm font-semibold text-white transition hover:border-primary hover:text-primary"
+      >
+        Conhecer a proposta
+      </Link>
     </div>
+
+    <p className="mt-4 text-sm text-white/40">
+      Seja um dos primeiros a conhecer a BaldShield.
+    </p>
+
+    <p className="mt-2 text-xs text-primary">
+      Acesso antecipado ao primeiro lançamento
+    </p>
+  </div>
+</div>
 
     {/* IMAGEM */}
-    <div className="relative">
-      <div className="absolute inset-0 bg-primary/10 blur-3xl" />
+<div className="relative">
+  <div className="absolute inset-0 bg-primary/10 blur-3xl" />
 
-      <div className="relative overflow-hidden rounded-2xl border border-white/10 shadow-[0_20px_60px_rgba(0,0,0,0.6)]">
-        <img
-          src="/hero-careca-premium.png"
-          alt="Homem careca estilo premium BaldShield"
-          className="w-full h-[650px] object-cover object-[center_8%]"
-        />
-      </div>
-    </div>
-
+  <div className="relative overflow-hidden rounded-2xl border border-white/10 shadow-[0_20px_60px_rgba(0,0,0,0.6)]">
+    <img
+      src="/hero-careca-premium.png"
+      alt="Homem careca estilo premium BaldShield"
+      className="w-full h-[600px] object-cover object-[center_8%] brightness-105 contrast-110"
+    />
+    <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-white/15 pointer-events-none" />
+    <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_50%,rgba(255,120,0,0.12),transparent_60%)] pointer-events-none" />
   </div>
+</div>
+
+</div>
 </section>
 
 {/* Identificação / Dor */}
