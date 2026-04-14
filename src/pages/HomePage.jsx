@@ -77,7 +77,7 @@ const HomePage = () => {
   </h1>
 
   <p className="text-lg text-zinc-300 max-w-xl">
-    A primeira marca brasileira criada para cuidar do couro cabeludo de homens carecas.
+    A primeira marca brasileira criada para cuidar do couro cabeludo de quem não tem cabelo.
   </p>
 
   <p className="text-sm uppercase tracking-[0.25em] text-zinc-400">
@@ -191,7 +191,7 @@ const HomePage = () => {
             </h2>
 
             <p className="text-lg md:text-xl text-secondary leading-relaxed max-w-3xl mx-auto mb-6">
-              A BaldShield nasce como a primeira marca brasileira focada na saúde do couro cabeludo de homens carecas.
+              A BaldShield nasce como a primeira marca brasileira focada na saúde do couro cabeludo de quem assumiu a careca com estilo.
             </p>
 
             <p className="text-base text-muted-foreground max-w-2xl mx-auto">
