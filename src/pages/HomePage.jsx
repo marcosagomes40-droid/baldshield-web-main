@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from "react";
 import { Helmet } from 'react-helmet';
 import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
@@ -12,6 +12,20 @@ import SectionHeader from '@/components/SectionHeader.jsx';
 
 
 const HomePage = () => {
+  
+  const images = [
+  "/hero-careca-premium.png",
+  "/hero-careca-feminino.png"
+];
+useEffect(() => {
+  const interval = setInterval(() => {
+    setCurrentImage((prev) => (prev + 1) % images.length);
+  }, 6000);
+
+  return () => clearInterval(interval);
+}, []);
+
+const [currentImage, setCurrentImage] = useState(0);
   const benefits = [
     {
       icon: Shield,
@@ -117,11 +131,11 @@ const HomePage = () => {
   <div className="absolute inset-0 bg-primary/10 blur-3xl" />
 
   <div className="relative overflow-hidden rounded-2xl border border-white/10 shadow-[0_20px_60px_rgba(0,0,0,0.6)]">
-    <img
-      src="/hero-careca-premium.png"
-      alt="Homem careca estilo premium BaldShield"
-      className="w-full h-[600px] object-cover object-[center_8%] brightness-105 contrast-110"
-    />
+<img
+  src={images[currentImage]}
+  alt="BaldShield"
+  className="w-full h-[600px] object-cover object-[center_8%] brightness-105 contrast-110 transition-opacity duration-700"
+/>
     <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-white/15 pointer-events-none" />
     <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_50%,rgba(255,120,0,0.12),transparent_60%)] pointer-events-none" />
   </div>
