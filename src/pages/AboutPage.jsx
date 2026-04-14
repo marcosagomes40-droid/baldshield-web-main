@@ -16,7 +16,7 @@ const AboutPage = () => {
             </p>
 
             <h1 className="text-4xl md:text-6xl font-bold leading-tight max-w-4xl">
-              Proteção solar feita para quem é careca.
+              Cuidado e proteção para o couro cabeludo exposto.
             </h1>
 
             <p className="mt-8 text-lg md:text-xl text-white/75 max-w-3xl leading-relaxed">
