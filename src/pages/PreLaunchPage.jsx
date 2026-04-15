@@ -37,20 +37,31 @@ const PreLaunchPage = () => {
                 Pré-lançamento BaldShield
               </p>
 
-              <h1 className="mb-6 text-5xl font-bold leading-tight md:text-6xl">
-                Controle de brilho para quem é careca.
+              <h1
+                className="mb-6 text-5xl font-bold leading-tight md:text-6xl"
+                style={{ fontFamily: 'Playfair Display, serif' }}
+              >
+                Ninguém te ensinou
+                <span className="block text-primary">
+                  a cuidar disso.
+                </span>
               </h1>
 
-              <p className="mb-8 max-w-xl text-lg text-gray-300">
-                Uma solução simples, rápida e discreta para o seu dia a dia.
+              <p className="mb-8 max-w-xl text-lg text-gray-300 leading-relaxed">
+                O couro cabeludo de quem não tem cabelo é uma das áreas mais expostas do corpo.
+                E quase ninguém trata isso como deveria.
               </p>
 
-              <div className="mb-6 flex flex-wrap gap-4">
+              <p className="mb-8 text-sm uppercase tracking-[0.25em] text-gray-400">
+                Sem brilho. Sem improviso. Sem descuido.
+              </p>
+
+              <div className="mb-4 flex flex-wrap gap-4">
                 <a
                   href="#lista"
-                  className="rounded-2xl bg-primary px-8 py-4 font-semibold text-black transition hover:scale-105"
+                  className="rounded-2xl bg-primary px-8 py-4 font-semibold text-black transition hover:scale-105 hover:bg-primary/90"
                 >
-                  Quero acesso antecipado
+                  Quero acesso VIP
                 </a>
 
                 <a
@@ -62,7 +73,7 @@ const PreLaunchPage = () => {
               </div>
 
               <p className="mb-10 text-sm text-gray-400">
-                Vagas limitadas para os primeiros testes.
+                Seja um dos primeiros a conhecer a BaldShield.
               </p>
 
               <div className="grid max-w-xl gap-4 sm:grid-cols-3">
@@ -72,8 +83,8 @@ const PreLaunchPage = () => {
                 </div>
 
                 <div className="rounded-2xl border border-white/10 bg-white/5 p-4">
-                  <p className="text-sm text-gray-400">Uso</p>
-                  <p className="mt-1 font-semibold">rápido e prático</p>
+                  <p className="text-sm text-gray-400">Cuidado</p>
+                  <p className="mt-1 font-semibold">simples e diário</p>
                 </div>
 
                 <div className="rounded-2xl border border-white/10 bg-white/5 p-4">
@@ -90,7 +101,9 @@ const PreLaunchPage = () => {
               transition={{ duration: 0.8 }}
               className="relative"
             >
-              <div className="overflow-hidden rounded-[2rem] border border-white/10 bg-white/5 shadow-2xl">
+              <div className="absolute inset-0 bg-primary/10 blur-3xl" />
+
+              <div className="relative overflow-hidden rounded-[2rem] border border-white/10 bg-white/5 shadow-2xl">
                 <img
                   src="/BaldWipespre32.png"
                   alt="Pré-lançamento BaldShield"
@@ -102,96 +115,98 @@ const PreLaunchPage = () => {
         </section>
 
         {/* PROBLEMA */}
-<section id="problema" className="bg-black px-6 py-20 md:px-12 lg:px-20">
-  <div className="mx-auto max-w-6xl">
-    <motion.div
-      variants={fadeUp}
-      initial="hidden"
-      whileInView="visible"
-      viewport={{ once: true }}
-      transition={{ duration: 0.6 }}
-      className="mb-12"
-    >
-      <div className="w-full flex justify-center">
-        <span className="mb-6 block text-base md:text-lg font-semibold uppercase tracking-[0.4em] text-primary text-center">
-          Se você é careca, você sabe
-        </span>
-      </div>
+        <section id="problema" className="bg-black px-6 py-20 md:px-12 lg:px-20">
+          <div className="mx-auto max-w-6xl">
+            <motion.div
+              variants={fadeUp}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+              className="mb-12"
+            >
+              <div className="flex w-full justify-center">
+                <span className="mb-6 block text-base font-semibold uppercase tracking-[0.4em] text-primary text-center md:text-lg">
+                  Quem não tem cabelo sabe
+                </span>
+              </div>
 
-      <div className="w-full flex justify-center">
-        <h2 className="max-w-4xl text-center text-4xl font-bold leading-tight md:text-5xl">
-          Existem situações que ninguém fala sobre.
-        </h2>
-      </div>
-    </motion.div>
+              <div className="flex w-full justify-center">
+                <h2 className="max-w-4xl text-center text-4xl font-bold leading-tight md:text-5xl">
+                  Existem situações que quase ninguém trata como problema.
+                </h2>
+              </div>
+            </motion.div>
 
-    <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
-      {[
-        'Sol forte e reflexo excessivo',
-        'Flash em fotos e vídeos',
-        'Calor e suor ao longo do dia',
-        'Luz de escritório e reuniões',
-      ].map((item, index) => (
-        <motion.div
-          key={item}
-          variants={fadeUp}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-          transition={{ duration: 0.4, delay: index * 0.1 }}
-          className="rounded-2xl border border-white/10 bg-white/5 p-6 text-center"
-        >
-          <p className="text-lg font-medium text-white">{item}</p>
-        </motion.div>
-      ))}
-    </div>
-  </div>
-</section>
+            <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+              {[
+                'Sol forte e reflexo excessivo',
+                'Calor e desconforto ao longo do dia',
+                'Brilho que incomoda mais do que deveria',
+                'Uma rotina sem cuidado específico',
+              ].map((item, index) => (
+                <motion.div
+                  key={item}
+                  variants={fadeUp}
+                  initial="hidden"
+                  whileInView="visible"
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.4, delay: index * 0.1 }}
+                  className="rounded-2xl border border-white/10 bg-white/5 p-6 text-center"
+                >
+                  <p className="text-lg font-medium text-white">{item}</p>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
 
         {/* EM BREVE */}
-<div className="mx-auto max-w-5xl rounded-[2rem] border border-white/10 bg-white/5 p-8 text-center md:p-12">
-  <div className="w-full flex justify-center">
-    <span className="mb-6 block text-base md:text-lg font-semibold uppercase tracking-[0.4em] text-primary text-center">
-      Em breve
-    </span>
-  </div>
+        <section className="bg-black px-6 pb-20 md:px-12 lg:px-20">
+          <div className="mx-auto max-w-5xl rounded-[2rem] border border-white/10 bg-white/5 p-8 text-center md:p-12">
+            <div className="flex w-full justify-center">
+              <span className="mb-6 block text-base font-semibold uppercase tracking-[0.4em] text-primary text-center md:text-lg">
+                Em breve
+              </span>
+            </div>
 
-  <div className="w-full flex justify-center">
-    <h2 className="mb-6 max-w-4xl text-center text-4xl font-bold leading-tight md:text-5xl">
-      Uma solução simples para um problema ignorado.
-    </h2>
-  </div>
+            <div className="flex w-full justify-center">
+              <h2 className="mb-6 max-w-4xl text-center text-4xl font-bold leading-tight md:text-5xl">
+                Uma solução simples para um cuidado que sempre foi ignorado.
+              </h2>
+            </div>
 
-  <p className="mx-auto max-w-3xl text-lg text-gray-300">
-    Estamos finalizando os testes e preparando o lançamento.
-    Entre para a lista e seja um dos primeiros a saber.
-  </p>
-</div>
+            <p className="mx-auto max-w-3xl text-lg leading-relaxed text-gray-300">
+              Estamos finalizando os testes e preparando o lançamento.
+              Entre para a lista e seja um dos primeiros a acompanhar essa nova etapa da BaldShield.
+            </p>
+          </div>
+        </section>
 
         {/* LISTA */}
-<section id="lista" className="bg-black px-6 py-20 md:px-12 lg:px-20">
-  <div className="mx-auto max-w-4xl rounded-[2rem] border border-primary/20 bg-card p-8 shadow-2xl md:p-12">
-    <div className="mb-8">
-      <div className="w-full flex justify-center">
-        <span className="mb-6 block text-base md:text-lg font-semibold uppercase tracking-[0.4em] text-primary text-center">
-          Lista de espera
-        </span>
-      </div>
+        <section id="lista" className="bg-black px-6 py-20 md:px-12 lg:px-20">
+          <div className="mx-auto max-w-4xl rounded-[2rem] border border-primary/20 bg-card p-8 shadow-2xl md:p-12">
+            <div className="mb-8">
+              <div className="flex w-full justify-center">
+                <span className="mb-6 block text-base font-semibold uppercase tracking-[0.4em] text-primary text-center md:text-lg">
+                  Lista VIP
+                </span>
+              </div>
 
-      <div className="w-full flex justify-center">
-        <h2 className="mb-4 max-w-4xl text-center text-4xl font-bold leading-tight md:text-5xl">
-          Quero ser um dos primeiros
-        </h2>
-      </div>
+              <div className="flex w-full justify-center">
+                <h2 className="mb-4 max-w-4xl text-center text-4xl font-bold leading-tight md:text-5xl">
+                  Quero ser um dos primeiros
+                </h2>
+              </div>
 
-      <p className="text-center text-gray-300">
-        Preencha abaixo para receber novidades, prioridade e acesso ao lançamento.
-      </p>
-    </div>
+              <p className="text-center text-gray-300">
+                Preencha abaixo para receber novidades, prioridade e acesso ao lançamento.
+              </p>
+            </div>
 
-    <ContactForm />
-  </div>
-</section>
+            <ContactForm />
+          </div>
+        </section>
 
         <Footer />
       </div>

@@ -34,8 +34,8 @@ const AboutPage = () => {
               </p>
               <h2 className="text-3xl md:text-5xl lg:text-6xl font-bold leading-tight md:leading-[1.05] mb-6">
                 Mais do que proteção solar.<br />
-                Uma nova categoria de cuidado<br />
-                para quem não tem cabelo.
+                Uma nova categoria de cuidado para<br />
+                quem não tem cabelo.
               </h2>
             </div>
 
