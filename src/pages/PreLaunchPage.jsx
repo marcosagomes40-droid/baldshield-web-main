@@ -103,12 +103,12 @@ const PreLaunchPage = () => {
             >
               <div className="absolute inset-0 bg-primary/10 blur-3xl" />
 
-              <div className="h-[70vh]">
-                <img
-                  src="/hero-wipes.png"
-                  className="w-full h-full object-cover"
-                  style={{ objectPosition: "center 15%" }}
-                 />
+              <div className="h-[90vh] flex items-center justify-center">
+              <img
+                src="/hero-wipes.png"
+                className="w-full h-full object-cover object-center"
+                style={{ objectPosition: "center 5%" }}
+              />
             </div>
             </motion.div>
           </div>
