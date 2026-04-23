@@ -103,13 +103,13 @@ const PreLaunchPage = () => {
             >
               <div className="absolute inset-0 bg-primary/10 blur-3xl" />
 
-              <div className="relative overflow-hidden rounded-[2rem] border border-white/10 bg-white/5 shadow-2xl">
+              <div className="h-[70vh]">
                 <img
-                  src="/BaldWipespre32.png"
-                  alt="Pré-lançamento BaldShield"
+                  src="/hero-wipes.png"
                   className="w-full h-full object-cover"
-                />
-              </div>
+                  style={{ objectPosition: "center 15%" }}
+                 />
+            </div>
             </motion.div>
           </div>
         </section>
