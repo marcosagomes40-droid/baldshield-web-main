@@ -9,6 +9,8 @@ import ContactPage from './pages/ContactPage.jsx';
 import SuccessPage from './pages/SuccessPage.jsx';
 import AboutPage from './pages/AboutPage.jsx';
 import PreLaunchPage from './pages/PreLaunchPage.jsx';
+import BlogPage from './pages/BlogPage.jsx';
+import BlogPostBambooCharcoal from './pages/BlogPostBambooCharcoal.jsx';
 import { Toaster } from '@/components/ui/toaster';
 import { CartProvider } from '@/hooks/useCart.jsx';
 
@@ -26,6 +28,13 @@ function App() {
           <Route path="/success" element={<SuccessPage />} />
           <Route path="/about" element={<AboutPage />} />
           <Route path="/pre-launch" element={<PreLaunchPage />} />
+
+          <Route path="/blog" element={<BlogPage />} />
+          <Route
+            path="/blog/o-segredo-do-carvao-de-bambu"
+            element={<BlogPostBambooCharcoal />}
+          />
+
           <Route
             path="*"
             element={
