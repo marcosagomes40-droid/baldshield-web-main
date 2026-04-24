@@ -33,7 +33,7 @@ const BlogPostBambooCharcoal = () => {
             <img
               src="/Blog/bamboo-charcoal-hero.png"
               alt="Carvão de bambu ativado"
-              className="my-10 w-full rounded-[2rem] object-cover aspect-[4/5] md:aspect-[16/10]"
+              className="my-10 w-full rounded-[2rem] object-contain bg-black"
             />
 
             <p className="mb-10 text-xl leading-relaxed text-gray-300">
