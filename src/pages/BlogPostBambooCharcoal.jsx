@@ -65,7 +65,7 @@ const BlogPostBambooCharcoal = () => {
               <img
                 src="/Blog/bamboo-adsorcao.png"
                 alt="Tecnologia de adsorção do carvão de bambu"
-                className="my-10 w-full rounded-[2rem] object-cover aspect-[4/5] md:aspect-[16/10]"
+                className="my-10 w-full rounded-[2rem] object-contain bg-black"
               />
 
               <section>
@@ -91,7 +91,7 @@ const BlogPostBambooCharcoal = () => {
               <img
                 src="/Blog/baldshield-wipes-uso.png"
                 alt="Homem usando BaldShield Wipes no couro cabeludo"
-                className="my-10 w-full rounded-[2rem] object-cover aspect-[4/5] md:aspect-[16/10]"
+                className="my-10 w-full rounded-[2rem] object-contain bg-black"
               />
             </div>
 
