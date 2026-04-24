@@ -33,7 +33,7 @@ const BlogPostBambooCharcoal = () => {
             <img
               src="/Blog/bamboo-charcoal-hero.png"
               alt="Carvão de bambu ativado"
-              className="my-10 h-[420px] w-full rounded-[2rem] object-cover"
+              className="my-10 w-full rounded-[2rem] object-cover aspect-[4/5] md:aspect-[16/10]"
             />
 
             <p className="mb-10 text-xl leading-relaxed text-gray-300">
@@ -65,7 +65,7 @@ const BlogPostBambooCharcoal = () => {
               <img
                 src="/Blog/bamboo-adsorcao.png"
                 alt="Tecnologia de adsorção do carvão de bambu"
-                className="my-10 h-[420px] w-full rounded-[2rem] object-cover"
+                className="my-10 w-full rounded-[2rem] object-cover aspect-[4/5] md:aspect-[16/10]"
               />
 
               <section>
@@ -91,7 +91,7 @@ const BlogPostBambooCharcoal = () => {
               <img
                 src="/Blog/baldshield-wipes-uso.png"
                 alt="Homem usando BaldShield Wipes no couro cabeludo"
-                className="my-10 h-[420px] w-full rounded-[2rem] object-cover"
+                className="my-10 w-full rounded-[2rem] object-cover aspect-[4/5] md:aspect-[16/10]"
               />
             </div>
 
