@@ -12,6 +12,13 @@ const posts = [
       'Como os lenços anti-oleosidade ajudam a controlar o brilho da pele e do couro cabeludo.',
     category: 'Cuidados',
   },
+  {
+    slug: '/blog/risco-invisivel-no-couro-cabeludo',
+    title: 'O risco invisível no couro cabeludo',
+    excerpt:
+      'Por que homens com pouco ou nenhum cabelo precisam redobrar o cuidado com o sol e a pele exposta.',
+    category: 'Prevenção',
+  },
 ];
 
 const BlogPage = () => {
