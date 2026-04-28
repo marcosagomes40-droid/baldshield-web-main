@@ -12,6 +12,7 @@ import PreLaunchPage from './pages/PreLaunchPage.jsx';
 import BlogPage from './pages/BlogPage.jsx';
 import BlogPostBambooCharcoal from './pages/BlogPostBambooCharcoal.jsx';
 import BlogPostScalpRisk from './pages/BlogPostScalpRisk.jsx';
+import BlogPostDiaZero from './pages/BlogPostDiaZero.jsx';
 import { Toaster } from '@/components/ui/toaster';
 import { CartProvider } from '@/hooks/useCart.jsx';
 
@@ -38,6 +39,10 @@ function App() {
           <Route
           path="/blog/risco-invisivel-no-couro-cabeludo"
           element={<BlogPostScalpRisk />}
+          />
+          <Route
+          path="/blog/dia-zero-careca-confianca"
+          element={<BlogPostDiaZero />}
           />
           <Route
             path="*"

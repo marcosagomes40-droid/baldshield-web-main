@@ -19,7 +19,13 @@ const posts = [
       'Por que homens com pouco ou nenhum cabelo precisam redobrar o cuidado com o sol e a pele exposta.',
     category: 'Prevenção',
   },
-];
+  {
+    slug: '/blog/dia-zero-careca-confianca',
+    title: 'O Dia Zero: o maior upgrade de confiança de um homem',
+    excerpt: 'O momento em que você para de esconder e assume o controle.',
+    category: 'Identidade',
+  },
+  ];
 
 const BlogPage = () => {
   return (
