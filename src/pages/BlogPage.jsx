@@ -22,10 +22,18 @@ const posts = [
   {
     slug: '/blog/dia-zero-careca-confianca',
     title: 'O Dia Zero: o maior upgrade de confiança de um homem',
-    excerpt: 'O momento em que você para de esconder e assume o controle.',
+    excerpt:
+      'O momento em que você para de esconder e assume o controle.',
     category: 'Identidade',
   },
-  ];
+  {
+    slug: '/blog/por-que-a-careca-brilha',
+    title: 'Por que a careca brilha?',
+    excerpt:
+      'A ciência do couro cabeludo e o segredo do acabamento matte premium.',
+    category: 'Scalp care',
+  },
+];
 
 const BlogPage = () => {
   return (
@@ -70,7 +78,10 @@ const BlogPage = () => {
                     {post.category}
                   </span>
 
-                  <h2 className="mb-4 text-2xl font-bold transition group-hover:text-primary">
+                  <h2
+                    className="mb-4 text-2xl font-bold transition group-hover:text-primary"
+                    style={{ fontFamily: 'Playfair Display, serif' }}
+                  >
                     {post.title}
                   </h2>
 

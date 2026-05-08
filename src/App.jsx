@@ -13,6 +13,7 @@ import BlogPage from './pages/BlogPage.jsx';
 import BlogPostBambooCharcoal from './pages/BlogPostBambooCharcoal.jsx';
 import BlogPostScalpRisk from './pages/BlogPostScalpRisk.jsx';
 import BlogPostDiaZero from './pages/BlogPostDiaZero.jsx';
+import BlogPostCarecaBrilha from './pages/BlogPostCarecaBrilha.jsx';
 import { Toaster } from '@/components/ui/toaster';
 import { CartProvider } from '@/hooks/useCart.jsx';
 
@@ -43,6 +44,10 @@ function App() {
           <Route
           path="/blog/dia-zero-careca-confianca"
           element={<BlogPostDiaZero />}
+          />
+          <Route
+          path="/blog/por-que-a-careca-brilha"
+          element={<BlogPostCarecaBrilha />}
           />
           <Route
             path="*"
