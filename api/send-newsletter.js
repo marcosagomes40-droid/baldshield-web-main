@@ -41,79 +41,100 @@ export default async function handler(req, res) {
       subject: `Novo artigo BaldShield: ${blogTitle}`,
       html: `
         <div style="margin:0;padding:0;background:#000000;font-family:Arial,Helvetica,sans-serif;">
-          <div style="max-width:640px;margin:0 auto;padding:28px 14px;">
-            <div style="background:#0f0f0f;border:1px solid #222222;border-radius:18px;overflow:hidden;">
+          <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:#000000;border-collapse:collapse;">
+            <tr>
+              <td align="center" style="padding:24px 10px;">
 
-              <div style="padding:30px 22px 28px 22px;text-align:center;border-bottom:1px solid #222222;">
-                <img
-                  src="https://www.baldshield.com/escudo.png"
-                  alt="BaldShield"
-                  width="92"
-                  style="display:block;margin:0 auto 14px auto;"
-                />
+                <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="max-width:600px;background:#0f0f0f;border:1px solid #222222;border-radius:18px;overflow:hidden;border-collapse:separate;">
+                  
+                  <tr>
+                    <td align="center" style="padding:28px 20px 24px 20px;border-bottom:1px solid #222222;">
+                      <img
+                        src="https://www.baldshield.com/escudo.png"
+                        alt="BaldShield"
+                        width="120"
+                        style="display:block;width:120px;max-width:120px;height:auto;margin:0 auto 16px auto;border:0;"
+                        />
 
-                <div style="color:#ffffff;font-size:22px;font-weight:bold;letter-spacing:2px;line-height:1.2;">
-                  BALDSHIELD
-                </div>
+                      <div style="color:#ffffff;font-size:19px;font-weight:bold;letter-spacing:2px;line-height:1.2;">
+                        BALDSHIELD
+                      </div>
 
-                <div style="margin-top:8px;color:#c9a96b;font-size:12px;letter-spacing:2px;line-height:1.5;text-transform:uppercase;">
-                  Scalp Care for the Bold
-                </div>
-              </div>
+                      <div style="margin-top:7px;color:#c9a96b;font-size:11px;letter-spacing:2px;line-height:1.5;text-transform:uppercase;">
+                        Scalp Care for the Bold
+                      </div>
+                    </td>
+                  </tr>
 
-              <img
-                src="${heroImage}"
-                alt="${blogTitle}"
-                style="display:block;width:100%;height:auto;border:0;"
-              />
+                  <tr>
+                    <td style="padding:0;">
+                      <img
+                        src="${heroImage}"
+                        alt="${blogTitle}"
+                        width="600"
+                        style="display:block;width:100%;max-width:600px;height:auto;border:0;"
+                      />
+                    </td>
+                  </tr>
 
-              <div style="padding:34px 24px;color:#eaeaea;">
-                <p style="margin:0 0 12px 0;color:#ff6a00;font-size:12px;font-weight:bold;letter-spacing:2px;text-transform:uppercase;line-height:1.5;">
-                  Novo artigo no blog
-                </p>
+                  <tr>
+                    <td style="padding:30px 22px 32px 22px;color:#eaeaea;">
+                      <p style="margin:0 0 12px 0;color:#ff6a00;font-size:11px;font-weight:bold;letter-spacing:2px;text-transform:uppercase;line-height:1.4;">
+                        Novo artigo no blog
+                      </p>
 
-                <h1 style="margin:0 0 18px 0;color:#ffffff;font-size:30px;line-height:1.18;font-weight:800;">
-                  ${blogTitle}
-                </h1>
+                      <h1 style="margin:0 0 18px 0;color:#ffffff;font-size:26px;line-height:1.18;font-weight:800;">
+                        ${blogTitle}
+                      </h1>
 
-                <p style="margin:0 0 22px 0;color:#cfcfcf;font-size:16px;line-height:1.7;">
-                  Olá${nome ? `, ${nome}` : ''}. Publicamos um novo conteúdo sobre cuidado, brilho e presença para quem assumiu a careca.
-                </p>
+                      <p style="margin:0 0 18px 0;color:#cfcfcf;font-size:15px;line-height:1.65;">
+                        Olá${nome ? `, ${nome}` : ''}. Publicamos um novo conteúdo sobre cuidado, brilho e presença para quem assumiu a careca.
+                      </p>
 
-                <p style="margin:0 0 30px 0;color:#cfcfcf;font-size:16px;line-height:1.7;">
-                  ${blogSummary}
-                </p>
+                      <p style="margin:0 0 28px 0;color:#cfcfcf;font-size:15px;line-height:1.65;">
+                        ${blogSummary}
+                      </p>
 
-                <div style="text-align:center;margin:34px 0;">
-                  <a
-                    href="${blogUrl}"
-                    style="background:#ff6a00;color:#000000;padding:15px 26px;border-radius:10px;text-decoration:none;font-weight:bold;display:inline-block;font-size:15px;line-height:1.2;"
-                  >
-                    Ler artigo completo
-                  </a>
-                </div>
+                      <table role="presentation" cellpadding="0" cellspacing="0" align="center" style="margin:30px auto;border-collapse:collapse;">
+                        <tr>
+                          <td align="center" bgcolor="#ff6a00" style="border-radius:10px;">
+                            <a
+                              href="${blogUrl}"
+                              style="display:inline-block;padding:14px 24px;color:#000000;text-decoration:none;font-weight:bold;font-size:15px;line-height:1.2;"
+                            >
+                              Ler artigo completo
+                            </a>
+                          </td>
+                        </tr>
+                      </table>
 
-                <div style="margin-top:34px;padding-top:24px;border-top:1px solid #222222;">
-                  <p style="margin:0;color:#9a9a9a;font-size:14px;line-height:1.6;text-align:center;">
-                    Assumir a careca é estilo. Cuidar dela é o próximo passo.
-                  </p>
-                </div>
-              </div>
+                      <div style="margin-top:28px;padding-top:22px;border-top:1px solid #222222;">
+                        <p style="margin:0;color:#9a9a9a;font-size:13px;line-height:1.5;text-align:center;">
+                          Assumir a careca é estilo. Cuidar dela é o próximo passo.
+                        </p>
+                      </div>
+                    </td>
+                  </tr>
 
-              <div style="padding:22px 20px;text-align:center;border-top:1px solid #222222;background:#090909;">
-                <p style="margin:0 0 8px 0;color:#777777;font-size:12px;">
-                  BaldShield © ${new Date().getFullYear()}
-                </p>
+                  <tr>
+                    <td align="center" style="padding:22px 18px;text-align:center;border-top:1px solid #222222;background:#090909;">
+                      <p style="margin:0 0 8px 0;color:#777777;font-size:12px;line-height:1.4;">
+                        BaldShield © ${new Date().getFullYear()}
+                      </p>
 
-                <p style="margin:0;color:#666666;font-size:11px;line-height:1.6;">
-                  Você recebeu este e-mail porque se cadastrou para receber novidades da BaldShield.
-                  <br />
-                  Para cancelar sua inscrição, responda este e-mail com <strong>REMOVER</strong>.
-                </p>
-              </div>
+                      <p style="margin:0;color:#666666;font-size:11px;line-height:1.5;">
+                        Você recebeu este e-mail porque se cadastrou para receber novidades da BaldShield.
+                        <br />
+                        Para cancelar sua inscrição, responda este e-mail com <strong>REMOVER</strong>.
+                      </p>
+                    </td>
+                  </tr>
 
-            </div>
-          </div>
+                </table>
+
+              </td>
+            </tr>
+          </table>
         </div>
       `,
     });
