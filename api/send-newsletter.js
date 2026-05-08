@@ -39,79 +39,73 @@ export default async function handler(req, res) {
       to,
       subject: `Novo artigo BaldShield: ${blogTitle}`,
       html: `
-        <div style="margin:0; padding:0; background:#050505; font-family: Arial, Helvetica, sans-serif;">
-          <div style="max-width:640px; margin:0 auto; padding:32px 16px;">
-            <div style="background:#0f0f0f; border:1px solid #222; border-radius:18px; overflow:hidden;">
+        <div style="margin:0;padding:40px;background:#000000;font-family:Arial,Helvetica,sans-serif;">
+          <div style="max-width:680px;margin:0 auto;background:#0b0b0b;border:1px solid #1f1f1f;border-radius:28px;overflow:hidden;">
 
-              <div style="padding:28px 24px; text-align:center; border-bottom:1px solid #222;">
-                <img
-                  src="https://www.baldshield.com/escudo.png"
-                  alt="BaldShield"
-                  width="72"
-                  style="display:block; margin:0 auto 14px auto;"
-                />
-
-                <div style="color:#ffffff; font-size:18px; font-weight:bold; letter-spacing:2px;">
-                  BALDSHIELD
-                </div>
-
-                <div style="margin-top:6px; color:#9a9a9a; font-size:12px; letter-spacing:1px;">
-                  SCALP CARE FOR THE BOLD
-                </div>
-              </div>
-
+            <div style="padding:42px 32px;text-align:center;border-bottom:1px solid #1a1a1a;">
               <img
-                src="${heroImage}"
-                alt="${blogTitle}"
-                style="display:block; width:100%; height:auto; border:0;"
+                src="https://www.baldshield.com/logo.png"
+                alt="BaldShield"
+                width="120"
+                style="display:block;margin:0 auto 18px auto;"
               />
 
-              <div style="padding:34px 28px; color:#eaeaea;">
-                <p style="margin:0 0 12px 0; color:#ff6a00; font-size:12px; font-weight:bold; letter-spacing:2px; text-transform:uppercase;">
-                  Novo artigo no blog
-                </p>
-
-                <h1 style="margin:0 0 18px 0; color:#ffffff; font-size:30px; line-height:1.2;">
-                  ${blogTitle}
-                </h1>
-
-                <p style="margin:0 0 22px 0; color:#cfcfcf; font-size:16px; line-height:1.7;">
-                  Olá${nome ? `, ${nome}` : ''}. Publicamos um novo conteúdo sobre cuidado, brilho e presença para quem assumiu a careca.
-                </p>
-
-                <p style="margin:0 0 30px 0; color:#cfcfcf; font-size:16px; line-height:1.7;">
-                  ${blogSummary}
-                </p>
-
-                <div style="text-align:center; margin:34px 0;">
-                  <a
-                    href="${blogUrl}"
-                    style="background:#ff6a00; color:#000000; padding:15px 26px; border-radius:10px; text-decoration:none; font-weight:bold; display:inline-block;"
-                  >
-                    Ler artigo completo
-                  </a>
-                </div>
-
-                <div style="margin-top:34px; padding-top:24px; border-top:1px solid #222;">
-                  <p style="margin:0; color:#9a9a9a; font-size:14px; line-height:1.6;">
-                    Assumir a careca é estilo. Cuidar dela é o próximo passo.
-                  </p>
-                </div>
-              </div>
-
-              <div style="padding:22px 24px; text-align:center; border-top:1px solid #222; background:#090909;">
-                <p style="margin:0 0 8px 0; color:#777; font-size:12px;">
-                  BaldShield © ${new Date().getFullYear()}
-                </p>
-
-                <p style="margin:0; color:#666; font-size:11px; line-height:1.6;">
-                  Você recebeu este e-mail porque se cadastrou para receber novidades da BaldShield.
-                  <br />
-                  Para cancelar sua inscrição, responda este e-mail com <strong>REMOVER</strong>.
-                </p>
-              </div>
-
+              <p style="color:#c9a96b;margin:0;letter-spacing:3px;font-size:12px;text-transform:uppercase;">
+                Scalp care for the bold
+              </p>
             </div>
+
+            <img
+              src="${heroImage}"
+              alt="${blogTitle}"
+              style="display:block;width:100%;height:auto;border:0;"
+            />
+
+            <div style="padding:46px 34px;color:#eaeaea;">
+              <p style="margin:0 0 14px 0;color:#ff8c00;font-size:12px;font-weight:bold;letter-spacing:3px;text-transform:uppercase;">
+                Novo artigo no blog
+              </p>
+
+              <h1 style="margin:0 0 22px 0;color:#ffffff;font-size:36px;line-height:1.15;font-weight:800;">
+                ${blogTitle}
+              </h1>
+
+              <p style="margin:0 0 24px 0;color:#cfcfcf;font-size:17px;line-height:1.8;">
+                Olá${nome ? `, ${nome}` : ''}. Publicamos um novo conteúdo sobre cuidado, brilho e presença para quem assumiu a careca.
+              </p>
+
+              <p style="margin:0 0 34px 0;color:#cfcfcf;font-size:17px;line-height:1.8;">
+                ${blogSummary}
+              </p>
+
+              <div style="text-align:center;margin:40px 0;">
+                <a
+                  href="${blogUrl}"
+                  style="background:#ff8c00;color:#000000;text-decoration:none;padding:17px 32px;border-radius:14px;font-weight:bold;display:inline-block;font-size:16px;"
+                >
+                  Ler artigo completo
+                </a>
+              </div>
+
+              <div style="margin-top:46px;padding:26px;border:1px solid #2a2a2a;border-radius:18px;background:#111111;text-align:center;">
+                <p style="margin:0;color:#d8d8d8;font-size:16px;line-height:1.7;">
+                  Assumir a careca é estilo. Cuidar dela é o próximo passo.
+                </p>
+              </div>
+            </div>
+
+            <div style="padding:26px 24px;text-align:center;border-top:1px solid #222;background:#070707;">
+              <p style="margin:0 0 10px 0;color:#777;font-size:12px;">
+                BaldShield © ${new Date().getFullYear()}
+              </p>
+
+              <p style="margin:0;color:#666;font-size:11px;line-height:1.7;">
+                Você recebeu este e-mail porque se cadastrou para receber novidades da BaldShield.
+                <br />
+                Para cancelar sua inscrição, responda este e-mail com <strong>REMOVER</strong>.
+              </p>
+            </div>
+
           </div>
         </div>
       `,
