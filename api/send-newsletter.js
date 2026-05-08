@@ -29,25 +29,29 @@ export default async function handler(req, res) {
       to = 'contato@baldshield.com',
       nome = 'Marcos',
       blogTitle = 'Por que a careca brilha?',
-      blogSummary = 'A ciência do couro cabeludo e o segredo do acabamento matte premium.',
-      blogUrl = 'https://www.baldshield.com/blog/por-que-a-careca-brilha',
-      heroImage = 'https://www.baldshield.com/Blog/Blog_brilho1a.png',
+      blogSummary =
+        'A ciência do couro cabeludo e o segredo do acabamento matte premium.',
+      blogUrl =
+        'https://www.baldshield.com/blog/por-que-a-careca-brilha',
+      heroImage =
+        'https://www.baldshield.com/Blog/Blog_brilho1a.png',
     } = body;
 
     const result = await resend.emails.send({
       from: 'BaldShield <contato@baldshield.com>',
       to,
       subject: `Novo artigo BaldShield: ${blogTitle}`,
+
       html: `
         <div style="margin:0;padding:40px;background:#000000;font-family:Arial,Helvetica,sans-serif;">
           <div style="max-width:680px;margin:0 auto;background:#0b0b0b;border:1px solid #1f1f1f;border-radius:28px;overflow:hidden;">
 
-            <div style="padding:42px 32px;text-align:center;border-bottom:1px solid #1a1a1a;">
+            <div style="padding:30px 32px 28px 32px;text-align:center;border-bottom:1px solid #1a1a1a;">
               <img
                 src="https://www.baldshield.com/logo.png"
                 alt="BaldShield"
-                width="120"
-                style="display:block;margin:0 auto 18px auto;"
+                width="190"
+                style="display:block;margin:0 auto 14px auto;"
               />
 
               <p style="color:#c9a96b;margin:0;letter-spacing:3px;font-size:12px;text-transform:uppercase;">
@@ -62,6 +66,7 @@ export default async function handler(req, res) {
             />
 
             <div style="padding:46px 34px;color:#eaeaea;">
+
               <p style="margin:0 0 14px 0;color:#ff8c00;font-size:12px;font-weight:bold;letter-spacing:3px;text-transform:uppercase;">
                 Novo artigo no blog
               </p>
@@ -81,7 +86,16 @@ export default async function handler(req, res) {
               <div style="text-align:center;margin:40px 0;">
                 <a
                   href="${blogUrl}"
-                  style="background:#ff8c00;color:#000000;text-decoration:none;padding:17px 32px;border-radius:14px;font-weight:bold;display:inline-block;font-size:16px;"
+                  style="
+                    background:#ff8c00;
+                    color:#000000;
+                    text-decoration:none;
+                    padding:17px 32px;
+                    border-radius:14px;
+                    font-weight:bold;
+                    display:inline-block;
+                    font-size:16px;
+                  "
                 >
                   Ler artigo completo
                 </a>
@@ -92,9 +106,11 @@ export default async function handler(req, res) {
                   Assumir a careca é estilo. Cuidar dela é o próximo passo.
                 </p>
               </div>
+
             </div>
 
             <div style="padding:26px 24px;text-align:center;border-top:1px solid #222;background:#070707;">
+
               <p style="margin:0 0 10px 0;color:#777;font-size:12px;">
                 BaldShield © ${new Date().getFullYear()}
               </p>
@@ -104,6 +120,7 @@ export default async function handler(req, res) {
                 <br />
                 Para cancelar sua inscrição, responda este e-mail com <strong>REMOVER</strong>.
               </p>
+
             </div>
 
           </div>
@@ -115,6 +132,7 @@ export default async function handler(req, res) {
       success: true,
       result,
     });
+
   } catch (error) {
     console.error('Erro ao enviar newsletter:', error);
 
