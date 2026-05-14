@@ -1,154 +1,110 @@
-import { Resend } from 'resend';
+import fs from 'fs';
+import path from 'path';
 
-export default async function handler(req, res) {
-  if (req.method !== 'POST') {
-    return res.status(405).json({
-      success: false,
-      error: 'Method not allowed',
-    });
-  }
+const API_URL = 'https://www.baldshield.com/api/send-newsletter';
 
+const BATCH_SIZE = 10;
+const DELAY_MS = 2500;
+
+function delay(ms) {
+  return new Promise((resolve) => setTimeout(resolve, ms));
+}
+
+async function run() {
   try {
-    const apiKey = process.env.RESEND_API_KEY;
+    const csvPath = path.join(process.cwd(), 'data', 'lista-baldshield.csv');
 
-    if (!apiKey) {
-      return res.status(500).json({
-        success: false,
-        error: 'RESEND_API_KEY não configurada',
-      });
+    const file = fs.readFileSync(csvPath, 'utf-8');
+
+    const lines = file.split('\n').slice(1);
+
+    const emails = [];
+
+    for (const line of lines) {
+      const columns = line.split(',');
+
+      const nome = columns[0]?.trim();
+      const email = columns[1]?.trim()?.toLowerCase();
+      const assunto = columns[2]?.trim()?.toLowerCase();
+      const origem = columns[4]?.trim()?.toLowerCase();
+
+      const isWaitlist =
+        assunto?.includes('lista de espera') ||
+        origem?.includes('waitlist-products');
+
+      if (
+        isWaitlist &&
+        email &&
+        email.includes('@') &&
+        !emails.some((item) => item.email === email)
+      ) {
+        emails.push({
+          nome,
+          email,
+        });
+      }
     }
 
-    const resend = new Resend(apiKey);
+    const batch = emails.slice(0, BATCH_SIZE);
 
-    const body =
-      typeof req.body === 'string'
-        ? JSON.parse(req.body || '{}')
-        : req.body || {};
+    console.log('');
+    console.log('==============================');
+    console.log('BALDSHIELD NEWSLETTER');
+    console.log('==============================');
+    console.log('');
 
-    const {
-      to = 'contato@baldshield.com',
-      nome = 'Marcos',
-      blogTitle = 'Por que a careca brilha?',
-      blogSummary =
-        'A ciência do couro cabeludo e o segredo do acabamento matte premium.',
-      blogUrl = 'https://www.baldshield.com/blog/por-que-a-careca-brilha',
-      heroImage = 'https://www.baldshield.com/Blog/Blog_brilho1a.png',
-    } = body;
+    console.log(`Total selecionado: ${batch.length}`);
+    console.log('');
 
-    const result = await resend.emails.send({
-      from: 'BaldShield <contato@baldshield.com>',
-      to,
-      subject: `Novo artigo BaldShield: ${blogTitle}`,
-      html: `
-        <div style="margin:0;padding:0;background:#000000;font-family:Arial,Helvetica,sans-serif;">
-          <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:#000000;border-collapse:collapse;">
-            <tr>
-              <td align="center" style="padding:24px 10px;">
+    let success = 0;
+    let failed = 0;
 
-                <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="max-width:600px;background:#0f0f0f;border:1px solid #222222;border-radius:18px;overflow:hidden;border-collapse:separate;">
-                  
-                  <tr>
-                    <td align="center" style="padding:28px 20px 24px 20px;border-bottom:1px solid #222222;">
-                      <img
-                        src="https://www.baldshield.com/escudo.png"
-                        alt="BaldShield"
-                        width="120"
-                        style="display:block;width:120px;max-width:120px;height:auto;margin:0 auto 16px auto;border:0;"
-                        />
+    for (const item of batch) {
+      try {
+        console.log(`Enviando para: ${item.email}`);
 
-                      <div style="color:#ffffff;font-size:19px;font-weight:bold;letter-spacing:2px;line-height:1.2;">
-                        BALDSHIELD
-                      </div>
+        const response = await fetch(API_URL, {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({
+            to: item.email,
+            nome: item.nome || 'BaldShield Member',
+          }),
+        });
 
-                      <div style="margin-top:7px;color:#c9a96b;font-size:11px;letter-spacing:2px;line-height:1.5;text-transform:uppercase;">
-                        Scalp Care for the Bold
-                      </div>
-                    </td>
-                  </tr>
+        const result = await response.json();
 
-                  <tr>
-                    <td style="padding:0;">
-                      <img
-                        src="${heroImage}"
-                        alt="${blogTitle}"
-                        width="600"
-                        style="display:block;width:100%;max-width:600px;height:auto;border:0;"
-                      />
-                    </td>
-                  </tr>
+        if (result.success) {
+          success++;
+          console.log('OK');
+        } else {
+          failed++;
+          console.log('ERRO');
+        }
+      } catch (error) {
+        failed++;
+        console.log('FALHA:', error.message);
+      }
 
-                  <tr>
-                    <td style="padding:30px 22px 32px 22px;color:#eaeaea;">
-                      <p style="margin:0 0 12px 0;color:#ff6a00;font-size:11px;font-weight:bold;letter-spacing:2px;text-transform:uppercase;line-height:1.4;">
-                        Novo artigo no blog
-                      </p>
+      console.log('');
 
-                      <h1 style="margin:0 0 18px 0;color:#ffffff;font-size:26px;line-height:1.18;font-weight:800;">
-                        ${blogTitle}
-                      </h1>
+      await delay(DELAY_MS);
+    }
 
-                      <p style="margin:0 0 18px 0;color:#cfcfcf;font-size:15px;line-height:1.65;">
-                        Olá${nome ? `, ${nome}` : ''}. Publicamos um novo conteúdo sobre cuidado, brilho e presença para quem assumiu a careca.
-                      </p>
+    console.log('==============================');
+    console.log('FINALIZADO');
+    console.log('==============================');
+    console.log('');
 
-                      <p style="margin:0 0 28px 0;color:#cfcfcf;font-size:15px;line-height:1.65;">
-                        ${blogSummary}
-                      </p>
+    console.log(`Sucesso: ${success}`);
+    console.log(`Falhas: ${failed}`);
+    console.log('');
 
-                      <table role="presentation" cellpadding="0" cellspacing="0" align="center" style="margin:30px auto;border-collapse:collapse;">
-                        <tr>
-                          <td align="center" bgcolor="#ff6a00" style="border-radius:10px;">
-                            <a
-                              href="${blogUrl}"
-                              style="display:inline-block;padding:14px 24px;color:#000000;text-decoration:none;font-weight:bold;font-size:15px;line-height:1.2;"
-                            >
-                              Ler artigo completo
-                            </a>
-                          </td>
-                        </tr>
-                      </table>
-
-                      <div style="margin-top:28px;padding-top:22px;border-top:1px solid #222222;">
-                        <p style="margin:0;color:#9a9a9a;font-size:13px;line-height:1.5;text-align:center;">
-                          Assumir a careca é estilo. Cuidar dela é o próximo passo.
-                        </p>
-                      </div>
-                    </td>
-                  </tr>
-
-                  <tr>
-                    <td align="center" style="padding:22px 18px;text-align:center;border-top:1px solid #222222;background:#090909;">
-                      <p style="margin:0 0 8px 0;color:#777777;font-size:12px;line-height:1.4;">
-                        BaldShield © ${new Date().getFullYear()}
-                      </p>
-
-                      <p style="margin:0;color:#666666;font-size:11px;line-height:1.5;">
-                        Você recebeu este e-mail porque se cadastrou para receber novidades da BaldShield.
-                        <br />
-                        Para cancelar sua inscrição, responda este e-mail com <strong>REMOVER</strong>.
-                      </p>
-                    </td>
-                  </tr>
-
-                </table>
-
-              </td>
-            </tr>
-          </table>
-        </div>
-      `,
-    });
-
-    return res.status(200).json({
-      success: true,
-      result,
-    });
   } catch (error) {
-    console.error('Erro ao enviar newsletter:', error);
-
-    return res.status(500).json({
-      success: false,
-      error: error?.message || 'Erro ao enviar newsletter',
-    });
+    console.error('Erro geral:', error);
   }
 }
+
+run();

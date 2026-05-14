@@ -16,6 +16,7 @@ import BlogPostDiaZero from './pages/BlogPostDiaZero.jsx';
 import BlogPostCarecaBrilha from './pages/BlogPostCarecaBrilha.jsx';
 import { Toaster } from '@/components/ui/toaster';
 import { CartProvider } from '@/hooks/useCart.jsx';
+import WhatsAppButton from "./components/WhatsAppButton";
 
 function App() {
   return (
@@ -68,9 +69,11 @@ function App() {
               </div>
             }
           />
-        </Routes>
-        <Toaster />
+          </Routes>
+          <WhatsAppButton />
+          <Toaster />
       </Router>
+    
     </CartProvider>
   );
 }
