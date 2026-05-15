@@ -82,11 +82,11 @@ const EmbaixadorPage = () => {
         </div>
 
         {/* COLUNA DIREITA */}
-        <div className="hidden lg:block sticky top-36 pt-4">
+        <div className="mt-10 lg:mt-0 lg:sticky lg:top-36 lg:pt-4">
           <img
             src="/embaixador-baldshield-premium.webp"
             alt="Embaixador BaldShield"
-            className="w-full max-w-xl ml-auto rounded-3xl object-cover shadow-2xl border border-white/10"
+            className="w-full max-w-xl mx-auto rounded-3xl object-cover shadow-2xl border border-white/10"
         />
         </div>
 

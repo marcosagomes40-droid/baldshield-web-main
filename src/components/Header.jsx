@@ -18,8 +18,9 @@ const Header = () => {
   { name: 'Início', path: '/' },
   { name: 'Produtos', path: '/products' },
   { name: 'Benefícios', path: '/benefits' },
+  { name: 'Embaixador', path: '/embaixador' },
   { name: 'Por que existimos', path: '/about' },
-   { name: 'Blog', path: '/blog' },
+  { name: 'Blog', path: '/blog' },
   { name: 'Contato', path: '/contact' },
 ];
 
