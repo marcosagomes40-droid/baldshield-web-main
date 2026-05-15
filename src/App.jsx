@@ -17,6 +17,7 @@ import BlogPostCarecaBrilha from './pages/BlogPostCarecaBrilha.jsx';
 import { Toaster } from '@/components/ui/toaster';
 import { CartProvider } from '@/hooks/useCart.jsx';
 import WhatsAppButton from "./components/WhatsAppButton";
+import EmbaixadorPage from './pages/EmbaixadorPage.jsx';
 
 function App() {
   return (
@@ -31,6 +32,7 @@ function App() {
           <Route path="/contact" element={<ContactPage />} />
           <Route path="/success" element={<SuccessPage />} />
           <Route path="/about" element={<AboutPage />} />
+          <Route path="/embaixador" element={<EmbaixadorPage />} />
           <Route path="/pre-launch" element={<PreLaunchPage />} />
 
           <Route path="/blog" element={<BlogPage />} />
