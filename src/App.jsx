@@ -18,6 +18,7 @@ import { Toaster } from '@/components/ui/toaster';
 import { CartProvider } from '@/hooks/useCart.jsx';
 import WhatsAppButton from "./components/WhatsAppButton";
 import EmbaixadorPage from './pages/EmbaixadorPage.jsx';
+import CosmetiquePage from '@/pages/CosmetiquePage.jsx';
 
 function App() {
   return (
@@ -34,7 +35,7 @@ function App() {
           <Route path="/about" element={<AboutPage />} />
           <Route path="/embaixador" element={<EmbaixadorPage />} />
           <Route path="/pre-launch" element={<PreLaunchPage />} />
-
+          <Route path="/cosmetique" element={<CosmetiquePage />} />    
           <Route path="/blog" element={<BlogPage />} />
           <Route
             path="/blog/o-segredo-do-carvao-de-bambu"

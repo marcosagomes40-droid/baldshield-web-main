@@ -11,6 +11,22 @@ const fadeUp = {
 };
 
 const PreLaunchPage = () => {
+  React.useEffect(() => {
+  const params = new URLSearchParams(window.location.search);
+
+  if (params.get('scroll') === 'lista') {
+    setTimeout(() => {
+      const element = document.getElementById('lista');
+
+      if (element) {
+        element.scrollIntoView({
+          behavior: 'smooth',
+          block: 'start',
+        });
+      }
+    }, 100);
+  }
+}, []);
   return (
     <>
       <Helmet>
@@ -184,7 +200,10 @@ const PreLaunchPage = () => {
         </section>
 
         {/* LISTA */}
-        <section id="lista" className="bg-black px-6 py-20 md:px-12 lg:px-20">
+        <section
+          id="lista"
+          className="scroll-mt-32 bg-black px-6 py-20 md:px-12 lg:px-20"
+          >
           <div className="mx-auto max-w-4xl rounded-[2rem] border border-primary/20 bg-card p-8 shadow-2xl md:p-12">
             <div className="mb-8">
               <div className="flex w-full justify-center">
