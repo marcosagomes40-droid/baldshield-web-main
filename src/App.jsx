@@ -14,6 +14,7 @@ import BlogPostBambooCharcoal from './pages/BlogPostBambooCharcoal.jsx';
 import BlogPostScalpRisk from './pages/BlogPostScalpRisk.jsx';
 import BlogPostDiaZero from './pages/BlogPostDiaZero.jsx';
 import BlogPostCarecaBrilha from './pages/BlogPostCarecaBrilha.jsx';
+import BlogPostRotinaHomensCarecas from '@/pages/blog/BlogPostRotinaHomensCarecas.jsx';
 import { Toaster } from '@/components/ui/toaster';
 import { CartProvider } from '@/hooks/useCart.jsx';
 import WhatsAppButton from "./components/WhatsAppButton";
@@ -52,6 +53,10 @@ function App() {
           <Route
           path="/blog/por-que-a-careca-brilha"
           element={<BlogPostCarecaBrilha />}
+          />
+          <Route
+          path="/blog/rotina-ideal-para-homens-carecas"
+          element={<BlogPostRotinaHomensCarecas />}
           />
           <Route
             path="*"

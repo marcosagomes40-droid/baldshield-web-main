@@ -5,6 +5,13 @@ import Header from '@/components/Header.jsx';
 import Footer from '@/components/Footer.jsx';
 
 const posts = [
+    {
+    slug: '/blog/rotina-ideal-para-homens-carecas',
+    title: 'A rotina ideal para homens carecas',
+    excerpt:
+      'Muito além da estética: por que o couro cabeludo exposto exige cuidados específicos no dia a dia.',
+    category: 'Scalp care',
+  },
   {
     slug: '/blog/o-segredo-do-carvao-de-bambu',
     title: 'O segredo por trás do carvão de bambu',
