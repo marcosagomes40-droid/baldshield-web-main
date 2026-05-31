@@ -9,6 +9,7 @@ import Footer from "@/components/Footer.jsx";
 import BenefitCard from "@/components/BenefitCard.jsx";
 import CTASection from "@/components/CTASection.jsx";
 import SectionHeader from "@/components/SectionHeader.jsx";
+import VipFloatingModal from "@/components/VipFloatingModal.jsx";
 
 const HomePage = () => {
   const images = ["/hero-careca-premium.png", "/hero-careca-feminino.png"];
@@ -106,6 +107,7 @@ const HomePage = () => {
 
       <div className="min-h-screen bg-black">
         <Header />
+        <VipFloatingModal />
 
         {/* HERO */}
         <section className="relative overflow-hidden bg-black">
