@@ -11,10 +11,7 @@ import CTASection from "@/components/CTASection.jsx";
 import SectionHeader from "@/components/SectionHeader.jsx";
 
 const HomePage = () => {
-  const images = [
-    "/hero-careca-premium.png",
-    "/hero-careca-feminino.png",
-  ];
+  const images = ["/hero-careca-premium.png", "/hero-careca-feminino.png"];
 
   const [currentImage, setCurrentImage] = useState(0);
 
@@ -29,27 +26,27 @@ const HomePage = () => {
   const benefits = [
     {
       icon: Shield,
-      title: "Proteção UV",
+      title: "Proteção diária",
       description:
-        "Fórmula FPS que protege o couro cabeludo contra os raios UVA e UVB, ajudando a prevenir queimaduras e danos causados pela exposição solar.",
+        "Cuidado pensado para o couro cabeludo exposto, ajudando a proteger a pele contra agressões externas do dia a dia.",
     },
     {
       icon: Droplet,
-      title: "Resistente à água",
+      title: "Resistência e conforto",
       description:
-        "Mantém a proteção mesmo durante atividades ao ar livre, suor intenso ou contato com água.",
+        "Desenvolvido para acompanhar a rotina masculina, inclusive em dias quentes, atividades ao ar livre e momentos de maior exposição.",
     },
     {
       icon: Sparkles,
-      title: "Toque seco",
+      title: "Acabamento matte",
       description:
-        "Textura leve, de rápida absorção, sem oleosidade e sem brilho excessivo no couro cabeludo.",
+        "Textura leve, sensação confortável e visual mais seco, ajudando a reduzir o aspecto de brilho excessivo no couro cabeludo.",
     },
     {
       icon: Award,
-      title: "Testado dermatologicamente",
+      title: "Cuidado premium",
       description:
-        "Seguro para uso diário, inclusive em peles sensíveis.",
+        "Uma proposta de scalp care criada para homens que assumiram a careca com estilo, presença e confiança.",
     },
   ];
 
@@ -67,33 +64,39 @@ const HomePage = () => {
   return (
     <>
       <Helmet>
-        <title>BaldShield | Cuidados Premium para Homens Carecas</title>
+        <title>BaldShield | Scalp Care Premium para Homens Carecas</title>
 
         <meta
           name="description"
-          content="A primeira marca brasileira focada no cuidado premium do couro cabeludo masculino. Proteção solar matte, menos brilho e mais confiança para homens carecas."
+          content="A primeira marca brasileira focada no cuidado premium do couro cabeludo masculino. Controle de brilho, proteção diária e scalp care para homens carecas."
         />
 
         <meta
           name="keywords"
-          content="cuidados para homens carecas, protetor solar para careca, couro cabeludo masculino, proteção solar matte, como evitar brilho na careca, cuidado da careca, BaldShield"
+          content="cuidados para homens carecas, scalp care masculino, couro cabeludo masculino, como evitar brilho na careca, cuidado da careca, controle de oleosidade, BaldShield"
         />
 
         <link rel="canonical" href="https://www.baldshield.com/" />
 
-        <meta property="og:title" content="BaldShield | Cuidados Premium para Homens Carecas" />
+        <meta
+          property="og:title"
+          content="BaldShield | Scalp Care Premium para Homens Carecas"
+        />
         <meta
           property="og:description"
-          content="A primeira marca brasileira focada no cuidado premium do couro cabeludo masculino. Proteção solar matte, menos brilho e mais confiança para homens carecas."
+          content="A primeira marca brasileira focada no cuidado premium do couro cabeludo masculino. Controle de brilho, proteção diária e mais confiança para homens carecas."
         />
         <meta property="og:url" content="https://www.baldshield.com/" />
         <meta property="og:type" content="website" />
 
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="BaldShield | Cuidados Premium para Homens Carecas" />
+        <meta
+          name="twitter:title"
+          content="BaldShield | Scalp Care Premium para Homens Carecas"
+        />
         <meta
           name="twitter:description"
-          content="Proteção solar matte, controle de brilho e uma rotina premium desenvolvida para homens carecas."
+          content="Controle de brilho, proteção diária e uma rotina premium desenvolvida para homens carecas."
         />
 
         <script type="application/ld+json">
@@ -109,29 +112,27 @@ const HomePage = () => {
           <div className="absolute inset-0 bg-gradient-to-b from-black via-black to-zinc-950" />
 
           <div className="relative mx-auto grid min-h-[90vh] max-w-7xl items-center gap-12 px-6 py-20 md:px-10 lg:grid-cols-2 lg:gap-16 lg:py-28">
-            {/* TEXTO */}
             <div className="max-w-2xl space-y-6">
               <span className="inline-block text-xs font-semibold uppercase tracking-[0.35em] text-primary">
                 BaldShield
               </span>
 
-              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight">
-              A primeira marca brasileira
-              <span className="block text-primary">
-              para o cuidado da careca.
-              </span>
+              <h1 className="text-4xl font-bold leading-tight text-white sm:text-5xl lg:text-6xl">
+                A primeira marca brasileira
+                <span className="block text-primary">
+                  para o cuidado da careca.
+                </span>
               </h1>
 
-              <p className="text-lg text-zinc-300 max-w-xl">
-                Proteção solar matte, controle de brilho e uma rotina premium
-                desenvolvida para homens carecas.
+              <p className="max-w-xl text-lg text-zinc-300">
+                Proteção, controle de brilho e cuidado diário para quem assumiu
+                a careca com confiança.
               </p>
 
               <p className="text-sm uppercase tracking-[0.25em] text-zinc-400">
-                Sem brilho. Sem queimadura. Sem improviso.
+                Sem brilho. Sem improviso. Com presença.
               </p>
 
-              {/* CTA + Conversão */}
               <div className="pt-4">
                 <div className="flex flex-col items-start gap-4 sm:flex-row">
                   <Link
@@ -159,7 +160,6 @@ const HomePage = () => {
               </div>
             </div>
 
-            {/* IMAGEM */}
             <div className="relative">
               <div className="absolute inset-0 bg-primary/10 blur-3xl" />
 
@@ -168,11 +168,11 @@ const HomePage = () => {
                   src={images[currentImage]}
                   alt="Homem careca representando a rotina premium de cuidados BaldShield para couro cabeludo masculino"
                   loading="eager"
-                  className="w-full h-[600px] object-cover object-[center_8%] brightness-105 contrast-110 transition-opacity duration-700"
+                  className="h-[600px] w-full object-cover object-[center_8%] brightness-105 contrast-110 transition-opacity duration-700"
                 />
 
-                <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-white/15 pointer-events-none" />
-                <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_50%,rgba(255,120,0,0.12),transparent_60%)] pointer-events-none" />
+                <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-white/15" />
+                <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_80%_50%,rgba(255,120,0,0.12),transparent_60%)]" />
               </div>
             </div>
           </div>
@@ -186,207 +186,243 @@ const HomePage = () => {
               subtitle="Poucos minutos no sol já incomodam."
             />
 
-            <div className="mt-4 space-y-3 text-zinc-300 text-lg sm:text-xl text-center">
-              <p className="text-primary font-medium">O brilho aparece rápido.</p>
+            <div className="mt-4 space-y-3 text-center text-lg text-zinc-300 sm:text-xl">
+              <p className="font-medium text-primary">
+                O brilho aparece rápido.
+              </p>
+              <p className="text-white/80">O couro cabeludo fica exposto.</p>
               <p className="text-white/80">
-                O desconforto faz parte da rotina.
+                E durante anos, ninguém criou uma rotina pensada para isso.
+              </p>
+              <p className="font-medium text-primary">
+                Foi por isso que nasceu a BaldShield.
               </p>
             </div>
           </div>
         </section>
 
         {/* SEO PREMIUM SECTION */}
-        <section className="bg-black py-28 border-t border-white/5">
-          <div className="max-w-5xl mx-auto px-6 text-center">
-            <div className="text-center mb-6">
-              <span className="inline-block text-primary uppercase tracking-[0.28em] text-sm font-semibold">
-                Cuidado da careca
-              </span>
-            </div>
+        <section className="border-t border-white/5 bg-black py-28">
+          <div className="mx-auto max-w-5xl px-6 text-center">
+            <span className="mb-6 inline-block text-sm font-semibold uppercase tracking-[0.28em] text-primary">
+              Cuidado da careca
+            </span>
 
             <h2
-              className="text-4xl md:text-5xl font-bold leading-tight text-white"
+              className="text-4xl font-bold leading-tight text-white md:text-5xl"
               style={{ fontFamily: "Playfair Display, serif" }}
             >
               Por que homens carecas precisam de cuidados específicos?
             </h2>
 
-            <p className="mt-8 text-lg text-white/70 max-w-3xl mx-auto leading-relaxed">
+            <p className="mx-auto mt-8 max-w-3xl text-lg leading-relaxed text-white/70">
               O couro cabeludo masculino está entre as áreas mais expostas ao
-              sol, ao calor e ao brilho excessivo. Mesmo assim, durante anos,
-              homens carecas precisaram improvisar com produtos feitos para o
-              rosto, para o corpo ou para quem ainda tem cabelo.
+              sol, ao calor, à oleosidade e ao brilho excessivo. Mesmo assim,
+              durante anos, homens carecas precisaram improvisar com produtos
+              feitos para o rosto, para o corpo ou para quem ainda tem cabelo.
             </p>
 
-            <p className="mt-5 text-lg text-white/70 max-w-3xl mx-auto leading-relaxed">
-              A BaldShield nasceu para mudar isso: uma rotina premium focada em
-              proteção solar matte, controle de brilho e conforto diário para
-              homens carecas.
+            <p className="mx-auto mt-5 max-w-3xl text-lg leading-relaxed text-white/70">
+              A BaldShield nasceu para mudar isso: um conceito premium de scalp
+              care focado em proteção, controle visual, equilíbrio e cuidado
+              diário para homens carecas.
             </p>
           </div>
         </section>
 
         {/* QUEBRA DE PADRÃO */}
         <section className="bg-black py-32">
-          <div className="max-w-4xl mx-auto px-6 text-center">
+          <div className="mx-auto max-w-4xl px-6 text-center">
             <SectionHeader label="A VERDADE É SIMPLES" />
 
             <h2
-              className="text-4xl md:text-5xl font-bold leading-tight text-white"
+              className="text-4xl font-bold leading-tight text-white md:text-5xl"
               style={{ fontFamily: "Playfair Display, serif" }}
             >
               Durante anos, ninguém pensou no cuidado do couro cabeludo de quem
               não tem cabelo.
             </h2>
 
-            <p className="mt-8 text-lg text-white/70 max-w-2xl mx-auto leading-relaxed">
+            <p className="mx-auto mt-8 max-w-2xl text-lg leading-relaxed text-white/70">
               Produtos existem para cabelo. Para barba. Para pele. Mas não para
               quem decidiu assumir a careca como estilo.
             </p>
 
-            <p className="mt-4 text-lg text-white/70 max-w-2xl mx-auto leading-relaxed">
+            <p className="mx-auto mt-4 max-w-2xl text-lg leading-relaxed text-white/70">
               A BaldShield nasce para mudar isso.
             </p>
           </div>
         </section>
 
         {/* QUEM SOMOS */}
-        <section className="py-28 bg-gradient-to-b from-black to-card">
-          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <p className="text-lg md:text-xl uppercase tracking-[0.7em] text-primary mb-10 text-center font-semibold">
+        <section className="bg-gradient-to-b from-black to-card py-28">
+          <div className="mx-auto max-w-4xl px-4 text-center sm:px-6 lg:px-8">
+            <p className="mb-10 text-center text-lg font-semibold uppercase tracking-[0.7em] text-primary md:text-xl">
               BALDSHIELD
             </p>
 
             <h2
-              className="text-4xl md:text-5xl font-bold text-foreground mb-6"
+              className="mb-6 text-4xl font-bold text-foreground md:text-5xl"
               style={{ fontFamily: "Playfair Display, serif" }}
             >
               Mais do que proteção. Uma nova forma de cuidar do couro cabeludo.
             </h2>
 
-            <p className="text-lg md:text-xl text-secondary leading-relaxed max-w-3xl mx-auto mb-6">
+            <p className="mx-auto mb-6 max-w-3xl text-lg leading-relaxed text-secondary md:text-xl">
               A BaldShield nasce como a primeira marca brasileira focada na
               saúde do couro cabeludo de quem assumiu a careca com estilo.
             </p>
 
-            <p className="text-base text-muted-foreground max-w-2xl mx-auto">
-              O couro cabeludo é uma das áreas mais expostas ao sol — e por
+            <p className="mx-auto max-w-2xl text-base text-muted-foreground">
+              O couro cabeludo é uma das áreas mais expostas do corpo — e por
               muito tempo foi negligenciado. A BaldShield surge para mudar isso
-              com foco em saúde, proteção e cuidado diário.
+              com foco em saúde, proteção, controle e cuidado diário.
             </p>
           </div>
         </section>
 
-        {/* ROTINA BALDSHIELD */}
-        <section className="bg-black py-32">
-          <div className="mx-auto max-w-6xl px-6">
-            <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center mb-20">
-              <p className="text-lg md:text-xl uppercase tracking-[0.7em] text-primary mb-10 font-semibold">
-                BALDSHIELD
-              </p>
+        {/* SCALP DEFENSE SYSTEM */}
+        <section className="relative overflow-hidden bg-black py-32">
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_20%,rgba(255,115,0,0.10),transparent_35%)]" />
+
+          <div className="relative mx-auto max-w-6xl px-6">
+            <div className="mx-auto mb-20 max-w-4xl text-center">
+              <div className="mb-8 flex items-center justify-center gap-6">
+                <span className="hidden h-px w-28 bg-gradient-to-r from-transparent via-primary to-primary md:block" />
+                <span className="relative text-center text-sm font-semibold uppercase tracking-[0.55em] text-primary md:text-base">
+                  Scalp Defense System™
+                </span>
+                <span className="hidden h-px w-28 bg-gradient-to-l from-transparent via-primary to-primary md:block" />
+              </div>
 
               <h2
-                className="text-4xl md:text-5xl font-bold text-white mb-6"
+                className="mb-6 text-4xl font-bold leading-tight text-white md:text-5xl"
                 style={{ fontFamily: "Playfair Display, serif" }}
               >
-                Uma rotina completa para o couro cabeludo.
+                Uma rotina completa
+                <span className="block">para o couro cabeludo.</span>
               </h2>
 
-              <p className="text-lg text-white/70 max-w-2xl mx-auto leading-relaxed">
-                Estamos construindo uma linha pensada para quem assumiu a
-                careca como estilo — com proteção, controle de brilho e cuidado
-                diário.
+              <p className="mx-auto max-w-2xl text-lg leading-relaxed text-white/70">
+                Estamos construindo um sistema pensado para quem assumiu a
+                careca como estilo — com proteção, controle de brilho, equilíbrio
+                e cuidado diário.
               </p>
             </div>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-              <div className="rounded-2xl border border-primary/50 bg-gradient-to-b from-primary/10 to-transparent p-6 transition hover:bg-primary/10 shadow-[0_0_40px_rgba(255,115,0,0.12)]">
-                <p className="text-xs uppercase tracking-[0.3em] text-primary mb-4 font-semibold">
-                  Primeiro lançamento
+            <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
+              <div className="rounded-2xl border border-primary/60 bg-gradient-to-b from-primary/10 to-transparent p-7 text-center shadow-[0_0_45px_rgba(255,115,0,0.14)] transition hover:bg-primary/10">
+                <p className="mb-6 text-xs font-semibold uppercase tracking-[0.35em] text-primary">
+                  Protect
                 </p>
-                <h3 className="text-xl font-semibold text-white mb-3">
-                  Proteção solar
+
+                <div className="mx-auto mb-6 flex h-14 w-14 items-center justify-center rounded-full bg-primary/10 text-primary">
+                  <Shield size={26} />
+                </div>
+
+                <h3 className="mb-4 text-2xl font-semibold text-white">
+                  Proteção diária
                 </h3>
-                <p className="text-white/75 text-sm leading-relaxed">
-                  Proteção UVA/UVB com toque seco, pensada para o couro
-                  cabeludo exposto.
+
+                <p className="text-sm leading-relaxed text-white/70">
+                  Cuidado pensado para ajudar a proteger o couro cabeludo
+                  exposto na rotina diária.
                 </p>
               </div>
 
-              <div className="rounded-2xl border border-white/10 p-6 bg-white/5 hover:bg-white/10 transition">
-                <p className="text-xs uppercase tracking-[0.3em] text-white/40 mb-4">
-                  Em desenvolvimento
+              <div className="rounded-2xl border border-white/10 bg-white/5 p-7 text-center transition hover:border-primary/40 hover:bg-white/10">
+                <p className="mb-6 text-xs uppercase tracking-[0.35em] text-white/50">
+                  Control
                 </p>
-                <h3 className="text-xl font-semibold text-white mb-3">
+
+                <div className="mx-auto mb-6 flex h-14 w-14 items-center justify-center rounded-full bg-primary/10 text-primary">
+                  <Droplet size={26} />
+                </div>
+
+                <h3 className="mb-4 text-2xl font-semibold text-white">
                   Controle de brilho
                 </h3>
-                <p className="text-white/60 text-sm leading-relaxed">
-                  Lenços antibrilho para remover a oleosidade instantaneamente.
+
+                <p className="text-sm leading-relaxed text-white/60">
+                  Controle visual da oleosidade e do brilho excessivo ao longo
+                  do dia.
                 </p>
               </div>
 
-              <div className="rounded-2xl border border-white/10 p-6 bg-white/5 hover:bg-white/10 transition">
-                <p className="text-xs uppercase tracking-[0.3em] text-white/40 mb-4">
-                  Em desenvolvimento
+              <div className="rounded-2xl border border-white/10 bg-white/5 p-7 text-center transition hover:border-primary/40 hover:bg-white/10">
+                <p className="mb-6 text-xs uppercase tracking-[0.35em] text-white/50">
+                  Hydrate
                 </p>
-                <h3 className="text-xl font-semibold text-white mb-3">
+
+                <div className="mx-auto mb-6 flex h-14 w-14 items-center justify-center rounded-full bg-primary/10 text-primary">
+                  <Droplet size={26} />
+                </div>
+
+                <h3 className="mb-4 text-2xl font-semibold text-white">
                   Hidratação
                 </h3>
-                <p className="text-white/60 text-sm leading-relaxed">
-                  Hidratação leve para manter conforto, equilíbrio e saúde da
-                  pele.
+
+                <p className="text-sm leading-relaxed text-white/60">
+                  Conforto, equilíbrio e hidratação leve para o couro cabeludo.
                 </p>
               </div>
 
-              <div className="rounded-2xl border border-white/10 p-6 bg-white/5 hover:bg-white/10 transition">
-                <p className="text-xs uppercase tracking-[0.3em] text-white/40 mb-4">
-                  Em desenvolvimento
+              <div className="rounded-2xl border border-white/10 bg-white/5 p-7 text-center transition hover:border-primary/40 hover:bg-white/10">
+                <p className="mb-6 text-xs uppercase tracking-[0.35em] text-white/50">
+                  Clean
                 </p>
-                <h3 className="text-xl font-semibold text-white mb-3">
+
+                <div className="mx-auto mb-6 flex h-14 w-14 items-center justify-center rounded-full bg-primary/10 text-primary">
+                  <Sparkles size={26} />
+                </div>
+
+                <h3 className="mb-4 text-2xl font-semibold text-white">
                   Limpeza e renovação
                 </h3>
-                <p className="text-white/60 text-sm leading-relaxed">
-                  Esfoliação suave para remover impurezas e renovar a pele.
+
+                <p className="text-sm leading-relaxed text-white/60">
+                  Limpeza suave para remover impurezas e preparar a pele para o
+                  cuidado diário.
                 </p>
               </div>
             </div>
 
-            <div className="text-center mt-14">
+            <div className="mt-14 text-center">
               <Link
                 to="/products"
                 className="inline-flex items-center justify-center rounded-full border border-primary px-8 py-4 text-sm font-semibold text-primary transition hover:bg-primary hover:text-black"
               >
-                Conhecer a linha BaldShield
+                Conhecer o Scalp Defense System™
               </Link>
             </div>
           </div>
         </section>
 
         {/* BENEFÍCIOS */}
-        <section className="py-24 bg-gradient-to-b from-black to-card">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <section className="bg-gradient-to-b from-black to-card py-24">
+          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
-              className="text-center mb-16"
+              className="mb-16 text-center"
             >
               <h2
-                className="text-4xl md:text-5xl font-bold text-foreground mb-6"
+                className="mb-6 text-4xl font-bold text-foreground md:text-5xl"
                 style={{ fontFamily: "Playfair Display, serif" }}
               >
                 Por que escolher a BaldShield?
               </h2>
 
-              <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-                Desenvolvido especialmente para o couro cabeludo masculino, com
-                proteção avançada, conforto no uso diário e performance para a
-                rotina ao ar livre.
+              <p className="mx-auto max-w-2xl text-lg text-muted-foreground">
+                Desenvolvida especialmente para o couro cabeludo masculino, com
+                uma proposta premium de proteção, conforto, controle visual e
+                cuidado diário.
               </p>
             </motion.div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
               {benefits.map((benefit, index) => (
                 <BenefitCard
                   key={index}
