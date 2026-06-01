@@ -6,8 +6,8 @@ const VipFloatingModal = () => {
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
-    // Para teste, deixe false.
-    // Depois de publicar, troque para:
+    // Durante a FCE Cosmetique, manter como false para aparecer em todas as visitas.
+    // Após a feira, trocar para:
     // const alreadySeen = localStorage.getItem("baldshield_vip_modal_seen");
     const alreadySeen = false;
 
@@ -28,11 +28,11 @@ const VipFloatingModal = () => {
   if (!isVisible) return null;
 
   return (
-    <div className="fixed inset-0 z-[9999] flex items-center justify-center bg-black/70 px-4 backdrop-blur-sm">
-      <div className="relative w-full max-w-xl overflow-hidden rounded-[2rem] border border-primary/30 bg-[#050505] p-8 text-center shadow-[0_0_80px_rgba(255,115,0,0.20)] md:p-10">
+    <div className="fixed inset-0 z-[9999] flex items-center justify-center bg-black/70 px-4 py-6 backdrop-blur-sm sm:py-8">
+      <div className="relative w-full max-w-xl max-h-[92vh] overflow-y-auto rounded-[2rem] border border-primary/30 bg-[#050505] p-6 text-center shadow-[0_0_80px_rgba(255,115,0,0.20)] sm:p-8 md:p-10">
         <button
           onClick={closeModal}
-          className="absolute right-5 top-5 rounded-full border border-white/10 p-2 text-white/60 transition hover:border-primary hover:text-primary"
+          className="absolute right-4 top-4 z-10 rounded-full border border-white/10 bg-black/40 p-2 text-white/60 transition hover:border-primary hover:text-primary"
           aria-label="Fechar"
         >
           <X size={18} />
@@ -40,31 +40,32 @@ const VipFloatingModal = () => {
 
         <div className="mb-4 flex justify-center">
           <img
-             src="/baldshield-logo.png"
+            src="/baldshield-logo.png"
             alt="BaldShield"
-            className="h-36 w-auto object-contain drop-shadow-[0_0_25px_rgba(255,115,0,0.35)]"
+            className="h-24 w-auto object-contain drop-shadow-[0_0_25px_rgba(255,115,0,0.35)] sm:h-28 md:h-32"
             onError={(e) => {
               e.currentTarget.style.display = "none";
             }}
           />
         </div>
 
-        <p className="mb-5 text-xs font-semibold uppercase tracking-[0.40em] text-primary">
+        <p className="mb-4 text-xs font-semibold uppercase tracking-[0.40em] text-primary">
           LISTA VIP
         </p>
 
         <h2
-          className="mb-6 text-4xl font-bold leading-tight text-white"
+          className="mb-5 text-3xl font-bold leading-tight text-white sm:text-4xl"
           style={{ fontFamily: "Playfair Display, serif" }}
         >
           Bem-vindo à BaldShield.
         </h2>
 
-        <p className="mb-5 text-lg leading-relaxed text-white/75">
-          Você acaba de descobrir a primeira marca brasileira dedicada à saúde e ao cuidado do couro cabeludo exposto.
+        <p className="mb-4 text-base leading-relaxed text-white/75 sm:text-lg">
+          Você acaba de descobrir a primeira marca brasileira dedicada à saúde e
+          ao cuidado do couro cabeludo exposto.
         </p>
 
-        <p className="mb-8 text-lg leading-relaxed text-white/75">
+        <p className="mb-7 text-base leading-relaxed text-white/75 sm:text-lg">
           Entre para a Lista VIP e acompanhe o lançamento do
           <span className="font-medium text-primary">
             {" "}
@@ -77,14 +78,14 @@ const VipFloatingModal = () => {
           <Link
             to="/pre-launch?scroll=lista"
             onClick={closeModal}
-            className="inline-flex items-center justify-center rounded-full bg-primary px-8 py-4 text-base font-semibold text-black transition hover:scale-105 hover:bg-primary/90"
+            className="inline-flex w-full items-center justify-center rounded-full bg-primary px-7 py-4 text-base font-semibold text-black transition hover:scale-105 hover:bg-primary/90 sm:w-auto sm:px-8"
           >
             Entrar para Lista VIP
           </Link>
 
           <button
             onClick={closeModal}
-            className="inline-flex items-center justify-center rounded-full border border-white/15 px-8 py-4 text-base font-semibold text-white/70 transition hover:border-primary hover:text-primary"
+            className="inline-flex w-full items-center justify-center rounded-full border border-white/15 px-7 py-4 text-base font-semibold text-white/70 transition hover:border-primary hover:text-primary sm:w-auto sm:px-8"
           >
             Agora não
           </button>
