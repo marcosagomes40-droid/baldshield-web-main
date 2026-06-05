@@ -6,10 +6,9 @@ const VipFloatingModal = () => {
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
-    // Durante a FCE Cosmetique, manter como false para aparecer em todas as visitas.
-    // Após a feira, trocar para:
-    // const alreadySeen = localStorage.getItem("baldshield_vip_modal_seen");
-    const alreadySeen = false;
+    const alreadySeen = localStorage.getItem(
+      "baldshield_vip_modal_seen"
+    );
 
     if (alreadySeen) return;
 

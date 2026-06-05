@@ -2,10 +2,8 @@ import fs from 'fs';
 import path from 'path';
 
 const RESEND_API_KEY = process.env.RESEND_API_KEY;
-
 const BATCH_SIZE = 10;
 const DELAY_MS = 2500;
-
 const FROM = 'BaldShield <contato@baldshield.com>';
 
 const NEWSLETTER = {
