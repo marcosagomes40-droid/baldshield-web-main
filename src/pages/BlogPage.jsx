@@ -5,7 +5,16 @@ import Header from '@/components/Header.jsx';
 import Footer from '@/components/Footer.jsx';
 
 const posts = [
-    {
+  {
+    slug: '/blog/o-que-e-scalp-defense-system',
+    title: 'O que é o Scalp Defense System™?',
+    excerpt:
+      'Conheça o método criado pela BaldShield para cuidar do couro cabeludo exposto através dos pilares Clean, Hydrate, Protect e Control.',
+    category: 'Scalp Defense System™',
+    date: '05 jun. 2026',
+    isNew: true,
+  },
+  {
     slug: '/blog/rotina-ideal-para-homens-carecas',
     title: 'A rotina ideal para homens carecas',
     excerpt:
@@ -70,8 +79,8 @@ const BlogPage = () => {
             </h1>
 
             <p className="mb-12 max-w-2xl text-lg leading-relaxed text-gray-300">
-              Dicas práticas sobre brilho, proteção solar, oleosidade e cuidado diário
-              com o couro cabeludo exposto.
+              Dicas práticas sobre brilho, proteção solar, oleosidade e cuidado
+              diário com o couro cabeludo exposto.
             </p>
 
             <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
@@ -81,9 +90,23 @@ const BlogPage = () => {
                   to={post.slug}
                   className="group rounded-[2rem] border border-white/10 bg-white/5 p-6 transition hover:border-primary/50 hover:bg-white/10"
                 >
-                  <span className="mb-4 inline-block text-xs font-semibold uppercase tracking-[0.25em] text-primary">
-                    {post.category}
-                  </span>
+                  <div className="mb-4 flex items-center justify-between gap-3">
+                    <span className="inline-block text-xs font-semibold uppercase tracking-[0.25em] text-primary">
+                      {post.category}
+                    </span>
+
+                    {post.isNew && (
+                      <span className="rounded-full border border-primary/40 px-3 py-1 text-[10px] font-semibold uppercase tracking-[0.22em] text-primary">
+                        Novo
+                      </span>
+                    )}
+                  </div>
+
+                  {post.date && (
+                    <p className="mb-3 text-xs uppercase tracking-[0.18em] text-zinc-500">
+                      {post.date}
+                    </p>
+                  )}
 
                   <h2
                     className="mb-4 text-2xl font-bold transition group-hover:text-primary"
@@ -92,9 +115,7 @@ const BlogPage = () => {
                     {post.title}
                   </h2>
 
-                  <p className="mb-6 text-gray-300">
-                    {post.excerpt}
-                  </p>
+                  <p className="mb-6 text-gray-300">{post.excerpt}</p>
 
                   <span className="font-semibold text-primary">
                     Ler artigo →
