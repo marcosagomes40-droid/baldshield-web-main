@@ -1,33 +1,113 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <!-- Páginas Principais -->
+
   <url>
-    <loc>https://baldshield.com/</loc>
-    <lastmod>2026-03-23</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>1</priority>
+    <loc>https://www.baldshield.com/</loc>
+    <lastmod>2026-06-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
   </url>
+
   <url>
-    <loc>https://baldshield.com/products</loc>
-    <lastmod>2026-03-23</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>1</priority>
+    <loc>https://www.baldshield.com/products</loc>
+    <lastmod>2026-06-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
   </url>
+
   <url>
-    <loc>https://baldshield.com/benefits</loc>
-    <lastmod>2026-03-23</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>1</priority>
+    <loc>https://www.baldshield.com/benefits</loc>
+    <lastmod>2026-06-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
+
   <url>
-    <loc>https://baldshield.com/contact</loc>
-    <lastmod>2026-03-23</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>1</priority>
+    <loc>https://www.baldshield.com/about</loc>
+    <lastmod>2026-06-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
+
   <url>
-    <loc>https://baldshield.com/success</loc>
-    <lastmod>2026-03-23</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>1</priority>
+    <loc>https://www.baldshield.com/pre-launch</loc>
+    <lastmod>2026-06-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
   </url>
+
+  <url>
+    <loc>https://www.baldshield.com/embaixador</loc>
+    <lastmod>2026-06-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://www.baldshield.com/cosmetique</loc>
+    <lastmod>2026-06-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://www.baldshield.com/contact</loc>
+    <lastmod>2026-06-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://www.baldshield.com/blog</loc>
+    <lastmod>2026-06-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Blog -->
+
+  <url>
+    <loc>https://www.baldshield.com/blog/o-que-e-scalp-defense-system</loc>
+    <lastmod>2026-06-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://www.baldshield.com/blog/rotina-ideal-para-homens-carecas</loc>
+    <lastmod>2026-05-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://www.baldshield.com/blog/por-que-a-careca-brilha</loc>
+    <lastmod>2026-05-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://www.baldshield.com/blog/risco-invisivel-no-couro-cabeludo</loc>
+    <lastmod>2026-05-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://www.baldshield.com/blog/o-segredo-do-carvao-de-bambu</loc>
+    <lastmod>2026-05-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://www.baldshield.com/blog/dia-zero-careca-confianca</loc>
+    <lastmod>2026-05-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
 </urlset>
