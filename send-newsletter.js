@@ -3,20 +3,20 @@ import path from 'path';
 
 const API_URL = 'https://www.baldshield.com/api/send-newsletter';
 
-const BATCH_SIZE = 10;
+const BATCH_SIZE = 1;
 const DELAY_MS = 2500;
 
 const NEWSLETTER = {
-  subject: 'A rotina ideal para homens carecas',
+  subject: 'Sua careca parece mais brilhante na câmera?',
   preview:
-    'Muito além da estética: a importância do cuidado diário para homens carecas.',
-  title: 'A rotina ideal para homens carecas',
+    'Entenda como iluminação, webcams e reflexos podem alterar a aparência do couro cabeludo exposto.',
+  title: 'Por que minha careca parece mais brilhante na câmera?',
   subtitle:
-    'Muito além da estética: por que o couro cabeludo exposto exige cuidados específicos no dia a dia.',
+    'Entenda como iluminação, webcams, telas e reflexos podem alterar a aparência do couro cabeludo exposto em videoconferências.',
   articleUrl:
-    'https://www.baldshield.com/blog/rotina-ideal-para-homens-carecas',
+    'https://www.baldshield.com/blog/por-que-minha-careca-brilha-na-camera',
   imageUrl:
-    'https://www.baldshield.com/Blog/rotina-ideal-homens-carecas-baldshield.webp',
+    'https://www.baldshield.com/Blog/careca-brilha-na-camera-videoconferencia-baldshield.webp',
 };
 
 function delay(ms) {
@@ -46,10 +46,10 @@ function buildEmailHtml(nome) {
             <tr>
               <td style="padding:28px 32px 18px 32px; text-align:center;">
                 <img 
-                  src="https://www.baldshield.com/BaldShield Logo fundo escuro.png" 
+                  src="https://www.baldshield.com/baldshield-logo.png" 
                   alt="BaldShield" 
-                  width="140" 
-                  style="display:block; margin:0 auto; max-width:140px; height:auto;" 
+                  width="180" 
+                  style="display:block; margin:0 auto; max-width:180px; height:auto;" 
                 />
               </td>
             </tr>
@@ -58,7 +58,7 @@ function buildEmailHtml(nome) {
               <td>
                 <img 
                   src="${NEWSLETTER.imageUrl}" 
-                  alt="A rotina ideal para homens carecas" 
+                  alt="Homem careca em videoconferência percebendo brilho excessivo no couro cabeludo" 
                   width="640" 
                   style="display:block; width:100%; max-width:640px; height:auto;" 
                 />
@@ -68,10 +68,10 @@ function buildEmailHtml(nome) {
             <tr>
               <td style="padding:36px 32px 12px 32px;">
                 <p style="margin:0 0 14px 0; color:#ff7a1a; font-size:12px; letter-spacing:4px; text-transform:uppercase; font-weight:bold;">
-                  Blog BaldShield
+                  Aparência Digital
                 </p>
 
-                <h1 style="margin:0 0 18px 0; color:#ffffff; font-size:34px; line-height:1.15; font-weight:800;">
+                <h1 style="margin:0 0 18px 0; color:#ffffff; font-size:30px; line-height:1.18; font-weight:800;">
                   ${NEWSLETTER.title}
                 </h1>
 
@@ -84,37 +84,64 @@ function buildEmailHtml(nome) {
                 </p>
 
                 <p style="margin:0 0 18px 0; color:#cfcfcf; font-size:16px; line-height:1.7;">
-                  Existe uma diferença entre raspar a cabeça e cuidar dela.
+                  Você já participou de uma reunião online e teve a sensação de que sua careca parecia muito mais brilhante na câmera do que no espelho?
                 </p>
 
                 <p style="margin:0 0 18px 0; color:#cfcfcf; font-size:16px; line-height:1.7;">
-                  Durante muito tempo, homens carecas simplesmente improvisaram. Mas o couro cabeludo continua sendo pele — e talvez uma das áreas mais expostas do corpo.
+                  A boa notícia é que isso nem sempre está relacionado à oleosidade.
                 </p>
 
-                <p style="margin:0 0 28px 0; color:#cfcfcf; font-size:16px; line-height:1.7;">
-                  No novo artigo da BaldShield, falamos sobre oleosidade, brilho excessivo, exposição solar, conforto e o nascimento do scalp care masculino.
+                <p style="margin:0 0 18px 0; color:#cfcfcf; font-size:16px; line-height:1.7;">
+                  Iluminação, webcams, monitores e reflexos podem alterar significativamente a forma como o couro cabeludo exposto aparece em videochamadas e gravações.
                 </p>
 
-                <table cellpadding="0" cellspacing="0" border="0" style="margin:0 auto 30px auto;">
+                <div style="margin:30px 0; padding:22px; border:1px solid #2a2a2a; border-radius:20px; background:#080808;">
+                  <p style="margin:0 0 14px 0; color:#ff7a1a; font-size:12px; letter-spacing:3px; text-transform:uppercase; font-weight:bold; text-align:center;">
+                    Neste artigo você vai descobrir
+                  </p>
+
+                  <p style="margin:0 0 10px 0; color:#ffffff; font-size:15px; line-height:1.7;">
+                    ✓ Por que a câmera pode aumentar a percepção de brilho
+                  </p>
+
+                  <p style="margin:0 0 10px 0; color:#ffffff; font-size:15px; line-height:1.7;">
+                    ✓ Como a iluminação influencia sua aparência
+                  </p>
+
+                  <p style="margin:0 0 10px 0; color:#ffffff; font-size:15px; line-height:1.7;">
+                    ✓ O impacto das webcams e telas no resultado final
+                  </p>
+
+                  <p style="margin:0; color:#ffffff; font-size:15px; line-height:1.7;">
+                    ✓ Práticas simples para melhorar sua presença online
+                  </p>
+                </div>
+
+                <table cellpadding="0" cellspacing="0" border="0" style="margin:0 auto 32px auto;">
                   <tr>
-                    <td align="center" bgcolor="#ff7a1a" style="border-radius:14px;">
+                    <td align="center" bgcolor="#ff7a1a" style="border-radius:999px;">
                       <a 
                         href="${NEWSLETTER.articleUrl}" 
                         target="_blank" 
-                        style="display:inline-block; padding:16px 28px; color:#050505; text-decoration:none; font-size:15px; font-weight:800;"
+                        style="display:inline-block; padding:16px 30px; color:#050505; text-decoration:none; font-size:15px; font-weight:800;"
                       >
-                        Ler artigo agora
+                        Ler artigo completo
                       </a>
                     </td>
                   </tr>
                 </table>
+
+                <p style="margin:0 0 18px 0; color:#cfcfcf; font-size:16px; line-height:1.7;">
+                  Na BaldShield acreditamos que assumir a careca é estilo.
+                  Cuidar dela é o próximo passo.
+                </p>
 
                 <p style="margin:0 0 8px 0; color:#ffffff; font-size:16px; line-height:1.7; font-weight:bold;">
                   BaldShield
                 </p>
 
                 <p style="margin:0; color:#a9a9a9; font-size:14px; line-height:1.6;">
-                  Scalp Care para homens carecas.
+                  Scalp Defense System™ · Confidence for the Bold.
                 </p>
               </td>
             </tr>
@@ -143,17 +170,25 @@ function buildEmailText(nome) {
   return `
 Olá, ${firstName}.
 
-Existe uma diferença entre raspar a cabeça e cuidar dela.
+Você já participou de uma reunião online e teve a sensação de que sua careca parecia muito mais brilhante na câmera do que no espelho?
 
-Durante muito tempo, homens carecas simplesmente improvisaram. Mas o couro cabeludo continua sendo pele — e talvez uma das áreas mais expostas do corpo.
+A boa notícia é que isso nem sempre está relacionado à oleosidade.
 
-No novo artigo da BaldShield, falamos sobre oleosidade, brilho excessivo, exposição solar, conforto e o nascimento do scalp care masculino.
+Iluminação, webcams, monitores e reflexos podem alterar significativamente a forma como o couro cabeludo exposto aparece em videochamadas e gravações.
+
+No novo artigo da BaldShield você vai descobrir:
+
+- Por que a câmera pode aumentar a percepção de brilho
+- Como a iluminação influencia sua aparência
+- O impacto das webcams e telas no resultado final
+- Práticas simples para melhorar sua presença online
 
 Leia agora:
 ${NEWSLETTER.articleUrl}
 
 BaldShield
-Scalp Care para homens carecas.
+Scalp Defense System™
+Confidence for the Bold.
 `;
 }
 
@@ -248,6 +283,7 @@ async function run() {
       }
 
       console.log('');
+
       await delay(DELAY_MS);
     }
 
