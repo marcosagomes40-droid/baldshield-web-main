@@ -1,16 +1,16 @@
 import fs from "fs";
 import path from "path";
 
-const RESEND_API_KEY = "re_gS9Qsv71_5zVyDgv14x9Q4EWLw3vc25fP";
+const RESEND_API_KEY = "COLE_SUA_CHAVE_RESEND_AQUI";
 
-const BATCH_SIZE = 15;
+const BATCH_SIZE = 1;
 const DELAY_MS = 2500;
 
 const FROM = "BaldShield <contato@baldshield.com>";
 
-const EMAIL = {
-  subject: "Obrigado pela conversa na FCE Cosmetique 2026",
-  siteUrl: "https://www.baldshield.com",
+const NEWSLETTER = {
+  subject: "Durante anos ninguém criou uma rotina para homens carecas",
+  articleUrl: "https://www.baldshield.com/blog/o-que-e-scalp-defense-system",
   logoUrl: "https://www.baldshield.com/baldshield-logo.png",
 };
 
@@ -19,7 +19,7 @@ function delay(ms) {
 }
 
 function getFirstName(nome) {
-  return nome?.trim()?.split(" ")?.[0] || "tudo bem";
+  return nome?.trim()?.split(" ")?.[0] || "BaldShield Member";
 }
 
 function buildHtml(contact) {
@@ -31,17 +31,17 @@ function buildHtml(contact) {
       
       <div style="padding:34px 24px 24px;text-align:center;">
         <img 
-          src="${EMAIL.logoUrl}" 
+          src="${NEWSLETTER.logoUrl}" 
           alt="BaldShield" 
           style="width:210px;max-width:75%;height:auto;margin:0 auto 34px;display:block;" 
         />
 
         <p style="color:#ff7a1a;text-transform:uppercase;letter-spacing:5px;font-size:12px;font-weight:bold;margin:0 0 22px;">
-          FCE COSMETIQUE 2026
+          SCALP DEFENSE SYSTEM™
         </p>
 
         <h1 style="font-family:Georgia,'Times New Roman',serif;font-size:28px;line-height:1.18;margin:0 0 32px;color:#ffffff;">
-          Obrigado por fazer parte do primeiro capítulo da BaldShield.
+          Durante anos ninguém criou uma rotina para homens carecas.
         </h1>
 
         <p style="color:#cfcfcf;font-size:16px;line-height:1.7;margin:0 0 18px;text-align:left;">
@@ -49,24 +49,24 @@ function buildHtml(contact) {
         </p>
 
         <p style="color:#cfcfcf;font-size:16px;line-height:1.7;margin:0 0 18px;text-align:left;">
-          Foi um prazer conhecer você durante a FCE Cosmetique 2026.
+          Quando alguém perde os cabelos, os fios desaparecem. Mas o couro cabeludo continua lá.
         </p>
 
         <p style="color:#cfcfcf;font-size:16px;line-height:1.7;margin:0 0 18px;text-align:left;">
-          A BaldShield nasceu com uma missão clara: desenvolver a primeira marca brasileira dedicada à saúde e ao cuidado do couro cabeludo exposto.
+          Continua exposto ao sol. Continua produzindo oleosidade. Continua sofrendo com calor, ressecamento e desconforto.
         </p>
 
         <p style="color:#cfcfcf;font-size:16px;line-height:1.7;margin:0 0 18px;text-align:left;">
-          Durante a feira tivemos a oportunidade de conversar com profissionais, fornecedores e parceiros que compartilham nossa visão sobre inovação, desenvolvimento e qualidade na indústria cosmética.
+          Foi dessa observação que nasceu o <strong style="color:#ffffff;">Scalp Defense System™</strong>: o método desenvolvido pela BaldShield para cuidar da saúde, do conforto e da aparência do couro cabeludo exposto.
         </p>
 
         <div style="margin:32px 0;padding:20px 22px;border:1px solid #2a2a2a;border-radius:20px;background:#080808;text-align:center;">
           <p style="color:#ff7a1a;text-transform:uppercase;letter-spacing:4px;font-size:12px;font-weight:bold;margin:0 0 16px;">
-            SCALP DEFENSE SYSTEM™
+            OS QUATRO PILARES
           </p>
 
           <p style="color:#ffffff;font-size:17px;line-height:1.6;margin:0 0 12px;font-weight:bold;">
-            Protect · Control · Hydrate · Clean
+            Clean · Hydrate · Protect · Control
           </p>
 
           <p style="color:#999999;font-size:14px;line-height:1.6;margin:0;">
@@ -74,22 +74,23 @@ function buildHtml(contact) {
           </p>
         </div>
 
+        <p style="color:#cfcfcf;font-size:16px;line-height:1.7;margin:0 0 24px;text-align:left;">
+          Este é apenas o começo de uma nova categoria de cuidados pensada para homens carecas.
+        </p>
+
         <div style="text-align:center;margin:36px 0;">
-          <a href="${EMAIL.siteUrl}" target="_blank" style="background:#ff7a1a;color:#050505;text-decoration:none;padding:16px 32px;border-radius:999px;font-weight:bold;font-size:15px;display:inline-block;">
-            Conheça a BaldShield
+          <a href="${NEWSLETTER.articleUrl}" target="_blank" style="background:#ff7a1a;color:#050505;text-decoration:none;padding:16px 32px;border-radius:999px;font-weight:bold;font-size:15px;display:inline-block;">
+            Ler artigo completo
           </a>
         </div>
 
         <p style="color:#ff7a1a;font-size:15px;line-height:1.7;margin:0;text-align:left;font-weight:600;">
-          Estamos apenas começando.Esperamos que esta seja a primeira de muitas conversas e oportunidades de colaboração.
+          O futuro do scalp care masculino começou.
         </p>
 
         <div style="margin-top:32px;text-align:left;">
-          <p style="color:#ffffff;font-weight:bold;margin:0 0 4px;">Marcos Gomes</p>
-          <p style="color:#999999;font-size:14px;margin:0 0 12px;">Founder – BaldShield</p>
-
-          <p style="color:#ffffff;font-weight:bold;margin:0 0 4px;">Denise Okada</p>
-          <p style="color:#999999;font-size:14px;margin:0;">Co-Founder – BaldShield</p>
+          <p style="color:#ffffff;font-weight:bold;margin:0 0 4px;">BaldShield</p>
+          <p style="color:#999999;font-size:14px;margin:0;">Confidence for the Bold.</p>
         </div>
 
         <hr style="border:none;border-top:1px solid #222;margin:32px 0;" />
@@ -105,11 +106,7 @@ function buildHtml(contact) {
         </p>
 
         <p style="color:#777777;font-size:12px;line-height:1.5;text-align:center;margin:0;">
-          Você está recebendo este e-mail porque conversamos durante a FCE Cosmetique 2026 ou porque seu contato foi compartilhado com a BaldShield durante o evento.
-        </p>
-
-        <p style="color:#777777;font-size:12px;text-align:center;margin:12px 0 0;">
-          BaldShield · Confidence for the Bold · www.baldshield.com
+          Você está recebendo este e-mail porque entrou na lista da BaldShield.
         </p>
       </div>
     </div>
@@ -127,7 +124,7 @@ async function sendEmail(contact) {
     body: JSON.stringify({
       from: FROM,
       to: contact.email,
-      subject: EMAIL.subject,
+      subject: NEWSLETTER.subject,
       html: buildHtml(contact),
     }),
   });
@@ -154,31 +151,19 @@ async function run() {
     return;
   }
 
-  const csvPath = path.join(process.cwd(), "data", "FCE Cosmetique 2026.csv");
+  const csvPath = path.join(process.cwd(), "data", "lista-baldshield.csv");
   const file = fs.readFileSync(csvPath, "utf-8");
 
-  const lines = file.split(/\r?\n/).filter((line) => line.trim());
-
-  const headerIndex = lines.findIndex((line) =>
-    line.toLowerCase().includes("e-mail")
-  );
-
-  if (headerIndex === -1) {
-    console.error("Erro: cabeçalho com coluna E-mail não encontrado.");
-    return;
-  }
-
-  const dataLines = lines.slice(headerIndex + 1);
+  const lines = file.split(/\r?\n/).slice(1);
   const contacts = [];
 
-  for (const line of dataLines) {
+  for (const line of lines) {
+    if (!line.trim()) continue;
+
     const columns = line.split(",");
 
     const nome = columns[0]?.trim();
-    const empresa = columns[1]?.trim();
-    const cargo = columns[2]?.trim();
-    const email = columns[3]?.trim()?.toLowerCase();
-    const interesse = columns[4]?.trim();
+    const email = columns[1]?.trim()?.toLowerCase();
 
     if (
       email &&
@@ -186,11 +171,8 @@ async function run() {
       !contacts.some((item) => item.email === email)
     ) {
       contacts.push({
-        nome: nome || "Contato",
-        empresa,
-        cargo,
+        nome: nome || "BaldShield Member",
         email,
-        interesse,
       });
     }
   }
@@ -199,7 +181,7 @@ async function run() {
 
   console.log("");
   console.log("==============================");
-  console.log("BALDSHIELD - FCE COSMETIQUE");
+  console.log("BALDSHIELD SDS NEWSLETTER");
   console.log("==============================");
   console.log(`Total encontrado: ${contacts.length}`);
   console.log(`Enviando agora: ${batch.length}`);

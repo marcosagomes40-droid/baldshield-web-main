@@ -16,6 +16,7 @@ import BlogPostDiaZero from './pages/BlogPostDiaZero.jsx';
 import BlogPostCarecaBrilha from './pages/BlogPostCarecaBrilha.jsx';
 import BlogPostRotinaHomensCarecas from '@/pages/blog/BlogPostRotinaHomensCarecas.jsx';
 import BlogPostScalpDefenseSystem from '@/pages/blog/BlogPostScalpDefenseSystem.jsx';
+import BlogPostCarecaBrilhaNaCamera from "@/pages/blog/BlogPostCarecaBrilhaNaCamera.jsx";
 import { Toaster } from '@/components/ui/toaster';
 import { CartProvider } from '@/hooks/useCart.jsx';
 import WhatsAppButton from "./components/WhatsAppButton";
@@ -62,6 +63,10 @@ function App() {
           <Route
           path="/blog/o-que-e-scalp-defense-system"
           element={<BlogPostScalpDefenseSystem />}
+          />
+          <Route
+          path="/blog/por-que-minha-careca-brilha-na-camera"
+          element={<BlogPostCarecaBrilhaNaCamera />}
           />
           <Route
             path="*"

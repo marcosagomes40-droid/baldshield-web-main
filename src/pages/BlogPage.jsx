@@ -6,6 +6,15 @@ import Footer from '@/components/Footer.jsx';
 
 const posts = [
   {
+  slug: "/blog/por-que-minha-careca-brilha-na-camera",
+  title: "Por que minha careca parece mais brilhante na câmera?",
+  excerpt:
+    "Entenda como iluminação, câmeras, telas e reflexos podem alterar a aparência do couro cabeludo em videoconferências.",
+  category: "Aparência digital",
+  date: "09 jun. 2026",
+  isNew: true,
+  },
+  {
     slug: '/blog/o-que-e-scalp-defense-system',
     title: 'O que é o Scalp Defense System™?',
     excerpt:

@@ -67,6 +67,12 @@
   </url>
 
   <!-- Blog -->
+  <url>
+    <loc>https://baldshield.com/blog/por-que-minha-careca-brilha-na-camera</loc>
+    <lastmod>2026-06-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
 
   <url>
     <loc>https://www.baldshield.com/blog/o-que-e-scalp-defense-system</loc>
