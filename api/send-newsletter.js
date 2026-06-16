@@ -1,62 +1,110 @@
-const RESEND_API_KEY = process.env.RESEND_API_KEY;
+import fs from 'fs';
+import path from 'path';
 
-export default async function handler(req, res) {
-  if (req.method !== 'POST') {
-    return res.status(405).json({
-      success: false,
-      message: 'Método não permitido',
-    });
-  }
+const API_URL = 'https://www.baldshield.com/api/send-newsletter';
 
-  if (!RESEND_API_KEY) {
-    return res.status(500).json({
-      success: false,
-      message: 'RESEND_API_KEY não configurada.',
-    });
-  }
+const BATCH_SIZE = 10;
+const DELAY_MS = 2500;
 
+function delay(ms) {
+  return new Promise((resolve) => setTimeout(resolve, ms));
+}
+
+async function run() {
   try {
-    const { to, subject, html, text } = req.body;
+    const csvPath = path.join(process.cwd(), 'data', 'lista-baldshield.csv');
 
-    if (!to || !subject || !html) {
-      return res.status(400).json({
-        success: false,
-        message: 'Campos obrigatórios ausentes.',
-      });
+    const file = fs.readFileSync(csvPath, 'utf-8');
+
+    const lines = file.split('\n').slice(1);
+
+    const emails = [];
+
+    for (const line of lines) {
+      const columns = line.split(',');
+
+      const nome = columns[0]?.trim();
+      const email = columns[1]?.trim()?.toLowerCase();
+      const assunto = columns[2]?.trim()?.toLowerCase();
+      const origem = columns[4]?.trim()?.toLowerCase();
+
+      const isWaitlist =
+        assunto?.includes('lista de espera') ||
+        origem?.includes('waitlist-products');
+
+      if (
+        isWaitlist &&
+        email &&
+        email.includes('@') &&
+        !emails.some((item) => item.email === email)
+      ) {
+        emails.push({
+          nome,
+          email,
+        });
+      }
     }
 
-    const response = await fetch('https://api.resend.com/emails', {
-      method: 'POST',
-      headers: {
-        Authorization: `Bearer ${RESEND_API_KEY}`,
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({
-        from: 'BaldShield <contato@baldshield.com>',
-        to,
-        subject,
-        html,
-        text,
-      }),
-    });
+    const batch = emails.slice(0, BATCH_SIZE);
 
-    const data = await response.json();
+    console.log('');
+    console.log('==============================');
+    console.log('BALDSHIELD NEWSLETTER');
+    console.log('==============================');
+    console.log('');
 
-    if (!response.ok) {
-      return res.status(response.status).json({
-        success: false,
-        error: data,
-      });
+    console.log(`Total selecionado: ${batch.length}`);
+    console.log('');
+
+    let success = 0;
+    let failed = 0;
+
+    for (const item of batch) {
+      try {
+        console.log(`Enviando para: ${item.email}`);
+
+        const response = await fetch(API_URL, {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({
+            to: item.email,
+            nome: item.nome || 'BaldShield Member',
+          }),
+        });
+
+        const result = await response.json();
+
+        if (result.success) {
+          success++;
+          console.log('OK');
+        } else {
+          failed++;
+          console.log('ERRO');
+        }
+      } catch (error) {
+        failed++;
+        console.log('FALHA:', error.message);
+      }
+
+      console.log('');
+
+      await delay(DELAY_MS);
     }
 
-    return res.status(200).json({
-      success: true,
-      data,
-    });
+    console.log('==============================');
+    console.log('FINALIZADO');
+    console.log('==============================');
+    console.log('');
+
+    console.log(`Sucesso: ${success}`);
+    console.log(`Falhas: ${failed}`);
+    console.log('');
+
   } catch (error) {
-    return res.status(500).json({
-      success: false,
-      message: error.message,
-    });
+    console.error('Erro geral:', error);
   }
 }
+
+run();

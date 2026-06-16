@@ -17,6 +17,8 @@ import BlogPostCarecaBrilha from './pages/BlogPostCarecaBrilha.jsx';
 import BlogPostRotinaHomensCarecas from '@/pages/blog/BlogPostRotinaHomensCarecas.jsx';
 import BlogPostScalpDefenseSystem from '@/pages/blog/BlogPostScalpDefenseSystem.jsx';
 import BlogPostCarecaBrilhaNaCamera from "@/pages/blog/BlogPostCarecaBrilhaNaCamera.jsx";
+import BlogPostLimpezaCouroCabeludo from "@/pages/blog/BlogPostLimpezaCouroCabeludo.jsx";
+import BlogPostHidratacaoCouroCabeludo from "@/pages/blog/BlogPostHidratacaoCouroCabeludo.jsx";
 import { Toaster } from '@/components/ui/toaster';
 import { CartProvider } from '@/hooks/useCart.jsx';
 import WhatsAppButton from "./components/WhatsAppButton";
@@ -67,6 +69,14 @@ function App() {
           <Route
           path="/blog/por-que-minha-careca-brilha-na-camera"
           element={<BlogPostCarecaBrilhaNaCamera />}
+          />
+          <Route
+          path="/blog/por-que-homens-carecas-deveriam-limpar-o-couro-cabeludo"
+          element={<BlogPostLimpezaCouroCabeludo />}
+          />
+          <Route
+          path="/blog/por-que-homens-carecas-deveriam-hidratar-o-couro-cabeludo"
+          element={<BlogPostHidratacaoCouroCabeludo />}
           />
           <Route
             path="*"

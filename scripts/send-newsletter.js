@@ -3,7 +3,7 @@ import path from 'path';
 
 const API_URL = 'https://www.baldshield.com/api/send-newsletter';
 
-const BATCH_SIZE = 1;
+const BATCH_SIZE = 20; // manter 1 para teste
 const DELAY_MS = 2500;
 
 const NEWSLETTER = {
@@ -33,6 +33,7 @@ function buildEmailHtml(nome) {
     <meta charset="UTF-8" />
     <title>${NEWSLETTER.subject}</title>
   </head>
+
   <body style="margin:0; padding:0; background:#050505; font-family:Arial, Helvetica, sans-serif; color:#ffffff;">
     <div style="display:none; max-height:0; overflow:hidden; opacity:0;">
       ${NEWSLETTER.preview}
@@ -66,16 +67,16 @@ function buildEmailHtml(nome) {
             </tr>
 
             <tr>
-              <td style="padding:36px 32px 12px 32px;">
-                <p style="margin:0 0 14px 0; color:#ff7a1a; font-size:12px; letter-spacing:4px; text-transform:uppercase; font-weight:bold;">
+              <td style="padding:40px 32px 12px 32px;">
+                <p style="margin:0 0 16px 0; color:#ff7a1a; font-size:12px; letter-spacing:4px; text-transform:uppercase; font-weight:bold;">
                   Aparência Digital
                 </p>
 
-                <h1 style="margin:0 0 18px 0; color:#ffffff; font-size:30px; line-height:1.18; font-weight:800;">
+                <h1 style="margin:0 0 20px 0; color:#ffffff; font-size:30px; line-height:1.18; font-weight:800;">
                   ${NEWSLETTER.title}
                 </h1>
 
-                <p style="margin:0 0 24px 0; color:#cfcfcf; font-size:17px; line-height:1.7;">
+                <p style="margin:0 0 26px 0; color:#cfcfcf; font-size:17px; line-height:1.7;">
                   ${NEWSLETTER.subtitle}
                 </p>
 
@@ -91,12 +92,12 @@ function buildEmailHtml(nome) {
                   A boa notícia é que isso nem sempre está relacionado à oleosidade.
                 </p>
 
-                <p style="margin:0 0 18px 0; color:#cfcfcf; font-size:16px; line-height:1.7;">
-                  Iluminação, webcams, monitores e reflexos podem alterar significativamente a forma como o couro cabeludo exposto aparece em videochamadas e gravações.
+                <p style="margin:0 0 22px 0; color:#cfcfcf; font-size:16px; line-height:1.7;">
+                  Iluminação, webcams, monitores e reflexos podem alterar significativamente a forma como o couro cabeludo aparece durante videoconferências e chamadas de vídeo.
                 </p>
 
-                <div style="margin:30px 0; padding:22px; border:1px solid #2a2a2a; border-radius:20px; background:#080808;">
-                  <p style="margin:0 0 14px 0; color:#ff7a1a; font-size:12px; letter-spacing:3px; text-transform:uppercase; font-weight:bold; text-align:center;">
+                <div style="margin:32px 0; padding:22px; border:1px solid #2a2a2a; border-radius:20px; background:#080808;">
+                  <p style="margin:0 0 16px 0; color:#ff7a1a; font-size:12px; letter-spacing:3px; text-transform:uppercase; font-weight:bold; text-align:center;">
                     Neste artigo você vai descobrir
                   </p>
 
@@ -117,15 +118,15 @@ function buildEmailHtml(nome) {
                   </p>
                 </div>
 
-                <table cellpadding="0" cellspacing="0" border="0" style="margin:0 auto 32px auto;">
+                <table cellpadding="0" cellspacing="0" border="0" style="margin:0 auto 34px auto;">
                   <tr>
                     <td align="center" bgcolor="#ff7a1a" style="border-radius:999px;">
                       <a 
                         href="${NEWSLETTER.articleUrl}" 
                         target="_blank" 
-                        style="display:inline-block; padding:16px 30px; color:#050505; text-decoration:none; font-size:15px; font-weight:800;"
+                        style="display:inline-block; padding:16px 34px; color:#050505; text-decoration:none; font-size:15px; font-weight:800;"
                       >
-                        Ler artigo completo
+                        Ler artigo completo →
                       </a>
                     </td>
                   </tr>
@@ -137,11 +138,15 @@ function buildEmailHtml(nome) {
                 </p>
 
                 <p style="margin:0 0 8px 0; color:#ffffff; font-size:16px; line-height:1.7; font-weight:bold;">
-                  BaldShield
+                  BaldShield™
                 </p>
 
-                <p style="margin:0; color:#a9a9a9; font-size:14px; line-height:1.6;">
-                  Scalp Defense System™ · Confidence for the Bold.
+                <p style="margin:0 0 8px 0; color:#a9a9a9; font-size:14px; line-height:1.6;">
+                  A primeira marca brasileira dedicada ao cuidado do couro cabeludo exposto.
+                </p>
+
+                <p style="margin:0; color:#ff7a1a; font-size:14px; line-height:1.6; font-weight:bold;">
+                  Confidence for the Bold.
                 </p>
               </td>
             </tr>
@@ -149,8 +154,15 @@ function buildEmailHtml(nome) {
             <tr>
               <td style="padding:24px 32px 32px 32px;">
                 <div style="height:1px; background:#222; margin-bottom:22px;"></div>
+
+                <p style="margin:0 0 10px 0; color:#777; font-size:12px; line-height:1.6; text-align:center;">
+                  Você está recebendo este e-mail porque se cadastrou na Lista VIP BaldShield.
+                </p>
+
                 <p style="margin:0; color:#777; font-size:12px; line-height:1.6; text-align:center;">
-                  Você está recebendo este e-mail porque entrou na lista da BaldShield.
+                  <a href="https://www.baldshield.com" target="_blank" style="color:#ff7a1a; text-decoration:none;">www.baldshield.com</a>
+                  &nbsp;·&nbsp;
+                  Instagram: @baldshield.br
                 </p>
               </td>
             </tr>
@@ -186,13 +198,18 @@ No novo artigo da BaldShield você vai descobrir:
 Leia agora:
 ${NEWSLETTER.articleUrl}
 
-BaldShield
-Scalp Defense System™
+BaldShield™
+A primeira marca brasileira dedicada ao cuidado do couro cabeludo exposto.
 Confidence for the Bold.
 `;
 }
 
 async function run() {
+  console.log('');
+  console.log('==============================');
+  console.log('INICIANDO NEWSLETTER BALDSHIELD');
+  console.log('==============================');
+
   try {
     const csvPath = path.join(process.cwd(), 'data', 'lista-baldshield.csv');
     const file = fs.readFileSync(csvPath, 'utf-8');
@@ -230,13 +247,8 @@ async function run() {
     const batch = contacts.slice(0, BATCH_SIZE);
 
     console.log('');
-    console.log('==============================');
-    console.log('BALDSHIELD NEWSLETTER');
-    console.log('==============================');
-    console.log('');
     console.log(`Assunto: ${NEWSLETTER.subject}`);
     console.log(`Artigo: ${NEWSLETTER.articleUrl}`);
-    console.log('');
     console.log(`Total encontrado na waitlist: ${contacts.length}`);
     console.log(`Enviando agora: ${batch.length}`);
     console.log('');
@@ -245,9 +257,9 @@ async function run() {
     let failed = 0;
 
     for (const contact of batch) {
-      try {
-        console.log(`Enviando para: ${contact.email}`);
+      console.log(`Enviando para: ${contact.email}`);
 
+      try {
         const response = await fetch(API_URL, {
           method: 'POST',
           headers: {
@@ -271,13 +283,12 @@ async function run() {
 
         let result = {};
         try {
-        result = text ? JSON.parse(text) : {};
+          result = text ? JSON.parse(text) : {};
         } catch {
-        result = { raw: text };
+          result = { raw: text };
         }
 
         console.log('Status HTTP:', response.status);
-        console.log('Resposta API:', result);
 
         if (response.ok && result.success) {
           success++;
@@ -285,7 +296,7 @@ async function run() {
         } else {
           failed++;
           console.log('Resultado: ERRO');
-          console.log(result);
+          console.log('Resposta API:', result);
         }
       } catch (error) {
         failed++;
@@ -293,7 +304,6 @@ async function run() {
       }
 
       console.log('');
-
       await delay(DELAY_MS);
     }
 

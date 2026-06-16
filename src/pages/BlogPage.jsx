@@ -5,6 +5,31 @@ import Header from '@/components/Header.jsx';
 import Footer from '@/components/Footer.jsx';
 
 const posts = [
+  /*
+  {
+  slug: "/blog/por-que-homens-carecas-deveriam-hidratar-o-couro-cabeludo",
+  title: "Por que homens carecas deveriam hidratar o couro cabeludo?",
+  excerpt:
+    "Descubra por que a hidratação é essencial para manter o couro cabeludo saudável, confortável e com melhor aparência.",
+  category: "Hidratação",
+  date: "15 jun. 2026",
+  isNew: true,
+  image:
+    "/Blog/hidratacao-couro-cabeludo/homem-careca-hidratacao-couro-cabeludo-baldshield.webp",
+  },
+  */
+  {
+  slug: "/blog/por-que-homens-carecas-deveriam-limpar-o-couro-cabeludo",
+  title: "Por que homens carecas deveriam limpar o couro cabeludo?",
+  excerpt:
+  "Descubra por que a limpeza adequada é o primeiro passo para manter o couro cabeludo saudável, equilibrado e preparado para hidratação e proteção.",
+  category: "Limpeza",
+  date: "15 jun. 2026",
+  isNew: true,
+  image:
+  "/Blog/limpeza-couro-cabeludo/homem-careca-limpeza-couro-cabeludo-baldshield.webp",
+  },
+
   {
   slug: "/blog/por-que-minha-careca-brilha-na-camera",
   title: "Por que minha careca parece mais brilhante na câmera?",
