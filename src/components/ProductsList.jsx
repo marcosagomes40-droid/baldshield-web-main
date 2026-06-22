@@ -166,7 +166,7 @@ const ProductsList = () => {
           </a>
 
           <a
-            href="mailto:mgomes@baldshield.com"
+            href="mailto:contato@baldshield.com"
             className="flex items-center gap-2 text-secondary hover:text-primary transition-colors duration-200"
           >
             <Mail size={18} />

@@ -62,11 +62,11 @@ const Footer = () => {
 
             <div className="space-y-3">
               <a
-                href="mailto:mgomes@baldshield.com"
+                href="mailto:contato@baldshield.com"
                 className="flex items-center gap-2 text-sm text-secondary hover:text-primary transition-colors duration-200"
               >
                 <Mail size={16} />
-                mgomes@baldshield.com
+                contato@baldshield.com
               </a>
 
               <div className="flex gap-4 pt-2 text-secondary">
