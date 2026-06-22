@@ -28,8 +28,8 @@ const ContactPage = () => {
     {
       icon: Mail,
       title: 'E-mail',
-      details: 'mgomes@baldshield.com',
-      link: 'mailto:mgomes@baldshield.com',
+      details: 'contato@baldshield.com',
+      link: 'mailto:contato@baldshield.com',
     },
     {
       icon: Instagram,
