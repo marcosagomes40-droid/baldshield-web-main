@@ -1,8 +1,5 @@
-// ARTIGO APROVADO
-// STATUS: CONGELADO
-// PUBLICAÇÃO PREVISTA: PRÓXIMA SEMANA 23062026
 // STEP 02 HYDRATE
-// NÃO ALTERAR SEM REVISÃO
+// PUBLICADO EM 23/06/2026
 
 import React from "react";
 import { Helmet } from "react-helmet";

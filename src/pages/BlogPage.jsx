@@ -5,19 +5,20 @@ import Header from '@/components/Header.jsx';
 import Footer from '@/components/Footer.jsx';
 
 const posts = [
-  /*
+  
   {
   slug: "/blog/por-que-homens-carecas-deveriam-hidratar-o-couro-cabeludo",
   title: "Por que homens carecas deveriam hidratar o couro cabeludo?",
   excerpt:
     "Descubra por que a hidratação é essencial para manter o couro cabeludo saudável, confortável e com melhor aparência.",
   category: "Hidratação",
-  date: "15 jun. 2026",
+  date: "23 jun. 2026",
   isNew: true,
   image:
     "/Blog/hidratacao-couro-cabeludo/homem-careca-hidratacao-couro-cabeludo-baldshield.webp",
   },
-  */
+  
+  
   {
   slug: "/blog/por-que-homens-carecas-deveriam-limpar-o-couro-cabeludo",
   title: "Por que homens carecas deveriam limpar o couro cabeludo?",
