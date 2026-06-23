@@ -16,6 +16,10 @@ const BlogPostHidratacaoCouroCabeludo = () => {
           content="Descubra por que a hidratação é essencial para homens carecas e como manter o couro cabeludo saudável, confortável e com melhor aparência todos os dias."
         />
         <meta
+          property="og:url"
+          content="https://www.baldshield.com/blog/por-que-homens-carecas-deveriam-hidratar-o-couro-cabeludo"
+        />
+        <meta
           name="keywords"
           content="hidratar couro cabeludo careca, hidratação para homens carecas, couro cabeludo ressecado, cuidados com a careca, pele do couro cabeludo, rotina para homens carecas, hidratação do couro cabeludo exposto"
         />
@@ -29,8 +33,9 @@ const BlogPostHidratacaoCouroCabeludo = () => {
         />
         <meta
           property="og:image"
-          content="/Blog/hidratacao-couro-cabeludo/homem-careca-hidratacao-couro-cabeludo-baldshield.webp"
+          content="https://www.baldshield.com/Blog/hidratacao-couro-cabeludo/homem-careca-hidratacao-couro-cabeludo-baldshield.webp"
         />
+        
         <meta property="og:type" content="article" />
       </Helmet>
 
