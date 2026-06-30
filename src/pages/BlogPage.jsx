@@ -7,6 +7,18 @@ import Footer from '@/components/Footer.jsx';
 const posts = [
   
   {
+  slug: "/blog/por-que-homens-carecas-deveriam-proteger-o-couro-cabeludo",
+  title: "Por que homens carecas deveriam proteger o couro cabeludo todos os dias?",
+  excerpt:
+    "Entenda por que proteger diariamente o couro cabeludo é um dos cuidados mais importantes para homens carecas.",
+  category: "Proteção",
+  date: "30 jun. 2026",
+  isNew: true,
+  image:
+    "/Blog/protecao-couro-cabeludo/homem-careca-protecao-couro-cabeludo-baldshield.webp",
+  },
+  
+  {
   slug: "/blog/por-que-homens-carecas-deveriam-hidratar-o-couro-cabeludo",
   title: "Por que homens carecas deveriam hidratar o couro cabeludo?",
   excerpt:

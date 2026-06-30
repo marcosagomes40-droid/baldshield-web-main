@@ -19,6 +19,7 @@ import BlogPostScalpDefenseSystem from '@/pages/blog/BlogPostScalpDefenseSystem.
 import BlogPostCarecaBrilhaNaCamera from "@/pages/blog/BlogPostCarecaBrilhaNaCamera.jsx";
 import BlogPostLimpezaCouroCabeludo from "@/pages/blog/BlogPostLimpezaCouroCabeludo.jsx";
 import BlogPostHidratacaoCouroCabeludo from "@/pages/blog/BlogPostHidratacaoCouroCabeludo.jsx";
+import BlogPostProtecaoCouroCabeludo from "@/pages/blog/BlogPostProtecaoCouroCabeludo";
 import { Toaster } from '@/components/ui/toaster';
 import { CartProvider } from '@/hooks/useCart.jsx';
 import WhatsAppButton from "./components/WhatsAppButton";
@@ -78,6 +79,12 @@ function App() {
           path="/blog/por-que-homens-carecas-deveriam-hidratar-o-couro-cabeludo"
           element={<BlogPostHidratacaoCouroCabeludo />}
           />
+          <Route
+          path="/blog/por-que-homens-carecas-deveriam-proteger-o-couro-cabeludo"
+          element={<BlogPostProtecaoCouroCabeludo />}
+          />
+
+
           <Route
             path="*"
             element={
