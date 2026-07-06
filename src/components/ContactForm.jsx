@@ -22,7 +22,10 @@ const ContactForm = () => {
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setFormData((prev) => ({ ...prev, [name]: value }));
+    setFormData((prev) => ({
+      ...prev,
+      [name]: value,
+    }));
   };
 
   const handleSubmit = async (e) => {
@@ -38,38 +41,20 @@ const ContactForm = () => {
         origem: 'contato-site',
       };
 
-      // 1) Salva na planilha
-      const sheetResponse = await fetch(SCRIPT_URL, {
-        method: 'POST',
-        body: JSON.stringify(payload),
-      });
-
-      if (!sheetResponse.ok) {
-        throw new Error('Erro ao salvar na planilha');
-      }
-
-      // 2) Envia o e-mail
-      const emailResponse = await fetch('/api/send-email', {
+      const response = await fetch(SCRIPT_URL, {
         method: 'POST',
         headers: {
-          'Content-Type': 'application/json',
+          'Content-Type': 'text/plain;charset=utf-8',
         },
         body: JSON.stringify(payload),
       });
 
-      let emailResult = {};
-      try {
-        emailResult = await emailResponse.json();
-      } catch {
-        throw new Error('Resposta inválida da API de email');
-      }
-
-      if (!emailResponse.ok || !emailResult.success) {
-        throw new Error(emailResult.error || 'Erro ao enviar email');
+      if (!response.ok) {
+        throw new Error('Erro ao salvar na lista.');
       }
 
       toast({
-        title: 'Mensagem enviada',
+        title: 'Mensagem enviada!',
         description: 'Recebemos seu contato com sucesso.',
       });
 
@@ -80,12 +65,13 @@ const ContactForm = () => {
         message: '',
       });
     } catch (error) {
-      console.error('Erro no formulário:', error);
+      console.error(error);
 
       toast({
         title: 'Erro ao enviar',
         description:
-          error.message || 'Não foi possível enviar sua mensagem. Tente novamente.',
+          'Não foi possível enviar sua mensagem. Tente novamente em alguns instantes.',
+        variant: 'destructive',
       });
     } finally {
       setIsSubmitting(false);
