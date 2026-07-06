@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Turnstile } from "@marsidev/react-turnstile";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
@@ -11,6 +12,8 @@ const SCRIPT_URL =
 const VipLeadForm = () => {
   const { toast } = useToast();
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [turnstileToken, setTurnstileToken] = useState("");
+  const [turnstileError, setTurnstileError] = useState(false);
 
   const [formData, setFormData] = useState({
     name: "",
@@ -28,6 +31,17 @@ const VipLeadForm = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+
+    if (!turnstileToken) {
+      toast({
+        title: "Validação necessária",
+        description: "Confirme que você não é um robô.",
+        variant: "destructive",
+      });
+
+      return;
+    }
+
     setIsSubmitting(true);
 
     try {
@@ -37,6 +51,7 @@ const VipLeadForm = () => {
         assunto: "Lista VIP",
         mensagem: "Cadastro realizado pela página de Pré-lançamento.",
         origem: "pre-launch-vip",
+        turnstileToken,
       };
 
       await fetch(SCRIPT_URL, {
@@ -58,13 +73,14 @@ const VipLeadForm = () => {
         name: "",
         email: "",
       });
+
+      setTurnstileToken("");
     } catch (error) {
       console.error("Erro ao cadastrar na Lista VIP:", error);
 
       toast({
         title: "Erro",
-        description:
-          "Não foi possível concluir seu cadastro. Tente novamente.",
+        description: "Não foi possível concluir seu cadastro. Tente novamente.",
         variant: "destructive",
       });
     } finally {
@@ -76,7 +92,6 @@ const VipLeadForm = () => {
     <form onSubmit={handleSubmit} className="space-y-6">
       <div className="space-y-2">
         <Label htmlFor="name">Nome</Label>
-
         <Input
           id="name"
           name="name"
@@ -90,7 +105,6 @@ const VipLeadForm = () => {
 
       <div className="space-y-2">
         <Label htmlFor="email">E-mail</Label>
-
         <Input
           id="email"
           name="email"
@@ -102,10 +116,40 @@ const VipLeadForm = () => {
         />
       </div>
 
+      <div className="space-y-3">
+        <div className="flex justify-center">
+          <Turnstile
+            siteKey={import.meta.env.VITE_TURNSTILE_SITE_KEY}
+            onSuccess={(token) => {
+              setTurnstileToken(token);
+              setTurnstileError(false);
+            }}
+            onError={() => {
+              setTurnstileToken("");
+              setTurnstileError(true);
+            }}
+            onExpire={() => {
+              setTurnstileToken("");
+              setTurnstileError(false);
+            }}
+            options={{
+              theme: "dark",
+              size: "normal",
+            }}
+          />
+        </div>
+
+        {turnstileError && (
+          <p className="text-center text-sm text-red-400">
+            Não foi possível validar a proteção anti-spam. Atualize a página e tente novamente.
+          </p>
+        )}
+      </div>
+
       <Button
         type="submit"
-        disabled={isSubmitting}
-        className="w-full bg-primary hover:bg-primary/90 text-black font-semibold"
+        disabled={isSubmitting || !turnstileToken}
+        className="w-full bg-primary hover:bg-primary/90 text-black font-semibold disabled:opacity-50 disabled:cursor-not-allowed"
       >
         {isSubmitting ? (
           "Cadastrando..."

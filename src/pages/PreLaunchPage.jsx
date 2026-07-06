@@ -3,7 +3,7 @@ import { Helmet } from 'react-helmet';
 import { motion } from 'framer-motion';
 import Header from '@/components/Header.jsx';
 import Footer from '@/components/Footer.jsx';
-import ContactForm from '@/components/ContactForm.jsx';
+import VipLeadForm from "@/components/VipLeadForm";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 30 },
@@ -223,7 +223,7 @@ const PreLaunchPage = () => {
               </p>
             </div>
 
-            <ContactForm />
+            <VipLeadForm />
           </div>
         </section>
 
