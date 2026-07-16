@@ -38,7 +38,7 @@ const posts = [
     "Descubra por que a hidratação é essencial para manter o couro cabeludo saudável, confortável e com melhor aparência.",
   category: "Hidratação",
   date: "23 jun. 2026",
-  isNew: true,
+  isNew: false,
   image:
     "/Blog/hidratacao-couro-cabeludo/homem-careca-hidratacao-couro-cabeludo-baldshield.webp",
   },
@@ -51,7 +51,7 @@ const posts = [
   "Descubra por que a limpeza adequada é o primeiro passo para manter o couro cabeludo saudável, equilibrado e preparado para hidratação e proteção.",
   category: "Limpeza",
   date: "15 jun. 2026",
-  isNew: true,
+  isNew: false,
   image:
   "/Blog/limpeza-couro-cabeludo/homem-careca-limpeza-couro-cabeludo-baldshield.webp",
   },
@@ -63,7 +63,7 @@ const posts = [
     "Entenda como iluminação, câmeras, telas e reflexos podem alterar a aparência do couro cabeludo em videoconferências.",
   category: "Aparência digital",
   date: "09 jun. 2026",
-  isNew: true,
+  isNew: false,
   },
   {
     slug: '/blog/o-que-e-scalp-defense-system',
@@ -72,7 +72,7 @@ const posts = [
       'Conheça o método criado pela BaldShield para cuidar do couro cabeludo exposto através dos pilares Clean, Hydrate, Protect e Control.',
     category: 'Scalp Defense System™',
     date: '05 jun. 2026',
-    isNew: true,
+    isNew: false,
   },
   {
     slug: '/blog/rotina-ideal-para-homens-carecas',
