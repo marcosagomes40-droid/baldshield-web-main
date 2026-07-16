@@ -20,6 +20,7 @@ import BlogPostCarecaBrilhaNaCamera from "@/pages/blog/BlogPostCarecaBrilhaNaCam
 import BlogPostLimpezaCouroCabeludo from "@/pages/blog/BlogPostLimpezaCouroCabeludo.jsx";
 import BlogPostHidratacaoCouroCabeludo from "@/pages/blog/BlogPostHidratacaoCouroCabeludo.jsx";
 import BlogPostProtecaoCouroCabeludo from "@/pages/blog/BlogPostProtecaoCouroCabeludo";
+import BlogPostOleosidadeCouroCabeludo from "@/pages/blog/BlogPostOleosidadeCouroCabeludo";
 import { Toaster } from '@/components/ui/toaster';
 import { CartProvider } from '@/hooks/useCart.jsx';
 import WhatsAppButton from "./components/WhatsAppButton";
@@ -84,6 +85,10 @@ function App() {
           element={<BlogPostProtecaoCouroCabeludo />}
           />
 
+          <Route
+          path="/blog/por-que-minha-careca-fica-oleosa-tao-rapido"
+          element={<BlogPostOleosidadeCouroCabeludo />}
+          />
 
           <Route
             path="*"

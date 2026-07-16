@@ -7,6 +7,19 @@ import Footer from '@/components/Footer.jsx';
 const posts = [
   
   {
+  slug: "/blog/por-que-minha-careca-fica-oleosa-tao-rapido",
+  title: "Por que minha careca fica oleosa tão rápido?",
+  excerpt:
+    "Entenda por que o couro cabeludo continua produzindo oleosidade mesmo sem cabelos e como manter a pele equilibrada.",
+  category: "Oleosidade",
+  date: "16 jul. 2026",
+  isNew: true,
+  image:
+    "/Blog/oleosidade-couro-cabeludo/homem-careca-oleosidade-couro-cabeludo-baldshield.webp",
+  },
+  
+  
+  {
   slug: "/blog/por-que-homens-carecas-deveriam-proteger-o-couro-cabeludo",
   title: "Por que homens carecas deveriam proteger o couro cabeludo todos os dias?",
   excerpt:
