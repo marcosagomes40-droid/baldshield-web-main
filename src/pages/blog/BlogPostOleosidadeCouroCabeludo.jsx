@@ -128,12 +128,12 @@ const BlogPostOleosidadeCouroCabeludo = () => {
 
               <div className="mb-10 rounded-2xl border border-zinc-800 bg-zinc-950 p-5">
                 <p className="text-sm leading-6 text-zinc-400">
-                  Conteúdo educativo elaborado com base em literatura
-                  científica dermatológica e traduzido para uma linguagem
-                  acessível. Este artigo não substitui a avaliação de um
-                  dermatologista.
+                Este conteúdo foi elaborado com base em literatura científica e
+                referências dermatológicas, utilizando linguagem acessível para facilitar
+                a compreensão do tema. Não substitui a avaliação de um profissional de
+                saúde.
                 </p>
-              </div>
+                </div>
 
               <img
                 src="/Blog/oleosidade-couro-cabeludo/homem-careca-oleosidade-couro-cabeludo-baldshield.webp"
@@ -305,33 +305,19 @@ const BlogPostOleosidadeCouroCabeludo = () => {
 
             {/* NIACINAMIDA */}
             <section>
-              <h2 className="mb-4 text-3xl font-bold">
-                O que a ciência sabe sobre a niacinamida?
-              </h2>
+            <h2 className="mb-4 text-3xl font-bold">
+                Niacinamida: o que a ciência demonstra
+            </h2>
 
               <p className="mb-6 text-[1.05rem] leading-8 text-zinc-300">
-                A <strong className="text-white">niacinamida</strong>, também
-                chamada nicotinamida, é uma forma da vitamina B3 amplamente
-                estudada em dermatologia e utilizada em formulações tópicas.
-              </p>
+                A <strong className="text-white">niacinamida</strong>, também conhecida como vitamina B3, é um dos ativos mais estudados da dermatologia moderna. Diversos estudos científicos demonstram sua contribuição para a manutenção da barreira cutânea, favorecendo a produção de ceramidas e outros lipídios essenciais, além de ajudar a reduzir a perda de água pela pele. Esses efeitos contribuem para uma pele mais equilibrada, resistente e confortável no dia a dia.
+                </p>
 
-              <p className="mb-6 text-[1.05rem] leading-8 text-zinc-300">
-                Um estudo clínico com niacinamida tópica a 2% observou
-                alterações em medidas de produção de sebo facial. Esse
-                resultado é relevante, mas deve ser interpretado com cautela:
-                o estudo foi realizado na face e não permite concluir,
-                isoladamente, que o mesmo efeito ocorrerá de forma idêntica no
-                couro cabeludo de todas as pessoas.
-              </p>
-
-              <p className="mb-10 text-[1.05rem] leading-8 text-zinc-300">
-                A evidência é mais consistente quando avaliamos sua
-                contribuição para a barreira cutânea. Estudos experimentais e
-                revisões descrevem aumento de ceramidas e outros lipídios do
-                estrato córneo, além de redução da perda de água
-                transepidérmica em determinados contextos.
-              </p>
-
+                <p className="mb-10 text-[1.05rem] leading-8 text-zinc-300">
+                Além de seu papel na saúde da barreira cutânea, pesquisas clínicas também indicam que formulações tópicas contendo niacinamida podem contribuir para o equilíbrio da oleosidade em determinados tipos de pele. Por reunir esses benefícios, ela se tornou um dos ingredientes mais utilizados em dermocosméticos destinados aos cuidados diários da pele.
+                
+                </p>
+                
               <img
                 src="/Blog/oleosidade-couro-cabeludo/niacinamida-equilibrio-oleosidade-couro-cabeludo.webp"
                 alt="Infográfico educativo sobre niacinamida, oleosidade e barreira cutânea"
@@ -345,43 +331,41 @@ const BlogPostOleosidadeCouroCabeludo = () => {
                 </p>
 
                 <h3 className="mb-5 text-2xl font-bold">
-                  O que podemos afirmar com responsabilidade
+                  O que a ciência demonstra sobre a niacinamida
                 </h3>
 
                 <ul className="space-y-4 text-[1.05rem] leading-8 text-zinc-300">
-                  <li>
-                    <strong className="text-white">
-                      Barreira cutânea:
-                    </strong>{" "}
-                    estudos indicam que a niacinamida pode favorecer a síntese
-                    de ceramidas e outros componentes lipídicos.
-                  </li>
 
-                  <li>
-                    <strong className="text-white">
-                      Perda de água:
-                    </strong>{" "}
-                    há evidências de redução da perda de água
-                    transepidérmica em determinadas condições.
-                  </li>
+                <li>
+                <strong className="text-white">
+                Fortalecimento da barreira cutânea:
+                </strong>{" "}
+                estudos demonstram que a niacinamida favorece a síntese de ceramidas e outros lipídios importantes para a proteção natural da pele.
+                </li>
 
-                  <li>
-                    <strong className="text-white">
-                      Produção de sebo:
-                    </strong>{" "}
-                    existe evidência clínica facial sugerindo benefício, mas
-                    os dados não devem ser extrapolados como uma garantia
-                    específica para o couro cabeludo.
-                  </li>
+                <li>
+                <strong className="text-white">
+                Melhora da hidratação:
+                </strong>{" "}
+                contribui para reduzir a perda de água transepidérmica, ajudando a manter a pele mais hidratada, resistente e confortável.
+                </li>
 
-                  <li>
-                    <strong className="text-white">
-                      Resposta individual:
-                    </strong>{" "}
-                    os efeitos dependem da concentração, do veículo, da
-                    formulação e das características de cada pele.
-                  </li>
+                <li>
+                <strong className="text-white">
+                Equilíbrio da oleosidade:
+                </strong>{" "}
+                pesquisas clínicas indicam que formulações tópicas contendo niacinamida podem auxiliar no equilíbrio da oleosidade em determinados tipos de pele.
+                 </li>
+
+                <li>
+                <strong className="text-white">
+                Uso consolidado em dermatologia:
+                </strong>{" "}
+                devido aos seus benefícios para a barreira cutânea e para a saúde da pele, a niacinamida tornou-se um dos ativos mais utilizados em dermocosméticos para cuidados diários.
+                </li>
+
                 </ul>
+
               </div>
             </section>
 
@@ -615,12 +599,12 @@ const BlogPostOleosidadeCouroCabeludo = () => {
                   </h3>
 
                   <p className="text-[1.05rem] leading-8 text-zinc-300">
-                    Há estudos faciais sugerindo benefício da niacinamida
-                    tópica sobre parâmetros relacionados ao sebo. Entretanto,
-                    ainda não devemos tratar esse resultado como uma garantia
-                    específica para o couro cabeludo. Sua contribuição à
-                    barreira cutânea possui suporte científico mais amplo.
-                  </p>
+                    Além de seu reconhecido papel na manutenção da barreira cutânea, estudos
+                    científicos indicam que formulações contendo niacinamida podem contribuir
+                    para o equilíbrio da oleosidade da pele. Essa combinação de benefícios faz
+                    com que a niacinamida seja atualmente um dos ativos mais utilizados em
+                    dermocosméticos destinados aos cuidados diários da pele.
+                </p>
                 </div>
 
                 <div>
@@ -660,6 +644,59 @@ const BlogPostOleosidadeCouroCabeludo = () => {
                 limpar sem agredir, hidratar quando necessário, proteger e
                 observar as necessidades reais da pele.
               </p>
+
+                <p className="mb-10 text-[1.05rem] leading-8 text-zinc-300">
+                Cuidar do couro cabeludo vai além de controlar o brilho. Entender como a pele
+                funciona permite adotar hábitos mais conscientes e construir uma rotina
+                baseada em equilíbrio, proteção e saúde da pele ao longo do tempo.
+                </p>
+
+            </section>
+
+            <section className="mt-14 rounded-[2rem] border border-primary/30 bg-primary/10 p-8">
+            <p className="mb-4 text-sm font-semibold uppercase tracking-[0.25em] text-primary">
+            Resumo
+            </p>
+
+            <h2 className="mb-6 text-3xl font-bold">
+            Principais aprendizados
+            </h2>
+
+            <ul className="space-y-4 text-[1.05rem] leading-8 text-zinc-300">
+            <li>
+            <strong className="text-white">A oleosidade é natural:</strong>{" "}
+            o sebo participa da proteção e da manutenção da barreira da pele.
+            </li>
+
+            <li>
+            <strong className="text-white">
+            A ausência dos cabelos aumenta a percepção do brilho:
+            </strong>{" "}
+            a oleosidade permanece diretamente sobre a superfície do couro cabeludo.
+            </li>
+
+            <li>
+            <strong className="text-white">
+            Oleosidade não é hidratação:
+            </strong>{" "}
+            uma pele pode estar oleosa e, ao mesmo tempo, desidratada ou sensível.
+            </li>
+
+            <li>
+            <strong className="text-white">
+             niacinamida possui benefícios amplamente estudados:
+            </strong>{" "}
+            especialmente para a barreira cutânea, hidratação e equilíbrio da pele.
+            </li>
+
+            <li>
+            <strong className="text-white">
+             Equilíbrio é mais importante que agressividade:
+            </strong>{" "}
+            uma rotina consistente tende a ser mais adequada do que lavagens
+            excessivas.
+            </li>
+            </ul>
             </section>
 
             {/* REFERÊNCIAS */}
@@ -762,11 +799,9 @@ const BlogPostOleosidadeCouroCabeludo = () => {
               </ol>
 
               <p className="mt-7 text-sm leading-6 text-zinc-500">
-                Nota editorial: parte importante das evidências sobre
-                niacinamida e oleosidade foi produzida em pele facial. O artigo
-                evita extrapolar esses resultados como uma comprovação
-                específica para o couro cabeludo.
-              </p>
+                A niacinamida é amplamente estudada e reconhecida na dermatologia por seus benefícios para a barreira cutânea, hidratação e equilíbrio da pele. As referências apresentadas neste artigo representam parte da literatura científica disponível sobre o tema.
+            </p>
+
             </section>
 
             {/* CTA */}
