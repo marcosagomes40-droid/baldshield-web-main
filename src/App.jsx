@@ -27,6 +27,7 @@ import WhatsAppButton from "./components/WhatsAppButton";
 import EmbaixadorPage from './pages/EmbaixadorPage.jsx';
 import CosmetiquePage from '@/pages/CosmetiquePage.jsx';
 import CleanLanding from "./pages/CleanLanding";
+import HydrateLanding from "./pages/HydrateLanding";
 
 function App() {
   return (
@@ -35,6 +36,7 @@ function App() {
         <ScrollToTop />
         <Routes>
           <Route path="/" element={<HomePage />} />
+          <Route path="/hydrate" element={<HydrateLanding />} />
           <Route path="/clean" element={<CleanLanding />} />
           <Route path="/products" element={<ProductsPage />} />
           <Route path="/product/:id" element={<ProductDetailPage />} />
