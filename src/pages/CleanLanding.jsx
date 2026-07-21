@@ -16,7 +16,7 @@ function CleanLanding() {
 
           <p>
             Você acaba de iniciar uma rotina desenvolvida especialmente para o
-            cuidado do couro cabeludo de homens carecas.
+            cuidado do couro cabeludo exposto.
           </p>
 
           <a href="#como-usar" className="clean-button">
