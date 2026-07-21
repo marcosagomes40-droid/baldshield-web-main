@@ -127,7 +127,7 @@ export default function CleanLanding() {
           <div className="clean-hero__copy">
             <div className="clean-kicker">
               <span className="clean-kicker__dot" />
-              Experiência exclusiva via QR Code
+              CONTEÚDO EXCLUSIVO BALDSHIELD
             </div>
 
             <p className="clean-eyebrow">SCALP DEFENSE SYSTEM™ · STEP 01</p>
