@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
-  <!-- Páginas Principais -->
+  <!-- Páginas principais -->
 
   <url>
     <loc>https://www.baldshield.com/</loc>
-    <lastmod>2026-06-05</lastmod>
+    <lastmod>2026-07-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
 
   <url>
     <loc>https://www.baldshield.com/products</loc>
-    <lastmod>2026-06-05</lastmod>
+    <lastmod>2026-07-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
@@ -33,7 +33,7 @@
 
   <url>
     <loc>https://www.baldshield.com/pre-launch</loc>
-    <lastmod>2026-06-05</lastmod>
+    <lastmod>2026-07-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
@@ -53,12 +53,12 @@
   </url>
 
   <url>
-    <loc>https://www.baldshield.com.br/clean</loc>
+    <loc>https://www.baldshield.com/clean</loc>
     <lastmod>2026-07-21</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.90</priority>
+    <priority>0.9</priority>
   </url>
-  
+
   <url>
     <loc>https://www.baldshield.com/contact</loc>
     <lastmod>2026-06-05</lastmod>
@@ -68,42 +68,43 @@
 
   <url>
     <loc>https://www.baldshield.com/blog</loc>
-    <lastmod>2026-06-05</lastmod>
+    <lastmod>2026-07-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
 
   <!-- Blog -->
-  
+
   <url>
-  <loc>https://www.baldshield.com/blog/por-que-minha-careca-fica-oleosa-tao-rapido</loc>
-  <lastmod>2026-07-16</lastmod>
-  <changefreq>monthly</changefreq>
-  <priority>0.80</priority>
+    <loc>https://www.baldshield.com/blog/por-que-minha-careca-fica-oleosa-tao-rapido</loc>
+    <lastmod>2026-07-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
 
   <url>
-  <loc>https://www.baldshield.com/blog/por-que-homens-carecas-deveriam-proteger-o-couro-cabeludo</loc>
-  <lastmod>2026-06-30</lastmod>
-  <changefreq>monthly</changefreq>
-  <priority>0.80</priority>
+    <loc>https://www.baldshield.com/blog/por-que-homens-carecas-deveriam-proteger-o-couro-cabeludo</loc>
+    <lastmod>2026-06-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
-  
-    <url>
+
+  <url>
     <loc>https://www.baldshield.com/blog/por-que-homens-carecas-deveriam-hidratar-o-couro-cabeludo</loc>
     <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.80</priority>
+    <priority>0.8</priority>
   </url>
 
   <url>
     <loc>https://www.baldshield.com/blog/por-que-homens-carecas-deveriam-limpar-o-couro-cabeludo</loc>
+    <lastmod>2026-06-16</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.80</priority>
+    <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://baldshield.com/blog/por-que-minha-careca-brilha-na-camera</loc>
+    <loc>https://www.baldshield.com/blog/por-que-minha-careca-brilha-na-camera</loc>
     <lastmod>2026-06-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
