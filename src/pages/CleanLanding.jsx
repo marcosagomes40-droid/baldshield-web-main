@@ -1,104 +1,137 @@
 import React from "react";
+import { Helmet } from "react-helmet";
+import cleanHero from "../assets/products/clean-hero-desktop.webp";
 import cleanBottle from "../assets/products/clean-bottle.webp";
 import "./CleanLanding.css";
 
 const usageSteps = [
   {
     number: "01",
-    title: "Molhe",
-    text: "Molhe completamente o couro cabeludo antes da aplicação.",
+    title: "Destrave",
+    text: "No primeiro uso, gire a válvula no sentido anti-horário para destravar.",
   },
   {
     number: "02",
     title: "Aplique",
-    text: "Distribua 2 pumps do CLEAN sobre o couro cabeludo molhado.",
+    text: "Aplique duas bombeadas do BALDSHIELD CLEAN sobre o couro cabeludo úmido.",
   },
   {
     number: "03",
     title: "Massageie",
-    text: "Massageie suavemente por aproximadamente 2 minutos.",
+    text: "Massageie suavemente por 2 minutos, espalhando o produto por toda a área exposta.",
   },
   {
     number: "04",
     title: "Enxágue",
-    text: "Enxágue completamente. Para melhores resultados, use diariamente.",
+    text: "Enxágue bem, removendo completamente o produto. Para melhores resultados, utilize diariamente.",
   },
 ];
 
 const benefits = [
   {
-    title: "Limpeza suave",
-    text: "Remove resíduos, suor e impurezas do dia a dia sem transformar o cuidado em uma etapa agressiva.",
+    title: "Purifica",
+    text: "Remove resíduos, suor e impurezas acumuladas no couro cabeludo exposto.",
   },
   {
-    title: "Controle da oleosidade",
-    text: "Ajuda a manter o couro cabeludo com aparência equilibrada e menos brilho excessivo.",
+    title: "Controla",
+    text: "Auxilia no equilíbrio da oleosidade e ajuda a reduzir o brilho excessivo.",
   },
   {
-    title: "Sensação de conforto",
-    text: "Uma rotina de limpeza pensada para deixar a pele limpa, fresca e confortável.",
+    title: "Equilibra",
+    text: "Promove uma limpeza diária confortável, respeitando o equilíbrio natural da pele.",
   },
   {
-    title: "Prepara a pele",
-    text: "Cria a base ideal para os próximos passos do Scalp Defense System™.",
+    title: "Prepara",
+    text: "Deixa o couro cabeludo pronto para receber hidratação e proteção nos próximos passos.",
   },
 ];
 
-const actives = [
+const formulaItems = [
   {
-    tag: "B3",
+    tag: "NI",
     title: "Niacinamida",
-    text: "Ativo reconhecido no cuidado cosmético da pele, associado ao equilíbrio e à manutenção da barreira cutânea.",
+    text: "Ativo cosmético que auxilia no controle da oleosidade e contribui para melhorar o aspecto geral da pele.",
   },
   {
-    tag: "Zn",
+    tag: "ZN",
     title: "Zinco",
-    text: "Componente selecionado para complementar a rotina de cuidado da pele com tendência à oleosidade.",
+    text: "Ingrediente selecionado para complementar o equilíbrio da oleosidade e o cuidado diário do couro cabeludo.",
   },
   {
     tag: "AV",
     title: "Aloe Vera",
-    text: "Ingrediente tradicionalmente utilizado em formulações voltadas ao conforto e à hidratação da pele.",
+    text: "Ingrediente conhecido por sua ação hidratante e calmante, contribuindo para uma sensação de conforto após a limpeza.",
   },
   {
-    tag: "pH",
+    tag: "LS",
     title: "Sistema de limpeza suave",
-    text: "Combinação desenvolvida para promover uma limpeza eficiente e adequada ao uso diário.",
+    text: "Combinação de agentes de limpeza desenvolvida para remover impurezas e excesso de oleosidade sem tornar o cuidado diário agressivo.",
   },
 ];
 
 const systemSteps = [
-  { step: "STEP 01", name: "CLEAN", action: "Purificar", status: "Você está aqui", active: true },
-  { step: "STEP 02", name: "HYDRATE", action: "Equilibrar", status: "Próximo passo" },
-  { step: "STEP 03", name: "PROTECT", action: "Defender", status: "Em breve" },
-  { step: "STEP 04", name: "WIPES", action: "Controlar", status: "Em breve" },
+  {
+    step: "STEP 01",
+    name: "CLEAN",
+    action: "Purificar",
+    status: "Você está aqui",
+    active: true,
+  },
+  {
+    step: "STEP 02",
+    name: "HYDRATE",
+    action: "Equilibrar",
+    status: "Próximo passo",
+  },
+  {
+    step: "STEP 03",
+    name: "PROTECT",
+    action: "Defender",
+    status: "Proteção diária",
+  },
+  {
+    step: "STEP 04",
+    name: "WIPES",
+    action: "Controlar",
+    status: "Cuidado ao longo do dia",
+  },
 ];
 
 const faqs = [
   {
     question: "Posso usar o CLEAN todos os dias?",
     answer:
-      "Sim. O modo de uso do produto indica aplicação diária. Use 2 pumps no couro cabeludo molhado, massageie por aproximadamente 2 minutos e enxágue completamente.",
+      "Sim. Para melhores resultados, o modo de uso recomenda a utilização diária do BALDSHIELD CLEAN.",
   },
   {
-    question: "Por que aplicar no couro cabeludo molhado?",
+    question: "O CLEAN ajuda no controle da oleosidade?",
     answer:
-      "A água ajuda a distribuir a emulsão pela superfície da pele e favorece uma massagem mais uniforme durante a limpeza.",
+      "A formulação auxilia no equilíbrio da oleosidade e na redução do brilho excessivo, especialmente quando utilizada de forma regular dentro da rotina BaldShield.",
   },
   {
-    question: "Preciso usar outro produto depois?",
+    question: "O produto pode ressecar o couro cabeludo?",
     answer:
-      "O CLEAN é o STEP 01 do Scalp Defense System™. Após a limpeza, a rotina pode continuar com hidratação e proteção, conforme a necessidade da sua pele e a disponibilidade dos próximos passos.",
+      "A proposta do CLEAN é realizar uma limpeza eficiente e confortável. A resposta da pele pode variar, por isso observe sua experiência de uso e continue a rotina com o STEP 02 HYDRATE.",
   },
   {
-    question: "O CLEAN substitui shampoo?",
+    question: "Quanto produto devo usar?",
     answer:
-      "O CLEAN foi desenvolvido para a limpeza cosmética do couro cabeludo exposto. Use-o conforme as instruções da embalagem e evite contato com os olhos.",
+      "Aplique duas bombeadas do BALDSHIELD CLEAN sobre o couro cabeludo úmido, conforme indicado no modo de uso do produto.",
   },
   {
-    question: "O que fazer em caso de desconforto?",
+    question: "Preciso enxaguar depois da aplicação?",
     answer:
-      "Suspenda o uso e enxágue a área. Em caso de irritação persistente, procure orientação de um profissional de saúde.",
+      "Sim. Massageie suavemente por 2 minutos e enxágue bem, removendo completamente o produto.",
+  },
+  {
+    question: "Posso usar depois de raspar a cabeça?",
+    answer:
+      "Pode ser incorporado à rotina, mas a pele recém-raspada pode estar mais sensível. Evite aplicar sobre áreas lesionadas ou irritadas e suspenda o uso em caso de desconforto.",
+  },
+  {
+    question: "O que fazer em caso de contato com os olhos?",
+    answer:
+      "Enxágue abundantemente com água. Se o desconforto persistir, procure orientação de um profissional de saúde.",
   },
 ];
 
@@ -120,247 +153,411 @@ function CheckIcon() {
 
 export default function CleanLanding() {
   return (
-    <main className="clean-page">
-      <section className="clean-hero" aria-labelledby="clean-title">
-        <div className="clean-hero__grain" aria-hidden="true" />
-        <div className="clean-shell clean-hero__layout">
-          <div className="clean-hero__copy">
-            <div className="clean-kicker">
-              <span className="clean-kicker__dot" />
-              CONTEÚDO EXCLUSIVO BALDSHIELD
+    <>
+      <Helmet>
+        <title>BALDSHIELD CLEAN | Conteúdo exclusivo STEP 01</title>
+        <meta
+          name="description"
+          content="Conteúdo exclusivo do BALDSHIELD CLEAN: modo de uso, benefícios, fórmula e sequência do Scalp Defense System™."
+        />
+        <link rel="canonical" href="https://www.baldshield.com/clean" />
+        <meta property="og:title" content="BALDSHIELD CLEAN | STEP 01" />
+        <meta
+          property="og:description"
+          content="Descubra como usar o STEP 01 do Scalp Defense System™ e inicie sua rotina de cuidado com o couro cabeludo exposto."
+        />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://www.baldshield.com/clean" />
+      </Helmet>
+
+      <main className="clean-page">
+        <section className="clean-hero" aria-labelledby="clean-title">
+          <div className="clean-hero__grain" aria-hidden="true" />
+
+          <div className="clean-hero__layout">
+            <div className="clean-shell clean-hero__copy">
+              <div className="clean-kicker">
+                <span className="clean-kicker__dot" />
+                CONTEÚDO EXCLUSIVO BALDSHIELD
+              </div>
+
+              <p className="clean-eyebrow">
+                SCALP DEFENSE SYSTEM™ · STEP 01
+              </p>
+
+              <h1 id="clean-title">
+                <span className="clean-hero__brand">
+                  BALDSHIELD <em>CLEAN.</em>
+                </span>
+                <span className="clean-hero__message">
+                  Toda grande rotina começa com uma limpeza inteligente.
+                </span>
+              </h1>
+
+              <p className="clean-hero__lead">
+                Você acaba de acessar o conteúdo exclusivo do primeiro passo do
+                Scalp Defense System™.
+              </p>
+
+              <p className="clean-hero__support">
+                Descubra como aproveitar melhor o seu BALDSHIELD CLEAN e
+                transformar a limpeza do couro cabeludo em um hábito diário.
+              </p>
+
+              <div className="clean-hero__actions">
+                <a
+                  className="clean-button clean-button--primary"
+                  href="#como-usar"
+                >
+                  Ver modo de uso
+                  <ArrowDownIcon />
+                </a>
+
+                <a
+                  className="clean-button clean-button--ghost"
+                  href="#formula"
+                >
+                  Conheça a fórmula
+                </a>
+              </div>
+
+              <div className="clean-hero__microcopy">
+                <span>
+                  <CheckIcon /> Uso diário
+                </span>
+                <span>
+                  <CheckIcon /> Controle da oleosidade
+                </span>
+                <span>
+                  <CheckIcon /> Enxágue
+                </span>
+              </div>
             </div>
 
-            <p className="clean-eyebrow">SCALP DEFENSE SYSTEM™ · STEP 01</p>
+            <div
+              className="clean-hero__visual"
+              aria-label="Homem utilizando o BALDSHIELD CLEAN durante o banho"
+            >
+              <div className="clean-hero__halo" aria-hidden="true" />
+              <div className="clean-hero__product-glow" aria-hidden="true" />
 
-            <h1 id="clean-title">
-              Bem-vindo ao
-              <span>BALDSHIELD CLEAN.</span>
-            </h1>
+              <figure className="clean-lifestyle-card">
+                <img
+                  src={cleanHero}
+                  alt="Homem utilizando BALDSHIELD CLEAN no couro cabeludo durante o banho"
+                  fetchPriority="high"
+                />
 
-            <p className="clean-hero__lead">
-              Você acaba de dar o primeiro passo de uma rotina desenvolvida
-              especialmente para o couro cabeludo exposto.
-            </p>
-
-            <p className="clean-hero__support">
-              Purifique. Equilibre. Prepare a pele para os próximos passos.
-            </p>
-
-            <div className="clean-hero__actions">
-              <a className="clean-button clean-button--primary" href="#como-usar">
-                Como usar
-                <ArrowDownIcon />
-              </a>
-              <a className="clean-button clean-button--ghost" href="#formula">
-                Conheça a fórmula
-              </a>
-            </div>
-
-            <div className="clean-hero__microcopy">
-              <span><CheckIcon /> Uso diário</span>
-              <span><CheckIcon /> 2 pumps</span>
-              <span><CheckIcon /> 2 minutos</span>
+                <figcaption className="clean-lifestyle-card__caption">
+                  <div>
+                    <span>STEP 01</span>
+                    <strong>CLEAN</strong>
+                  </div>
+                  <small>Emulsão de limpeza diária · 120 ml</small>
+                </figcaption>
+              </figure>
             </div>
           </div>
 
-          <div className="clean-hero__visual" aria-label="BALDSHIELD CLEAN">
-            <div className="clean-hero__halo" aria-hidden="true" />
-            <div className="clean-product-card">
-              <span className="clean-product-card__step">STEP 01</span>
-              <img
-                src={cleanBottle}
-                alt="BALDSHIELD CLEAN — emulsão de limpeza diária para o couro cabeludo exposto"
-              />
-              <div className="clean-product-card__caption">
-                <strong>CLEAN</strong>
-                <span>Emulsão de limpeza diária · 120 ml</span>
+          <a
+            className="clean-scroll-cue"
+            href="#como-usar"
+            aria-label="Ir para o modo de uso"
+          >
+            <span>Comece por aqui</span>
+            <ArrowDownIcon />
+          </a>
+        </section>
+
+        <section
+          className="clean-section clean-section--light"
+          id="como-usar"
+        >
+          <div className="clean-shell">
+            <header className="clean-section__heading clean-section__heading--dark">
+              <p className="clean-section__eyebrow">PRIMEIRO USO</p>
+              <h2>Como usar o seu CLEAN</h2>
+              <p>
+                Uma etapa simples de limpeza para integrar à rotina diária de
+                cuidado com o couro cabeludo exposto.
+              </p>
+            </header>
+
+            <div className="clean-usage">
+              {usageSteps.map((item, index) => (
+                <article className="clean-usage__item" key={item.number}>
+                  <div className="clean-usage__top">
+                    <span className="clean-usage__number">{item.number}</span>
+                    {index < usageSteps.length - 1 && (
+                      <span
+                        className="clean-usage__line"
+                        aria-hidden="true"
+                      />
+                    )}
+                  </div>
+                  <h3>{item.title}</h3>
+                  <p>{item.text}</p>
+                </article>
+              ))}
+            </div>
+
+            <div className="clean-tip">
+              <span className="clean-tip__icon">BS</span>
+              <div>
+                <strong>Dica BaldShield</strong>
+                <p>
+                  Utilize as pontas dos dedos para massagear o couro cabeludo
+                  durante aproximadamente 2 minutos. Evite utilizar as unhas ou
+                  realizar fricção excessiva.
+                </p>
               </div>
             </div>
           </div>
-        </div>
+        </section>
 
-        <a className="clean-scroll-cue" href="#como-usar" aria-label="Ir para como usar">
-          <span>Comece por aqui</span>
-          <ArrowDownIcon />
-        </a>
-      </section>
-
-      <section className="clean-section clean-section--light" id="como-usar">
-        <div className="clean-shell">
-          <header className="clean-section__heading clean-section__heading--dark">
-            <p className="clean-section__eyebrow">PRIMEIRO USO</p>
-            <h2>Como usar o seu CLEAN</h2>
-            <p>
-              Um ritual simples, pensado para fazer parte da sua rotina diária.
-            </p>
-          </header>
-
-          <div className="clean-usage">
-            {usageSteps.map((item, index) => (
-              <article className="clean-usage__item" key={item.number}>
-                <div className="clean-usage__top">
-                  <span className="clean-usage__number">{item.number}</span>
-                  {index < usageSteps.length - 1 && (
-                    <span className="clean-usage__line" aria-hidden="true" />
-                  )}
-                </div>
-                <h3>{item.title}</h3>
-                <p>{item.text}</p>
-              </article>
-            ))}
-          </div>
-
-          <div className="clean-tip">
-            <span className="clean-tip__icon">BS</span>
-            <div>
-              <strong>Dica BaldShield</strong>
-              <p>
-                Faça movimentos suaves com as pontas dos dedos. Evite usar as
-                unhas e enxágue completamente ao final.
+        <section className="clean-section clean-section--dark">
+          <div className="clean-shell">
+            <header className="clean-section__heading">
+              <p className="clean-section__eyebrow">
+                POR QUE LIMPAR O COURO CABELUDO?
               </p>
+              <h2>
+                Sem a proteção dos cabelos, a pele fica mais exposta à rotina.
+              </h2>
+              <p>
+                Suor, poluição, oleosidade, resíduos de produtos e exposição
+                diária se acumulam diretamente sobre o couro cabeludo. O CLEAN
+                transforma a limpeza em um primeiro passo consciente: purificar,
+                equilibrar e preparar a pele para as próximas etapas.
+              </p>
+            </header>
+
+            <div className="clean-benefits">
+              {benefits.map((benefit, index) => (
+                <article
+                  className="clean-benefit-card"
+                  key={benefit.title}
+                >
+                  <span className="clean-benefit-card__index">
+                    0{index + 1}
+                  </span>
+                  <h3>{benefit.title}</h3>
+                  <p>{benefit.text}</p>
+                </article>
+              ))}
             </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      <section className="clean-section clean-section--dark">
-        <div className="clean-shell">
-          <header className="clean-section__heading">
-            <p className="clean-section__eyebrow">POR QUE COMEÇAR PELA LIMPEZA?</p>
-            <h2>O couro cabeludo exposto vive o dia inteiro em contato com o mundo.</h2>
-            <p>
-              Oleosidade, suor, poluição e resíduos podem se acumular sobre a
-              pele. O CLEAN transforma a limpeza em um primeiro passo
-              consciente: remover o excesso, recuperar a sensação de frescor e
-              preparar o couro cabeludo para continuar a rotina.
-            </p>
-          </header>
+        <section
+          className="clean-section clean-section--formula"
+          id="formula"
+        >
+          <div className="clean-shell">
+            <header className="clean-section__heading clean-section__heading--formula">
+              <p className="clean-section__eyebrow">
+                CONHEÇA A FÓRMULA
+              </p>
+              <h2>Limpeza inteligente começa com uma fórmula equilibrada.</h2>
+              <p>
+                O BALDSHIELD CLEAN combina ativos selecionados para remover
+                impurezas, auxiliar no controle da oleosidade e preservar o
+                conforto do couro cabeludo exposto.
+              </p>
+            </header>
 
-          <div className="clean-benefits">
-            {benefits.map((benefit, index) => (
-              <article className="clean-benefit-card" key={benefit.title}>
-                <span className="clean-benefit-card__index">0{index + 1}</span>
-                <h3>{benefit.title}</h3>
-                <p>{benefit.text}</p>
-              </article>
-            ))}
-          </div>
-        </div>
-      </section>
+            <div className="clean-formula-experience">
+              <div className="clean-formula-product">
+                <div className="clean-formula-product__glow" aria-hidden="true" />
 
-      <section className="clean-section clean-section--formula" id="formula">
-        <div className="clean-shell">
-          <header className="clean-section__heading">
-            <p className="clean-section__eyebrow">DESCUBRA O QUE VOCÊ ESTÁ APLICANDO</p>
-            <h2>Ativos escolhidos para uma limpeza inteligente.</h2>
-            <p>
-              Uma combinação que une limpeza, equilíbrio e conforto em uma
-              experiência criada para o uso diário.
-            </p>
-          </header>
+                <div className="clean-formula-product__frame">
+                  <img
+                    src={cleanBottle}
+                    alt="Frasco BALDSHIELD CLEAN"
+                    loading="lazy"
+                  />
+                </div>
 
-          <div className="clean-actives">
-            {actives.map((active) => (
-              <article className="clean-active-card" key={active.title}>
-                <span className="clean-active-card__tag">{active.tag}</span>
-                <h3>{active.title}</h3>
-                <p>{active.text}</p>
-              </article>
-            ))}
-          </div>
+                <div className="clean-formula-product__copy">
+                  <span>STEP 01 · CLEAN</span>
+                  <strong>Limpeza eficaz sem agressão.</strong>
+                  <p>
+                    Uma emulsão pensada para integrar purificação, equilíbrio e
+                    conforto à rotina diária.
+                  </p>
+                </div>
+              </div>
 
-          <p className="clean-disclaimer">
-            As informações desta página apresentam a função cosmética dos
-            componentes de forma educativa. Consulte sempre o rótulo do produto
-            para composição, precauções e modo de uso completos.
-          </p>
-        </div>
-      </section>
+              <div className="clean-formula-list">
+                {formulaItems.map((item, index) => (
+                  <article className="clean-formula-item" key={item.title}>
+                    <div className="clean-formula-item__meta">
+                      <span>{String(index + 1).padStart(2, "0")}</span>
+                      <small>{item.tag}</small>
+                    </div>
+                    <div>
+                      <h3>{item.title}</h3>
+                      <p>{item.text}</p>
+                    </div>
+                  </article>
+                ))}
+              </div>
+            </div>
 
-      <section className="clean-section clean-section--system" id="sistema">
-        <div className="clean-shell clean-system">
-          <div className="clean-system__intro">
-            <p className="clean-section__eyebrow">SCALP DEFENSE SYSTEM™</p>
-            <h2>Uma rotina. Quatro movimentos essenciais.</h2>
-            <p>
-              O CLEAN não é um produto isolado. Ele inaugura uma jornada de
-              cuidado criada para acompanhar as necessidades do couro cabeludo
-              exposto.
+            <p className="clean-disclaimer">
+              As informações desta página apresentam a função cosmética dos
+              componentes de forma educativa. Consulte sempre o rótulo do
+              BALDSHIELD CLEAN para composição, precauções e modo de uso
+              completos.
             </p>
           </div>
+        </section>
 
-          <div className="clean-system__steps">
-            {systemSteps.map((item, index) => (
-              <React.Fragment key={item.step}>
+        <section className="clean-transition">
+          <div className="clean-shell clean-transition__layout">
+            <div className="clean-transition__copy">
+              <p className="clean-section__eyebrow">ANTES DO PRÓXIMO PASSO</p>
+              <h2>A limpeza prepara o terreno para a hidratação.</h2>
+              <p>
+                Depois de remover impurezas e excesso de oleosidade, o couro
+                cabeludo está pronto para receber o STEP 02 HYDRATE e continuar
+                a rotina de cuidado.
+              </p>
+              <a className="clean-button clean-button--ghost" href="/hydrate">
+                Conheça o HYDRATE
+              </a>
+            </div>
+
+            <div className="clean-transition__steps" aria-label="Transição do CLEAN para o HYDRATE">
+              <div className="clean-transition__step clean-transition__step--active">
+                <small>STEP 01</small>
+                <strong>CLEAN</strong>
+                <span>Purificar</span>
+              </div>
+
+              <div className="clean-transition__arrow" aria-hidden="true">
+                →
+              </div>
+
+              <div className="clean-transition__step">
+                <small>STEP 02</small>
+                <strong>HYDRATE</strong>
+                <span>Equilibrar</span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section
+          className="clean-section clean-section--system"
+          id="sistema"
+        >
+          <div className="clean-shell">
+            <div className="clean-system-timeline__intro">
+              <p className="clean-section__eyebrow">
+                SCALP DEFENSE SYSTEM™
+              </p>
+              <h2>Uma rotina. Quatro movimentos essenciais.</h2>
+              <p>
+                Você está no STEP 01. O CLEAN inicia a rotina removendo
+                impurezas e preparando o couro cabeludo para hidratação,
+                proteção e controle ao longo do dia.
+              </p>
+            </div>
+
+            <div className="clean-system-timeline">
+              {systemSteps.map((item, index) => (
                 <article
-                  className={`clean-system-card ${
-                    item.active ? "clean-system-card--active" : ""
+                  className={`clean-timeline-step ${
+                    item.active ? "clean-timeline-step--active" : ""
                   }`}
+                  key={item.step}
                 >
-                  <div className="clean-system-card__top">
-                    <span>{item.step}</span>
-                    {item.active && <CheckIcon />}
+                  <div className="clean-timeline-step__rail">
+                    <span className="clean-timeline-step__dot">
+                      {item.active && <CheckIcon />}
+                    </span>
+                    {index < systemSteps.length - 1 && (
+                      <span
+                        className="clean-timeline-step__line"
+                        aria-hidden="true"
+                      />
+                    )}
                   </div>
-                  <strong>{item.name}</strong>
-                  <p>{item.action}</p>
-                  <small>{item.status}</small>
+
+                  <div className="clean-timeline-step__content">
+                    <div className="clean-timeline-step__top">
+                      <span>{item.step}</span>
+                      <small>{item.status}</small>
+                    </div>
+                    <strong>{item.name}</strong>
+                    <p>{item.action}</p>
+                  </div>
                 </article>
-                {index < systemSteps.length - 1 && (
-                  <span className="clean-system__connector" aria-hidden="true">
-                    →
-                  </span>
-                )}
-              </React.Fragment>
-            ))}
+              ))}
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      <section className="clean-section clean-section--light" id="faq">
-        <div className="clean-shell clean-faq-layout">
-          <div className="clean-faq-layout__intro">
-            <p className="clean-section__eyebrow">DÚVIDAS FREQUENTES</p>
-            <h2>Seu primeiro passo, sem complicação.</h2>
+        <section className="clean-section clean-section--light" id="faq">
+          <div className="clean-shell clean-faq-layout">
+            <div className="clean-faq-layout__intro">
+              <p className="clean-section__eyebrow">DÚVIDAS FREQUENTES</p>
+              <h2>Limpeza sem complicação.</h2>
+              <p>
+                Respostas rápidas para ajudar você a aproveitar melhor a
+                experiência com o BALDSHIELD CLEAN.
+              </p>
+            </div>
+
+            <div className="clean-faq">
+              {faqs.map((faq, index) => (
+                <details className="clean-faq__item" key={faq.question}>
+                  <summary>
+                    <span className="clean-faq__number">
+                      {String(index + 1).padStart(2, "0")}
+                    </span>
+                    <span>{faq.question}</span>
+                    <span className="clean-faq__plus" aria-hidden="true">
+                      +
+                    </span>
+                  </summary>
+                  <p>{faq.answer}</p>
+                </details>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section className="clean-closing">
+          <div className="clean-closing__glow" aria-hidden="true" />
+
+          <div className="clean-shell clean-closing__content">
+            <p className="clean-section__eyebrow">CUIDADO QUE GERA CONFIANÇA</p>
+            <h2>
+              Toda grande rotina começa por uma limpeza inteligente.
+              <br />
+              Purificar. Equilibrar. Preparar.
+            </h2>
             <p>
-              Reunimos respostas rápidas para ajudar você a aproveitar melhor a
-              experiência com o CLEAN.
+              Você concluiu o STEP 01 do Scalp Defense System™. Agora o couro
+              cabeludo está pronto para seguir para a etapa de hidratação.
             </p>
-          </div>
 
-          <div className="clean-faq">
-            {faqs.map((faq, index) => (
-              <details className="clean-faq__item" key={faq.question}>
-                <summary>
-                  <span className="clean-faq__number">0{index + 1}</span>
-                  <span>{faq.question}</span>
-                  <span className="clean-faq__plus" aria-hidden="true">+</span>
-                </summary>
-                <p>{faq.answer}</p>
-              </details>
-            ))}
-          </div>
-        </div>
-      </section>
+            <a className="clean-button clean-button--primary" href="/hydrate">
+              Conheça o STEP 02
+              <ArrowDownIcon />
+            </a>
 
-      <section className="clean-closing">
-        <div className="clean-closing__glow" aria-hidden="true" />
-        <div className="clean-shell clean-closing__content">
-          <p className="clean-section__eyebrow">VOCÊ JÁ COMEÇOU</p>
-          <h2>Assumir a careca é estilo.<br />Cuidar dela é o próximo passo.</h2>
-          <p>
-            Continue descobrindo uma nova forma de cuidar do couro cabeludo
-            exposto.
-          </p>
-          <a className="clean-button clean-button--primary" href="#como-usar">
-            Rever modo de uso
-            <ArrowDownIcon />
-          </a>
-          <div className="clean-closing__brand">
-            <strong>BALD<span>SHIELD</span></strong>
-            <small>Confidence for the Bold</small>
+            <div className="clean-closing__brand">
+              <strong>
+                BALD<span>SHIELD</span>
+              </strong>
+              <small>Confidence for the Bold</small>
+            </div>
           </div>
-        </div>
-      </section>
-    </main>
+        </section>
+      </main>
+    </>
   );
 }
