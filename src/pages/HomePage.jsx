@@ -54,54 +54,103 @@ const HomePage = () => {
   const organizationSchema = {
     "@context": "https://schema.org",
     "@type": "Organization",
+    "@id": "https://www.baldshield.com/#organization",
     name: "BaldShield",
-    url: "https://www.baldshield.com",
-    logo: "https://www.baldshield.com/escudo.png",
+    url: "https://www.baldshield.com/",
+    logo: {
+      "@type": "ImageObject",
+      url: "https://www.baldshield.com/escudo.png",
+    },
     description:
-      "Marca brasileira focada no cuidado premium do couro cabeludo masculino para homens carecas.",
+      "A primeira marca brasileira especializada no cuidado do couro cabeludo de homens carecas.",
     sameAs: ["https://www.instagram.com/baldshield.br"],
+  };
+
+  const websiteSchema = {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "@id": "https://www.baldshield.com/#website",
+    url: "https://www.baldshield.com/",
+    name: "BaldShield",
+    description:
+      "Conteúdos e soluções para o cuidado do couro cabeludo de homens carecas.",
+    publisher: {
+      "@id": "https://www.baldshield.com/#organization",
+    },
+    inLanguage: "pt-BR",
   };
 
   return (
     <>
       <Helmet>
-        <title>BaldShield | Scalp Care Premium para Homens Carecas</title>
+        <title>BaldShield | Cuidado do Couro Cabeludo de Homens Carecas</title>
 
         <meta
           name="description"
-          content="A primeira marca brasileira focada no cuidado premium do couro cabeludo masculino. Controle de brilho, proteção diária e scalp care para homens carecas."
+          content="A primeira marca brasileira especializada no cuidado do couro cabeludo de homens carecas. Conheça o Scalp Defense System™, uma rotina completa de limpeza, hidratação, proteção e controle da oleosidade."
         />
 
         <meta
           name="keywords"
-          content="cuidados para homens carecas, scalp care masculino, couro cabeludo masculino, como evitar brilho na careca, cuidado da careca, controle de oleosidade, BaldShield"
+          content="BaldShield, cuidado do couro cabeludo, couro cabeludo de homens carecas, cuidados para homens carecas, scalp care masculino, limpeza do couro cabeludo, hidratação do couro cabeludo, proteção do couro cabeludo, controle de oleosidade, Scalp Defense System"
+        />
+
+        <meta
+          name="robots"
+          content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
         />
 
         <link rel="canonical" href="https://www.baldshield.com/" />
 
+        <meta property="og:type" content="website" />
+        <meta property="og:locale" content="pt_BR" />
+        <meta property="og:site_name" content="BaldShield" />
         <meta
           property="og:title"
-          content="BaldShield | Scalp Care Premium para Homens Carecas"
+          content="BaldShield | Cuidado do Couro Cabeludo de Homens Carecas"
         />
         <meta
           property="og:description"
-          content="A primeira marca brasileira focada no cuidado premium do couro cabeludo masculino. Controle de brilho, proteção diária e mais confiança para homens carecas."
+          content="A primeira marca brasileira especializada no cuidado do couro cabeludo de homens carecas. Conheça o Scalp Defense System™."
         />
         <meta property="og:url" content="https://www.baldshield.com/" />
-        <meta property="og:type" content="website" />
+        <meta
+          property="og:image"
+          content="https://www.baldshield.com/produto1.png"
+        />
+        <meta
+          property="og:image:secure_url"
+          content="https://www.baldshield.com/produto1.png"
+        />
+        <meta property="og:image:type" content="image/png" />
+        <meta
+          property="og:image:alt"
+          content="BaldShield — cuidado premium para o couro cabeludo de homens carecas"
+        />
 
         <meta name="twitter:card" content="summary_large_image" />
         <meta
           name="twitter:title"
-          content="BaldShield | Scalp Care Premium para Homens Carecas"
+          content="BaldShield | Cuidado do Couro Cabeludo de Homens Carecas"
         />
         <meta
           name="twitter:description"
-          content="Controle de brilho, proteção diária e uma rotina premium desenvolvida para homens carecas."
+          content="Conheça a primeira marca brasileira especializada no cuidado do couro cabeludo de homens carecas."
+        />
+        <meta
+          name="twitter:image"
+          content="https://www.baldshield.com/produto1.png"
+        />
+        <meta
+          name="twitter:image:alt"
+          content="BaldShield — cuidado premium para o couro cabeludo de homens carecas"
         />
 
         <script type="application/ld+json">
           {JSON.stringify(organizationSchema)}
+        </script>
+        <script type="application/ld+json">
+          {JSON.stringify(websiteSchema)}
         </script>
       </Helmet>
 
