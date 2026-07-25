@@ -7,6 +7,19 @@ import Footer from '@/components/Footer.jsx';
 const posts = [
   
   {
+  slug: "/blog/couro-cabeludo-sensivel-por-que-ele-pode-ficar-irritado",
+  title:
+    "Couro cabeludo sensível: por que ele pode ficar irritado mesmo sem cabelos?",
+  excerpt:
+    "Descubra por que o couro cabeludo continua vulnerável mesmo sem cabelos e quais cuidados ajudam a proteger sua barreira natural.",
+  category: "Saúde do couro cabeludo",
+  date: "24 jul. 2026",
+  isNew: true,
+  image:
+    "/Blog/couro-cabeludo-sensivel/couro-cabeludo-sensivel-irritacao-baldshield.webp",
+  },
+  
+  {
   slug: "/blog/por-que-minha-careca-fica-oleosa-tao-rapido",
   title: "Por que minha careca fica oleosa tão rápido?",
   excerpt:

@@ -21,6 +21,7 @@ import BlogPostLimpezaCouroCabeludo from "@/pages/blog/BlogPostLimpezaCouroCabel
 import BlogPostHidratacaoCouroCabeludo from "@/pages/blog/BlogPostHidratacaoCouroCabeludo.jsx";
 import BlogPostProtecaoCouroCabeludo from "@/pages/blog/BlogPostProtecaoCouroCabeludo";
 import BlogPostOleosidadeCouroCabeludo from "@/pages/blog/BlogPostOleosidadeCouroCabeludo";
+import BlogPostCouroCabeludoSensivel from "@/pages/blog/BlogPostCouroCabeludoSensivel";
 import { Toaster } from '@/components/ui/toaster';
 import { CartProvider } from '@/hooks/useCart.jsx';
 import WhatsAppButton from "./components/WhatsAppButton";
@@ -92,6 +93,10 @@ function App() {
           <Route
           path="/blog/por-que-minha-careca-fica-oleosa-tao-rapido"
           element={<BlogPostOleosidadeCouroCabeludo />}
+          />
+          <Route
+          path="/blog/couro-cabeludo-sensivel-por-que-ele-pode-ficar-irritado"
+          element={<BlogPostCouroCabeludoSensivel />}
           />
 
           <Route
