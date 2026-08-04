@@ -1071,7 +1071,7 @@ const BlogPostComoRasparCabeca = () => {
         </ol>
         </div>
         </section>
-        
+
 
             <section className="my-24 rounded-[2rem] border border-primary/30 bg-gradient-to-br from-zinc-950 via-black to-zinc-950 p-12 text-center">
 
@@ -1093,7 +1093,7 @@ const BlogPostComoRasparCabeca = () => {
               </p>
 
               <a
-                href="/scalp-defense-system"
+                href="/blog/o-que-e-scalp-defense-system"
                 className="inline-flex items-center rounded-full bg-primary px-10 py-4 text-lg font-semibold text-black transition duration-300 hover:scale-105"
               >
                 Conheça o Scalp Defense System™
