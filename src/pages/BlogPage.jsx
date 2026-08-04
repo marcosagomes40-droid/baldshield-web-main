@@ -7,6 +7,18 @@ import Footer from '@/components/Footer.jsx';
 const posts = [
   
   {
+  slug: "/blog/como-raspar-a-cabeca-corretamente",
+  title: "Como raspar a cabeça corretamente: o guia definitivo",
+  excerpt:
+    "Aprenda como preparar a pele, usar a lâmina corretamente e evitar irritações para manter o couro cabeludo saudável.",
+  category: "Scalp Care",
+  date: "03 ago. 2026",
+  isNew: true,
+  image:
+    "/Blog/como-raspar-a-cabeca/como-raspar-cabeca-corretamente-baldshield.webp",
+  },
+  
+  {
   slug: "/blog/couro-cabeludo-sensivel-por-que-ele-pode-ficar-irritado",
   title:
     "Couro cabeludo sensível: por que ele pode ficar irritado mesmo sem cabelos?",
@@ -26,7 +38,7 @@ const posts = [
     "Entenda por que o couro cabeludo continua produzindo oleosidade mesmo sem cabelos e como manter a pele equilibrada.",
   category: "Oleosidade",
   date: "16 jul. 2026",
-  isNew: true,
+  isNew: false,
   image:
     "/Blog/oleosidade-couro-cabeludo/homem-careca-oleosidade-couro-cabeludo-baldshield.webp",
   },
@@ -39,7 +51,7 @@ const posts = [
     "Entenda por que proteger diariamente o couro cabeludo é um dos cuidados mais importantes para homens carecas.",
   category: "Proteção",
   date: "30 jun. 2026",
-  isNew: true,
+  isNew: false,
   image:
     "/Blog/protecao-couro-cabeludo/homem-careca-protecao-couro-cabeludo-baldshield.webp",
   },
