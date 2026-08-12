@@ -23,6 +23,7 @@ import BlogPostProtecaoCouroCabeludo from "@/pages/blog/BlogPostProtecaoCouroCab
 import BlogPostOleosidadeCouroCabeludo from "@/pages/blog/BlogPostOleosidadeCouroCabeludo";
 import BlogPostCouroCabeludoSensivel from "@/pages/blog/BlogPostCouroCabeludoSensivel";
 import BlogPostComoRasparCabeca from "./pages/blog/BlogPostComoRasparCabeca";
+import BlogPostSkincareCareca from "@/pages/blog/BlogPostSkincareCareca";
 import { Toaster } from '@/components/ui/toaster';
 import { CartProvider } from '@/hooks/useCart.jsx';
 import WhatsAppButton from "./components/WhatsAppButton";
@@ -104,7 +105,13 @@ function App() {
           path="/blog/como-raspar-a-cabeca-corretamente"
           element={<BlogPostComoRasparCabeca />}
           />
-          
+
+          <Route
+          path="/blog/skincare-para-careca-couro-cabeludo-exposto"
+          element={<BlogPostSkincareCareca />}
+          />
+
+
           <Route
             path="*"
             element={

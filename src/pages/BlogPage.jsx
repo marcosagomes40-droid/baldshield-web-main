@@ -7,6 +7,19 @@ import Footer from '@/components/Footer.jsx';
 const posts = [
   
   {
+  slug: "/blog/skincare-para-careca-couro-cabeludo-exposto",
+  title:
+    "Existe skincare para careca? O mercado começa a olhar para o couro cabeludo exposto",
+  excerpt:
+    "Entenda por que o scalp care começa a olhar para o couro cabeludo exposto como uma área de pele que merece cuidados próprios.",
+  category: "Scalp Care",
+  date: "11 ago. 2026",
+  isNew: true,
+  image:
+    "/Blog/skincare-careca/scalp-care-careca-couro-cabeludo-exposto-baldshield.webp",
+  },
+    
+  {
   slug: "/blog/como-raspar-a-cabeca-corretamente",
   title: "Como raspar a cabeça corretamente: o guia definitivo",
   excerpt:
@@ -26,7 +39,7 @@ const posts = [
     "Descubra por que o couro cabeludo continua vulnerável mesmo sem cabelos e quais cuidados ajudam a proteger sua barreira natural.",
   category: "Saúde do couro cabeludo",
   date: "24 jul. 2026",
-  isNew: true,
+  isNew: false,
   image:
     "/Blog/couro-cabeludo-sensivel/couro-cabeludo-sensivel-irritacao-baldshield.webp",
   },
