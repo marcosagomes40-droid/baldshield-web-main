@@ -31,6 +31,7 @@ import EmbaixadorPage from './pages/EmbaixadorPage.jsx';
 import CosmetiquePage from '@/pages/CosmetiquePage.jsx';
 import CleanLanding from "./pages/CleanLanding";
 import HydrateLanding from "./pages/HydrateLanding";
+import ProtectLanding from "./pages/ProtectLanding";
 
 function App() {
   return (
@@ -39,6 +40,7 @@ function App() {
         <ScrollToTop />
         <Routes>
           <Route path="/" element={<HomePage />} />
+          <Route path="/protect" element={<ProtectLanding />} />
           <Route path="/hydrate" element={<HydrateLanding />} />
           <Route path="/clean" element={<CleanLanding />} />
           <Route path="/products" element={<ProductsPage />} />
