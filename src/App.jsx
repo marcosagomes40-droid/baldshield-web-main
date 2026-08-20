@@ -24,6 +24,7 @@ import BlogPostOleosidadeCouroCabeludo from "@/pages/blog/BlogPostOleosidadeCour
 import BlogPostCouroCabeludoSensivel from "@/pages/blog/BlogPostCouroCabeludoSensivel";
 import BlogPostComoRasparCabeca from "./pages/blog/BlogPostComoRasparCabeca";
 import BlogPostSkincareCareca from "@/pages/blog/BlogPostSkincareCareca";
+import BlogPostCouroCabeludoExposto from "@/pages/blog/BlogPostCouroCabeludoExposto";
 import { Toaster } from '@/components/ui/toaster';
 import { CartProvider } from '@/hooks/useCart.jsx';
 import WhatsAppButton from "./components/WhatsAppButton";
@@ -113,6 +114,10 @@ function App() {
           element={<BlogPostSkincareCareca />}
           />
 
+          <Route
+          path="/blog/couro-cabeludo-exposto-skincare-scalp-care"
+          element={<BlogPostCouroCabeludoExposto />}
+          />
 
           <Route
             path="*"

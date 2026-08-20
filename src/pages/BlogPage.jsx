@@ -5,7 +5,18 @@ import Header from '@/components/Header.jsx';
 import Footer from '@/components/Footer.jsx';
 
 const posts = [
-  
+  {
+  slug: "/blog/couro-cabeludo-exposto-skincare-scalp-care",
+  title: "O couro cabeludo exposto ainda cabe no skincare tradicional?",
+  excerpt:
+    "Entre skincare, haircare e scalp care, existe uma região que ainda ocupa um espaço particular: o couro cabeludo permanentemente exposto.",
+  category: "Scalp Care",
+  date: "19 ago. 2026",
+  isNew: true,
+  image:
+    "/Blog/couro-cabeludo-exposto/scalp-care-quem-nao-tem-cabelo-baldshield.webp",
+  },
+
   {
   slug: "/blog/skincare-para-careca-couro-cabeludo-exposto",
   title:
@@ -26,7 +37,7 @@ const posts = [
     "Aprenda como preparar a pele, usar a lâmina corretamente e evitar irritações para manter o couro cabeludo saudável.",
   category: "Scalp Care",
   date: "03 ago. 2026",
-  isNew: true,
+  isNew: false,
   image:
     "/Blog/como-raspar-a-cabeca/como-raspar-cabeca-corretamente-baldshield.webp",
   },
