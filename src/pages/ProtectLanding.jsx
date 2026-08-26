@@ -79,7 +79,7 @@ const systemSteps = [
   },
   {
     step: "STEP 03",
-    name: "PROTECT",
+    name: "DEFENSE",
     action: "Proteger",
     href: "/defense",
     active: true,
@@ -112,18 +112,18 @@ export default function ProtectLanding() {
   return (
     <>
       <Helmet>
-        <title>BALDSHIELD PROTECT | Conteúdo exclusivo STEP 03</title>
+        <title>BALDSHIELD DEFENSE | Conteúdo exclusivo STEP 03</title>
 
         <meta
           name="description"
-          content="Conteúdo exclusivo do BALDSHIELD PROTECT: proteção solar, modo de uso, tecnologia de fotoproteção e STEP 03 do Scalp Defense System™."
+          content="Conteúdo exclusivo do BALDSHIELD DEFENSE: proteção solar, modo de uso, tecnologia de fotoproteção e STEP 03 do Scalp Defense System™."
         />
 
         <link rel="canonical" href="https://www.baldshield.com/defense" />
 
         <meta
           property="og:title"
-          content="BALDSHIELD PROTECT | STEP 03"
+          content="BALDSHIELD DEFENSE | STEP 03"
         />
 
         <meta
@@ -163,7 +163,7 @@ export default function ProtectLanding() {
 
             <h1 id="protect-title">
               <span className="protect-hero__brand">
-                BALDSHIELD <em>PROTECT.</em>
+                BALDSHIELD <em>DEFENSE.</em>
               </span>
 
               <span className="protect-hero__message">
@@ -178,7 +178,7 @@ export default function ProtectLanding() {
             </p>
 
             <p className="protect-hero__support">
-              Proteção solar de alto desempenho para integrar o cuidado diário
+              Hidratação e proteção de alto desempenho para integrar o cuidado diário
               do couro cabeludo exposto.
             </p>
 
@@ -260,7 +260,7 @@ export default function ProtectLanding() {
               <h2>Proteção que vai além do número.</h2>
 
               <p>
-                O BALDSHIELD PROTECT combina alta proteção UVB com proteção UVA
+                O BALDSHIELD DEFENSE combina alta proteção UVB com UVA
                 de amplo espectro, comprovada por ensaios específicos de
                 fotoproteção.
               </p>
@@ -277,7 +277,7 @@ export default function ProtectLanding() {
 
             <p className="protect-disclaimer">
               Resultados baseados em estudos de eficácia e segurança realizados
-              sobre a formulação do PROTECT.
+              sobre a formulação do DEFENSE.
             </p>
           </div>
         </section>
@@ -293,10 +293,10 @@ export default function ProtectLanding() {
             <div className="protect-care-copy">
               <p className="protect-section__eyebrow">PROTEÇÃO + CUIDADO</p>
 
-              <h2>Proteção solar. Cuidado na mesma rotina.</h2>
+              <h2>Hidratação e Proteção. Cuidado na mesma rotina.</h2>
 
               <p className="protect-care-copy__intro">
-                Uma fórmula fluida pensada para tornar a proteção mais
+                Uma fórmula fluida pensada para tornar a hidratação e proteção mais
                 confortável no dia a dia, combinando fotoproteção com
                 ingredientes associados ao cuidado da pele.
               </p>
@@ -339,7 +339,7 @@ export default function ProtectLanding() {
               <h2>Proteja. Reaplique. Siga o dia.</h2>
 
               <p>
-                Uma rotina simples para integrar a proteção solar ao cuidado
+                Uma rotina simples para integrar a hidratação e proteção ao cuidado
                 diário do couro cabeludo exposto.
               </p>
             </header>
@@ -383,7 +383,7 @@ export default function ProtectLanding() {
                 SCALP DEFENSE SYSTEM™
               </p>
 
-              <h2>PROTECT é parte de algo maior.</h2>
+              <h2>DEFENSE é parte de algo maior.</h2>
 
               <p>
                 O cuidado do couro cabeludo exposto não termina em uma única
@@ -433,7 +433,7 @@ export default function ProtectLanding() {
               <p className="protect-section__eyebrow">O RITUAL BALDSHIELD</p>
 
               <h2>
-                CLEAN. HYDRATE. <span>PROTECT.</span>
+                CLEAN. HYDRATE. <span>DEFENSE.</span>
               </h2>
 
               <p>
