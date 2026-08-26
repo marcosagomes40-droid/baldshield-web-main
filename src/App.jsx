@@ -1,5 +1,11 @@
 import React from 'react';
-import { Route, Routes, BrowserRouter as Router } from 'react-router-dom';
+import {
+  Route,
+  Routes,
+  BrowserRouter as Router,
+  Navigate
+} from 'react-router-dom';
+
 import ScrollToTop from './components/ScrollToTop.jsx';
 import HomePage from './pages/HomePage.jsx';
 import ProductsPage from './pages/ProductsPage.jsx';
@@ -25,8 +31,10 @@ import BlogPostCouroCabeludoSensivel from "@/pages/blog/BlogPostCouroCabeludoSen
 import BlogPostComoRasparCabeca from "./pages/blog/BlogPostComoRasparCabeca";
 import BlogPostSkincareCareca from "@/pages/blog/BlogPostSkincareCareca";
 import BlogPostCouroCabeludoExposto from "@/pages/blog/BlogPostCouroCabeludoExposto";
+
 import { Toaster } from '@/components/ui/toaster';
 import { CartProvider } from '@/hooks/useCart.jsx';
+
 import WhatsAppButton from "./components/WhatsAppButton";
 import EmbaixadorPage from './pages/EmbaixadorPage.jsx';
 import CosmetiquePage from '@/pages/CosmetiquePage.jsx';
@@ -39,11 +47,21 @@ function App() {
     <CartProvider>
       <Router>
         <ScrollToTop />
+
         <Routes>
           <Route path="/" element={<HomePage />} />
-          <Route path="/protect" element={<ProtectLanding />} />
+
+          {/* Landing Pages */}
+          <Route path="/defense" element={<ProtectLanding />} />
+          <Route
+            path="/protect"
+            element={<Navigate to="/defense" replace />}
+          />
+
           <Route path="/hydrate" element={<HydrateLanding />} />
           <Route path="/clean" element={<CleanLanding />} />
+
+          {/* Páginas principais */}
           <Route path="/products" element={<ProductsPage />} />
           <Route path="/product/:id" element={<ProductDetailPage />} />
           <Route path="/benefits" element={<BenefitsPage />} />
@@ -52,73 +70,87 @@ function App() {
           <Route path="/about" element={<AboutPage />} />
           <Route path="/embaixador" element={<EmbaixadorPage />} />
           <Route path="/pre-launch" element={<PreLaunchPage />} />
-          <Route path="/cosmetique" element={<CosmetiquePage />} />    
+          <Route path="/cosmetique" element={<CosmetiquePage />} />
+
+          {/* Blog */}
           <Route path="/blog" element={<BlogPage />} />
+
           <Route
             path="/blog/o-segredo-do-carvao-de-bambu"
             element={<BlogPostBambooCharcoal />}
           />
+
           <Route
-          path="/blog/risco-invisivel-no-couro-cabeludo"
-          element={<BlogPostScalpRisk />}
-          />
-          <Route
-          path="/blog/dia-zero-careca-confianca"
-          element={<BlogPostDiaZero />}
-          />
-          <Route
-          path="/blog/por-que-a-careca-brilha"
-          element={<BlogPostCarecaBrilha />}
-          />
-          <Route
-          path="/blog/rotina-ideal-para-homens-carecas"
-          element={<BlogPostRotinaHomensCarecas />}
-          />
-          <Route
-          path="/blog/o-que-e-scalp-defense-system"
-          element={<BlogPostScalpDefenseSystem />}
-          />
-          <Route
-          path="/blog/por-que-minha-careca-brilha-na-camera"
-          element={<BlogPostCarecaBrilhaNaCamera />}
-          />
-          <Route
-          path="/blog/por-que-homens-carecas-deveriam-limpar-o-couro-cabeludo"
-          element={<BlogPostLimpezaCouroCabeludo />}
-          />
-          <Route
-          path="/blog/por-que-homens-carecas-deveriam-hidratar-o-couro-cabeludo"
-          element={<BlogPostHidratacaoCouroCabeludo />}
-          />
-          <Route
-          path="/blog/por-que-homens-carecas-deveriam-proteger-o-couro-cabeludo"
-          element={<BlogPostProtecaoCouroCabeludo />}
+            path="/blog/risco-invisivel-no-couro-cabeludo"
+            element={<BlogPostScalpRisk />}
           />
 
           <Route
-          path="/blog/por-que-minha-careca-fica-oleosa-tao-rapido"
-          element={<BlogPostOleosidadeCouroCabeludo />}
-          />
-          <Route
-          path="/blog/couro-cabeludo-sensivel-por-que-ele-pode-ficar-irritado"
-          element={<BlogPostCouroCabeludoSensivel />}
+            path="/blog/dia-zero-careca-confianca"
+            element={<BlogPostDiaZero />}
           />
 
           <Route
-          path="/blog/como-raspar-a-cabeca-corretamente"
-          element={<BlogPostComoRasparCabeca />}
+            path="/blog/por-que-a-careca-brilha"
+            element={<BlogPostCarecaBrilha />}
           />
 
           <Route
-          path="/blog/skincare-para-careca-couro-cabeludo-exposto"
-          element={<BlogPostSkincareCareca />}
+            path="/blog/rotina-ideal-para-homens-carecas"
+            element={<BlogPostRotinaHomensCarecas />}
           />
 
           <Route
-          path="/blog/couro-cabeludo-exposto-skincare-scalp-care"
-          element={<BlogPostCouroCabeludoExposto />}
+            path="/blog/o-que-e-scalp-defense-system"
+            element={<BlogPostScalpDefenseSystem />}
           />
 
+          <Route
+            path="/blog/por-que-minha-careca-brilha-na-camera"
+            element={<BlogPostCarecaBrilhaNaCamera />}
+          />
+
+          <Route
+            path="/blog/por-que-homens-carecas-deveriam-limpar-o-couro-cabeludo"
+            element={<BlogPostLimpezaCouroCabeludo />}
+          />
+
+          <Route
+            path="/blog/por-que-homens-carecas-deveriam-hidratar-o-couro-cabeludo"
+            element={<BlogPostHidratacaoCouroCabeludo />}
+          />
+
+          <Route
+            path="/blog/por-que-homens-carecas-deveriam-proteger-o-couro-cabeludo"
+            element={<BlogPostProtecaoCouroCabeludo />}
+          />
+
+          <Route
+            path="/blog/por-que-minha-careca-fica-oleosa-tao-rapido"
+            element={<BlogPostOleosidadeCouroCabeludo />}
+          />
+
+          <Route
+            path="/blog/couro-cabeludo-sensivel-por-que-ele-pode-ficar-irritado"
+            element={<BlogPostCouroCabeludoSensivel />}
+          />
+
+          <Route
+            path="/blog/como-raspar-a-cabeca-corretamente"
+            element={<BlogPostComoRasparCabeca />}
+          />
+
+          <Route
+            path="/blog/skincare-para-careca-couro-cabeludo-exposto"
+            element={<BlogPostSkincareCareca />}
+          />
+
+          <Route
+            path="/blog/couro-cabeludo-exposto-skincare-scalp-care"
+            element={<BlogPostCouroCabeludoExposto />}
+          />
+
+          {/* 404 */}
           <Route
             path="*"
             element={
@@ -130,19 +162,26 @@ function App() {
                   >
                     404
                   </h1>
-                  <p className="text-xl text-secondary mb-8">Page not found</p>
-                  <a href="/" className="text-primary hover:text-primary/80 underline">
+
+                  <p className="text-xl text-secondary mb-8">
+                    Page not found
+                  </p>
+
+                  <a
+                    href="/"
+                    className="text-primary hover:text-primary/80 underline"
+                  >
                     Back to home
                   </a>
                 </div>
               </div>
             }
           />
-          </Routes>
-          <WhatsAppButton />
-          <Toaster />
+        </Routes>
+
+        <WhatsAppButton />
+        <Toaster />
       </Router>
-    
     </CartProvider>
   );
 }

@@ -81,7 +81,7 @@ const systemSteps = [
     step: "STEP 03",
     name: "PROTECT",
     action: "Proteger",
-    href: "/protect",
+    href: "/defense",
     active: true,
   },
   {
@@ -119,7 +119,7 @@ export default function ProtectLanding() {
           content="Conteúdo exclusivo do BALDSHIELD PROTECT: proteção solar, modo de uso, tecnologia de fotoproteção e STEP 03 do Scalp Defense System™."
         />
 
-        <link rel="canonical" href="https://www.baldshield.com/protect" />
+        <link rel="canonical" href="https://www.baldshield.com/defense" />
 
         <meta
           property="og:title"
@@ -132,7 +132,7 @@ export default function ProtectLanding() {
         />
 
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://www.baldshield.com/protect" />
+        <meta property="og:url" content="https://www.baldshield.com/defense" />
       </Helmet>
 
       <main className="protect-page">
