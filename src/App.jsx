@@ -31,6 +31,7 @@ import BlogPostCouroCabeludoSensivel from "@/pages/blog/BlogPostCouroCabeludoSen
 import BlogPostComoRasparCabeca from "./pages/blog/BlogPostComoRasparCabeca";
 import BlogPostSkincareCareca from "@/pages/blog/BlogPostSkincareCareca";
 import BlogPostCouroCabeludoExposto from "@/pages/blog/BlogPostCouroCabeludoExposto";
+import BlogPostProtetorSolarCareca from "@/pages/blog/BlogPostProtetorSolarCareca";
 
 import { Toaster } from '@/components/ui/toaster';
 import { CartProvider } from '@/hooks/useCart.jsx';
@@ -148,6 +149,11 @@ function App() {
           <Route
             path="/blog/couro-cabeludo-exposto-skincare-scalp-care"
             element={<BlogPostCouroCabeludoExposto />}
+          />
+
+          <Route
+            path="/blog/protetor-solar-careca-couro-cabeludo"
+            element={<BlogPostProtetorSolarCareca />}
           />
 
           {/* 404 */}

@@ -6,6 +6,19 @@ import Footer from '@/components/Footer.jsx';
 
 const posts = [
   {
+  slug: "/blog/protetor-solar-careca-couro-cabeludo",
+  title: "Seu protetor solar termina na testa?",
+  excerpt:
+    "Você protege o rosto do sol. Mas, quando o couro cabeludo está exposto, por que a rotina deveria terminar exatamente na testa?",
+  category: "Proteção & Prevenção",
+  date: "26 ago. 2026",
+  isNew: true,
+  image:
+    "/Blog/protetor-solar-careca/protetor-solar-careca-couro-cabeludo-baldshield.webp",
+  },
+  
+  
+  {
   slug: "/blog/couro-cabeludo-exposto-skincare-scalp-care",
   title: "O couro cabeludo exposto ainda cabe no skincare tradicional?",
   excerpt:
@@ -25,7 +38,7 @@ const posts = [
     "Entenda por que o scalp care começa a olhar para o couro cabeludo exposto como uma área de pele que merece cuidados próprios.",
   category: "Scalp Care",
   date: "11 ago. 2026",
-  isNew: true,
+  isNew: false,
   image:
     "/Blog/skincare-careca/scalp-care-careca-couro-cabeludo-exposto-baldshield.webp",
   },
