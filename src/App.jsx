@@ -31,6 +31,7 @@ import BlogPostCouroCabeludoSensivel from "@/pages/blog/BlogPostCouroCabeludoSen
 import BlogPostComoRasparCabeca from "./pages/blog/BlogPostComoRasparCabeca";
 import BlogPostSkincareCareca from "@/pages/blog/BlogPostSkincareCareca";
 import BlogPostCouroCabeludoExposto from "@/pages/blog/BlogPostCouroCabeludoExposto";
+import BlogPostAcidoHialuronico from "@/pages/blog/BlogPostAcidoHialuronico";
 import BlogPostProtetorSolarCareca from "@/pages/blog/BlogPostProtetorSolarCareca";
 
 import { Toaster } from '@/components/ui/toaster';
@@ -154,6 +155,11 @@ function App() {
           <Route
             path="/blog/protetor-solar-careca-couro-cabeludo"
             element={<BlogPostProtetorSolarCareca />}
+          />
+          
+          <Route
+          path="/blog/acido-hialuronico-couro-cabeludo-exposto"
+          element={<BlogPostAcidoHialuronico />}
           />
 
           {/* 404 */}

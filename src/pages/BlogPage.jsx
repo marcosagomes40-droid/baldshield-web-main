@@ -6,6 +6,18 @@ import Footer from '@/components/Footer.jsx';
 
 const posts = [
   {
+  slug: "/blog/acido-hialuronico-couro-cabeludo-exposto",
+  title: "Ácido hialurônico no couro cabeludo exposto: faz sentido?",
+  excerpt:
+    "Um dos ativos mais conhecidos do skincare também pode fazer parte do cuidado do couro cabeludo exposto. Entenda sua relação com hidratação, formulação e scalp care.",
+  category: "Ciência & Scalp Care",
+  date: "07 set. 2026",
+  isNew: true,
+  image:
+    "/Blog/acido-hialuronico/acido-hialuronico-couro-cabeludo-exposto-baldshield.webp",
+  },
+  
+  {
   slug: "/blog/protetor-solar-careca-couro-cabeludo",
   title: "Seu protetor solar termina na testa?",
   excerpt:
@@ -25,7 +37,7 @@ const posts = [
     "Entre skincare, haircare e scalp care, existe uma região que ainda ocupa um espaço particular: o couro cabeludo permanentemente exposto.",
   category: "Scalp Care",
   date: "19 ago. 2026",
-  isNew: true,
+  isNew: false,
   image:
     "/Blog/couro-cabeludo-exposto/scalp-care-quem-nao-tem-cabelo-baldshield.webp",
   },
