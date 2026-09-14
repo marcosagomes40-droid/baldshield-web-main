@@ -32,6 +32,7 @@ import BlogPostComoRasparCabeca from "./pages/blog/BlogPostComoRasparCabeca";
 import BlogPostSkincareCareca from "@/pages/blog/BlogPostSkincareCareca";
 import BlogPostCouroCabeludoExposto from "@/pages/blog/BlogPostCouroCabeludoExposto";
 import BlogPostAcidoHialuronico from "@/pages/blog/BlogPostAcidoHialuronico";
+import BlogPostBoneCouroCabeludo from "@/pages/blog/BlogPostBoneCouroCabeludo";
 import BlogPostProtetorSolarCareca from "@/pages/blog/BlogPostProtetorSolarCareca";
 
 import { Toaster } from '@/components/ui/toaster';
@@ -160,6 +161,11 @@ function App() {
           <Route
           path="/blog/acido-hialuronico-couro-cabeludo-exposto"
           element={<BlogPostAcidoHialuronico />}
+          />
+
+          <Route
+          path="/blog/bone-protege-ou-prejudica-couro-cabeludo-exposto"
+          element={<BlogPostBoneCouroCabeludo />}
           />
 
           {/* 404 */}

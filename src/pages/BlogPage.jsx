@@ -6,6 +6,18 @@ import Footer from '@/components/Footer.jsx';
 
 const posts = [
   {
+  slug: "/blog/bone-protege-ou-prejudica-couro-cabeludo-exposto",
+  title: "Boné protege ou prejudica o couro cabeludo exposto?",
+  excerpt:
+    "Estilo, proteção e conforto. Entenda o que o boné realmente faz pelo couro cabeludo exposto — e quais são os seus limites.",
+  category: "Comportamento & Scalp Care",
+  date: "13 set. 2026",
+  isNew: true,
+  image:
+    "/Blog/bone-couro-cabeludo/bone-protege-couro-cabeludo-exposto-baldshield.webp",
+  },
+
+  {
   slug: "/blog/acido-hialuronico-couro-cabeludo-exposto",
   title: "Ácido hialurônico no couro cabeludo exposto: faz sentido?",
   excerpt:
@@ -24,7 +36,7 @@ const posts = [
     "Você protege o rosto do sol. Mas, quando o couro cabeludo está exposto, por que a rotina deveria terminar exatamente na testa?",
   category: "Proteção & Prevenção",
   date: "26 ago. 2026",
-  isNew: true,
+  isNew: false,
   image:
     "/Blog/protetor-solar-careca/protetor-solar-careca-couro-cabeludo-baldshield.webp",
   },
