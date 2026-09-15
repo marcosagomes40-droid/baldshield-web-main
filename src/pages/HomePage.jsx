@@ -168,7 +168,7 @@ const HomePage = () => {
                 BaldShield
               </span>
 
-              <h1 className="text-4xl font-bold leading-tight text-white sm:text-5xl lg:text-6xl">
+              <h1 className="text-4xl font-bold leading-tight text-white sm:text-5xl lg:text-5xl">
               A primeira marca brasileira
               
               <span className="block text-primary">
@@ -178,8 +178,8 @@ const HomePage = () => {
               </h1>
 
               <p className="max-w-xl text-lg text-zinc-300">
-                Proteção, controle de brilho e cuidado diário para quem assumiu
-                a careca com confiança.
+                  Cuidado especializado para o couro cabeludo exposto, pensado para
+                  limpar, hidratar, proteger e acompanhar sua rotina.
               </p>
 
               <p className="text-sm uppercase tracking-[0.25em] text-zinc-400">
