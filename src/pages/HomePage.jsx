@@ -62,7 +62,7 @@ const HomePage = () => {
       url: "https://www.baldshield.com/escudo.png",
     },
     description:
-      "A primeira marca brasileira especializada no cuidado do couro cabeludo de homens carecas.",
+      "A primeira marca brasileira dedicada ao cuidado do couro cabeludo exposto.",
     sameAs: ["https://www.instagram.com/baldshield.br"],
   };
 
@@ -73,7 +73,7 @@ const HomePage = () => {
     url: "https://www.baldshield.com/",
     name: "BaldShield",
     description:
-      "Conteúdos e soluções para o cuidado do couro cabeludo de homens carecas.",
+      "Conteúdos, cuidados e soluções para o couro cabeludo exposto.",
     publisher: {
       "@id": "https://www.baldshield.com/#organization",
     },
@@ -83,16 +83,16 @@ const HomePage = () => {
   return (
     <>
       <Helmet>
-        <title>BaldShield | Cuidado do Couro Cabeludo de Homens Carecas</title>
+        <title>BaldShield | Cuidado do Couro Cabeludo Exposto</title>
 
         <meta
           name="description"
-          content="A primeira marca brasileira especializada no cuidado do couro cabeludo de homens carecas. Conheça o Scalp Defense System™, uma rotina completa de limpeza, hidratação, proteção e controle da oleosidade."
+          content="A primeira marca brasileira dedicada ao cuidado do couro cabeludo exposto. Conheça o Scalp Defense System™, uma rotina de limpeza, hidratação, proteção e cuidado ao longo do dia."
         />
 
         <meta
           name="keywords"
-          content="BaldShield, cuidado do couro cabeludo, couro cabeludo de homens carecas, cuidados para homens carecas, scalp care masculino, limpeza do couro cabeludo, hidratação do couro cabeludo, proteção do couro cabeludo, controle de oleosidade, Scalp Defense System"
+          content="BaldShield, couro cabeludo exposto, cuidado do couro cabeludo, scalp care, limpeza do couro cabeludo, hidratação do couro cabeludo, proteção do couro cabeludo, controle de oleosidade e brilho, Scalp Defense System"
         />
 
         <meta
@@ -107,11 +107,11 @@ const HomePage = () => {
         <meta property="og:site_name" content="BaldShield" />
         <meta
           property="og:title"
-          content="BaldShield | Cuidado do Couro Cabeludo de Homens Carecas"
+          content="BaldShield | Cuidado do Couro Cabeludo Exposto"
         />
         <meta
           property="og:description"
-          content="A primeira marca brasileira especializada no cuidado do couro cabeludo de homens carecas. Conheça o Scalp Defense System™."
+          content="A primeira marca brasileira dedicada ao cuidado do couro cabeludo exposto. Conheça o Scalp Defense System™."
         />
         <meta property="og:url" content="https://www.baldshield.com/" />
         <meta
@@ -125,17 +125,17 @@ const HomePage = () => {
         <meta property="og:image:type" content="image/png" />
         <meta
           property="og:image:alt"
-          content="BaldShield — cuidado premium para o couro cabeludo de homens carecas"
+          content="BaldShield — cuidado premium para o couro cabeludo exposto"
         />
 
         <meta name="twitter:card" content="summary_large_image" />
         <meta
           name="twitter:title"
-          content="BaldShield | Cuidado do Couro Cabeludo de Homens Carecas"
+          content="BaldShield | Cuidado do Couro Cabeludo Exposto"
         />
         <meta
           name="twitter:description"
-          content="Conheça a primeira marca brasileira especializada no cuidado do couro cabeludo de homens carecas."
+          content="Conheça a primeira marca brasileira dedicada ao cuidado do couro cabeludo exposto."
         />
         <meta
           name="twitter:image"
@@ -143,7 +143,7 @@ const HomePage = () => {
         />
         <meta
           name="twitter:image:alt"
-          content="BaldShield — cuidado premium para o couro cabeludo de homens carecas"
+          content="BaldShield — cuidado premium para o couro cabeludo exposto"
         />
 
         <script type="application/ld+json">
