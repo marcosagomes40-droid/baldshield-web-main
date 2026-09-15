@@ -169,10 +169,12 @@ const HomePage = () => {
               </span>
 
               <h1 className="text-4xl font-bold leading-tight text-white sm:text-5xl lg:text-6xl">
-                A primeira marca brasileira
-                <span className="block text-primary">
-                  para o cuidado da careca.
-                </span>
+              A primeira marca brasileira
+              
+              <span className="block text-primary">
+              para o cuidado do couro cabeludo exposto.
+              </span>
+              
               </h1>
 
               <p className="max-w-xl text-lg text-zinc-300">
