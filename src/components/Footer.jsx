@@ -23,8 +23,9 @@ const Footer = () => {
             </div>
 
             <p className="text-sm text-muted-foreground leading-relaxed">
-              Proteção solar premium desenvolvida especialmente para cabeças carecas.
-              Proteja seu couro cabeludo com estilo, segurança e confiança.
+              Cuidado especializado para o couro cabeludo exposto.
+              Uma rotina pensada para limpar, hidratar, proteger e acompanhar
+              o cuidado ao longo do dia.
             </p>
           </div>
 

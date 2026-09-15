@@ -27,27 +27,27 @@ const HomePage = () => {
   const benefits = [
     {
       icon: Shield,
-      title: "Proteção diária",
+      title: "Cuidado especializado",
       description:
-        "Cuidado pensado para o couro cabeludo exposto, ajudando a proteger a pele contra agressões externas do dia a dia.",
+        "Uma proposta dedicada às necessidades do couro cabeludo exposto, transformando uma área muitas vezes esquecida em parte da rotina de cuidado.",
     },
     {
       icon: Droplet,
-      title: "Resistência e conforto",
+      title: "Rotina, não improviso",
       description:
-        "Desenvolvido para acompanhar a rotina masculina, inclusive em dias quentes, atividades ao ar livre e momentos de maior exposição.",
+        "Uma lógica de cuidado pensada para limpar, hidratar, proteger e acompanhar o couro cabeludo exposto ao longo do dia.",
     },
     {
       icon: Sparkles,
-      title: "Acabamento matte",
+      title: "Scalp Defense System™",
       description:
-        "Textura leve, sensação confortável e visual mais seco, ajudando a reduzir o aspecto de brilho excessivo no couro cabeludo.",
+        "Um sistema que organiza o cuidado em quatro etapas complementares: CLEAN, HYDRATE, DEFENSE e WIPES.",
     },
     {
       icon: Award,
-      title: "Cuidado premium",
+      title: "Feito para o couro cabeludo exposto",
       description:
-        "Uma proposta de scalp care criada para homens que assumiram a careca com estilo, presença e confiança.",
+        "A BaldShield nasce com foco nessa pele e em quem vive diariamente os efeitos de mantê-la exposta.",
     },
   ];
 
@@ -92,7 +92,7 @@ const HomePage = () => {
 
         <meta
           name="keywords"
-          content="BaldShield, couro cabeludo exposto, cuidado do couro cabeludo, scalp care, limpeza do couro cabeludo, hidratação do couro cabeludo, proteção do couro cabeludo, controle de oleosidade e brilho, Scalp Defense System"
+          content="BaldShield, couro cabeludo exposto, cuidado do couro cabeludo, careca, cuidados para careca, cuidados para homens carecas, scalp care, limpeza do couro cabeludo, hidratação do couro cabeludo, proteção do couro cabeludo, controle de oleosidade, Scalp Defense System"
         />
 
         <meta
@@ -125,7 +125,7 @@ const HomePage = () => {
         <meta property="og:image:type" content="image/png" />
         <meta
           property="og:image:alt"
-          content="BaldShield — cuidado premium para o couro cabeludo exposto"
+          content="BaldShield — cuidado especializado para o couro cabeludo exposto"
         />
 
         <meta name="twitter:card" content="summary_large_image" />
@@ -143,7 +143,7 @@ const HomePage = () => {
         />
         <meta
           name="twitter:image:alt"
-          content="BaldShield — cuidado premium para o couro cabeludo exposto"
+          content="BaldShield — cuidado especializado para o couro cabeludo exposto"
         />
 
         <script type="application/ld+json">
@@ -236,73 +236,57 @@ const HomePage = () => {
           <div className="mx-auto max-w-4xl px-6 text-center">
             <SectionHeader
               title="Quem é careca sabe."
-              subtitle="Poucos minutos no sol já incomodam."
+              subtitle="Sem o cabelo como cobertura, o couro cabeludo fica mais exposto à rotina."
             />
 
             <div className="mt-4 space-y-3 text-center text-lg text-zinc-300 sm:text-xl">
               <p className="font-medium text-primary">
-                O brilho aparece rápido.
+                O couro cabeludo fica exposto.
               </p>
-              <p className="text-white/80">O couro cabeludo fica exposto.</p>
               <p className="text-white/80">
-                E durante anos, ninguém criou uma rotina pensada para isso.
+                Sol, calor, suor, oleosidade e ressecamento passam a fazer parte do cuidado diário.
+              </p>
+              <p className="text-white/80">
+                E durante anos, quem é careca precisou adaptar produtos pensados para outras áreas.
               </p>
               <p className="font-medium text-primary">
-                Foi por isso que nasceu a BaldShield.
+                Foi para cuidar dessa pele exposta que nasceu a BaldShield.
               </p>
             </div>
           </div>
         </section>
 
-        {/* SEO PREMIUM SECTION */}
+        {/* CATEGORIA / PONTE ENTRE CARECA E COURO CABELUDO EXPOSTO */}
         <section className="border-t border-white/5 bg-black py-28">
           <div className="mx-auto max-w-5xl px-6 text-center">
             <span className="mb-6 inline-block text-sm font-semibold uppercase tracking-[0.28em] text-primary">
-              Cuidado da careca
+              Cuidado para careca
             </span>
 
             <h2
               className="text-4xl font-bold leading-tight text-white md:text-5xl"
               style={{ fontFamily: "Playfair Display, serif" }}
             >
-              Por que homens carecas precisam de cuidados específicos?
+              Careca também é pele exposta — e precisa de cuidado.
             </h2>
 
             <p className="mx-auto mt-8 max-w-3xl text-lg leading-relaxed text-white/70">
-              O couro cabeludo masculino está entre as áreas mais expostas ao
-              sol, ao calor, à oleosidade e ao brilho excessivo. Mesmo assim,
-              durante anos, homens carecas precisaram improvisar com produtos
-              feitos para o rosto, para o corpo ou para quem ainda tem cabelo.
+              Quando o cabelo deixa de funcionar como cobertura, o couro cabeludo
+              fica diretamente exposto ao sol, ao calor, ao suor, à oleosidade e
+              ao ressecamento. É uma pele com necessidades próprias de limpeza,
+              hidratação, proteção e cuidado ao longo do dia.
             </p>
 
             <p className="mx-auto mt-5 max-w-3xl text-lg leading-relaxed text-white/70">
-              A BaldShield nasceu para mudar isso: um conceito premium de scalp
-              care focado em proteção, controle visual, equilíbrio e cuidado
-              diário para homens carecas.
-            </p>
-          </div>
-        </section>
-
-        {/* QUEBRA DE PADRÃO */}
-        <section className="bg-black py-32">
-          <div className="mx-auto max-w-4xl px-6 text-center">
-            <SectionHeader label="A VERDADE É SIMPLES" />
-
-            <h2
-              className="text-4xl font-bold leading-tight text-white md:text-5xl"
-              style={{ fontFamily: "Playfair Display, serif" }}
-            >
-              Durante anos, ninguém pensou no cuidado do couro cabeludo de quem
-              não tem cabelo.
-            </h2>
-
-            <p className="mx-auto mt-8 max-w-2xl text-lg leading-relaxed text-white/70">
-              Produtos existem para cabelo. Para barba. Para pele. Mas não para
-              quem decidiu assumir a careca como estilo.
+              O skincare cuida da pele. O hair care cuida do cabelo. Quando o couro
+              cabeludo fica exposto, surge uma necessidade que ficou entre esses
+              dois mundos.
             </p>
 
-            <p className="mx-auto mt-4 max-w-2xl text-lg leading-relaxed text-white/70">
-              A BaldShield nasce para mudar isso.
+            <p className="mx-auto mt-5 max-w-3xl text-lg leading-relaxed text-white/70">
+              É nesse espaço que a BaldShield existe: cuidado especializado para
+              o couro cabeludo exposto, começando por quem vive essa realidade
+              todos os dias — pessoas carecas.
             </p>
           </div>
         </section>
@@ -318,18 +302,19 @@ const HomePage = () => {
               className="mb-6 text-4xl font-bold text-foreground md:text-5xl"
               style={{ fontFamily: "Playfair Display, serif" }}
             >
-              Mais do que proteção. Uma nova forma de cuidar do couro cabeludo.
+              Mais do que produtos. Uma nova forma de cuidar do couro cabeludo exposto.
             </h2>
 
             <p className="mx-auto mb-6 max-w-3xl text-lg leading-relaxed text-secondary md:text-xl">
-              A BaldShield nasce como a primeira marca brasileira focada na
-              saúde do couro cabeludo de quem assumiu a careca com estilo.
+              A BaldShield é uma marca brasileira dedicada ao cuidado do couro
+              cabeludo exposto — com ciência, qualidade e uma rotina pensada para
+              essa pele.
             </p>
 
             <p className="mx-auto max-w-2xl text-base text-muted-foreground">
-              O couro cabeludo é uma das áreas mais expostas do corpo — e por
-              muito tempo foi negligenciado. A BaldShield surge para mudar isso
-              com foco em saúde, proteção, controle e cuidado diário.
+              Nosso ponto de partida é simples: limpar, hidratar, proteger e
+              acompanhar o couro cabeludo ao longo do dia, transformando improviso
+              em cuidado.
             </p>
           </div>
         </section>
@@ -353,56 +338,42 @@ const HomePage = () => {
                 style={{ fontFamily: "Playfair Display, serif" }}
               >
                 Uma rotina completa
-                <span className="block">para o couro cabeludo.</span>
+                <span className="block">para o couro cabeludo exposto.</span>
               </h2>
 
               <p className="mx-auto max-w-2xl text-lg leading-relaxed text-white/70">
-                Estamos construindo um sistema pensado para quem assumiu a
-                careca como estilo — com proteção, controle de brilho, equilíbrio
-                e cuidado diário.
+                Quatro etapas que organizam o cuidado do couro cabeludo exposto:
+                limpar, hidratar, proteger e acompanhar a rotina ao longo do dia.
               </p>
             </div>
 
             <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
               <div className="rounded-2xl border border-primary/60 bg-gradient-to-b from-primary/10 to-transparent p-7 text-center shadow-[0_0_45px_rgba(255,115,0,0.14)] transition hover:bg-primary/10">
+                <p className="mb-2 text-[10px] font-semibold uppercase tracking-[0.28em] text-primary">
+                  Passo 01
+                </p>
                 <p className="mb-6 text-xs font-semibold uppercase tracking-[0.35em] text-primary">
-                  Protect
+                  Clean
                 </p>
 
                 <div className="mx-auto mb-6 flex h-14 w-14 items-center justify-center rounded-full bg-primary/10 text-primary">
-                  <Shield size={26} />
+                  <Sparkles size={26} />
                 </div>
 
                 <h3 className="mb-4 text-2xl font-semibold text-white">
-                  Proteção diária
+                  Limpeza
                 </h3>
 
                 <p className="text-sm leading-relaxed text-white/70">
-                  Cuidado pensado para ajudar a proteger o couro cabeludo
-                  exposto na rotina diária.
+                  Limpa o couro cabeludo exposto e prepara a pele para as próximas
+                  etapas do cuidado.
                 </p>
               </div>
 
               <div className="rounded-2xl border border-white/10 bg-white/5 p-7 text-center transition hover:border-primary/40 hover:bg-white/10">
-                <p className="mb-6 text-xs uppercase tracking-[0.35em] text-white/50">
-                  Control
+                <p className="mb-2 text-[10px] font-semibold uppercase tracking-[0.28em] text-white/50">
+                  Passo 02
                 </p>
-
-                <div className="mx-auto mb-6 flex h-14 w-14 items-center justify-center rounded-full bg-primary/10 text-primary">
-                  <Droplet size={26} />
-                </div>
-
-                <h3 className="mb-4 text-2xl font-semibold text-white">
-                  Controle de brilho
-                </h3>
-
-                <p className="text-sm leading-relaxed text-white/60">
-                  Controle visual da oleosidade e do brilho excessivo ao longo
-                  do dia.
-                </p>
-              </div>
-
-              <div className="rounded-2xl border border-white/10 bg-white/5 p-7 text-center transition hover:border-primary/40 hover:bg-white/10">
                 <p className="mb-6 text-xs uppercase tracking-[0.35em] text-white/50">
                   Hydrate
                 </p>
@@ -416,26 +387,50 @@ const HomePage = () => {
                 </h3>
 
                 <p className="text-sm leading-relaxed text-white/60">
-                  Conforto, equilíbrio e hidratação leve para o couro cabeludo.
+                  Hidrata o couro cabeludo exposto como parte da rotina de cuidado.
                 </p>
               </div>
 
               <div className="rounded-2xl border border-white/10 bg-white/5 p-7 text-center transition hover:border-primary/40 hover:bg-white/10">
+                <p className="mb-2 text-[10px] font-semibold uppercase tracking-[0.28em] text-white/50">
+                  Passo 03
+                </p>
                 <p className="mb-6 text-xs uppercase tracking-[0.35em] text-white/50">
-                  Clean
+                  Defense
                 </p>
 
                 <div className="mx-auto mb-6 flex h-14 w-14 items-center justify-center rounded-full bg-primary/10 text-primary">
-                  <Sparkles size={26} />
+                  <Shield size={26} />
                 </div>
 
                 <h3 className="mb-4 text-2xl font-semibold text-white">
-                  Limpeza e renovação
+                  Hidratação + proteção
                 </h3>
 
                 <p className="text-sm leading-relaxed text-white/60">
-                  Limpeza suave para remover impurezas e preparar a pele para o
-                  cuidado diário.
+                  Combina hidratação e alta proteção para o couro cabeludo exposto.
+                </p>
+              </div>
+
+              <div className="rounded-2xl border border-white/10 bg-white/5 p-7 text-center transition hover:border-primary/40 hover:bg-white/10">
+                <p className="mb-2 text-[10px] font-semibold uppercase tracking-[0.28em] text-white/50">
+                  Passo 04
+                </p>
+                <p className="mb-6 text-xs uppercase tracking-[0.35em] text-white/50">
+                  Wipes
+                </p>
+
+                <div className="mx-auto mb-6 flex h-14 w-14 items-center justify-center rounded-full bg-primary/10 text-primary">
+                  <Droplet size={26} />
+                </div>
+
+                <h3 className="mb-4 text-2xl font-semibold text-white">
+                  Cuidado ao longo do dia
+                </h3>
+
+                <p className="text-sm leading-relaxed text-white/60">
+                  Uma etapa portátil para acompanhar o cuidado do couro cabeludo
+                  exposto durante o dia.
                 </p>
               </div>
             </div>
@@ -469,9 +464,8 @@ const HomePage = () => {
               </h2>
 
               <p className="mx-auto max-w-2xl text-lg text-muted-foreground">
-                Desenvolvida especialmente para o couro cabeludo masculino, com
-                uma proposta premium de proteção, conforto, controle visual e
-                cuidado diário.
+                Porque o couro cabeludo exposto merece um cuidado pensado para a
+                sua própria realidade — com método, rotina e propósito.
               </p>
             </motion.div>
 
