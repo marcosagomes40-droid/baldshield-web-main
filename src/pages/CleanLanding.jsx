@@ -85,7 +85,7 @@ const systemSteps = [
   },
   {
     step: "STEP 03",
-    name: "PROTECT",
+    name: "DEFENSE",
     action: "Defender",
     status: "Proteção diária",
   },

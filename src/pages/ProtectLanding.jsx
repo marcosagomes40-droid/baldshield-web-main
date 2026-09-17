@@ -178,8 +178,7 @@ export default function ProtectLanding() {
             </p>
 
             <p className="protect-hero__support">
-              Hidratação e proteção de alto desempenho para integrar o cuidado diário
-              do couro cabeludo exposto.
+              Alta proteção para o couro cabeludo exposto, com hidratação integrada ao cuidado diário.
             </p>
 
             <div className="protect-hero__actions">

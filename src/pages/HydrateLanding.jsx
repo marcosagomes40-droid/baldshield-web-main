@@ -85,7 +85,7 @@ const systemSteps = [
   },
   {
     step: "STEP 03",
-    name: "PROTECT",
+    name: "DEFENSE",
     action: "Defender",
     status: "Próximo passo",
   },
@@ -106,7 +106,7 @@ const faqs = [
   {
     question: "Qual é o melhor momento para aplicar?",
     answer:
-      "Aplique sobre o couro cabeludo limpo e seco. Na rotina BaldShield, ele entra depois do STEP 01 CLEAN e antes do STEP 03 PROTECT.",
+      "Aplique sobre o couro cabeludo limpo e seco. Na rotina BaldShield, ele entra depois do STEP 01 CLEAN e antes do STEP 03 DEFENSE.",
   },
   {
     question: "Quanto produto devo usar?",
@@ -119,14 +119,14 @@ const faqs = [
       "Não. Massageie suavemente até a completa absorção e deixe o produto permanecer sobre a pele.",
   },
   {
-    question: "O HYDRATE possui fragrância?",
+    question: "O HYDRATE possui perfume?",
     answer:
-      "Consulte o rótulo do BALDSHIELD HYDRATE para confirmar as características completas da formulação e as orientações de uso.",
+      "Não. O HYDRATE foi formulado sem perfume, uma escolha pensada para o cuidado diário do couro cabeludo exposto, evitando fragrâncias desnecessárias na rotina e sem competir com o perfume que você escolhe usar.",
   },
   {
-    question: "Posso aplicar o protetor solar depois?",
+    question: "Depois do HYDRATE, como proteger o couro cabeludo exposto?",
     answer:
-      "Sim. Aguarde a absorção do HYDRATE e continue a rotina com o STEP 03 PROTECT, seguindo as instruções de uso do protetor.",
+      "Após a absorção do HYDRATE, utilize diariamente a Loção Multifuncional DEFENSE, STEP 03 do Scalp Defense System™, com FPS 70 e alta proteção UVA | UVB. Siga sempre o modo de uso indicado no rótulo do produto.",
   },
   {
     question: "O que fazer em caso de desconforto?",
