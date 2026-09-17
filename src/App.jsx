@@ -43,6 +43,7 @@ import CleanLanding from "./pages/CleanLanding";
 import HydrateLanding from "./pages/HydrateLanding";
 import ProtectLanding from "./pages/ProtectLanding";
 import CleanProductPage from "./pages/CleanProductPage";
+import HydrateProductPage from "./pages/HydrateProductPage";
 
 function App() {
   return (
@@ -66,6 +67,7 @@ function App() {
           {/* Páginas principais */}
           <Route path="/products" element={<ProductsPage />} />
           <Route path="/products/clean" element={<CleanProductPage />} />
+          <Route path="/products/hydrate" element={<HydrateProductPage />} />
           <Route path="/product/:id" element={<ProductDetailPage />} />
           <Route path="/benefits" element={<BenefitsPage />} />
           <Route path="/contact" element={<ContactPage />} />
