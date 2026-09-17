@@ -185,32 +185,23 @@ const HomePage = () => {
               <p className="text-sm uppercase tracking-[0.25em] text-zinc-400">
                 Sem brilho. Sem improviso. Com presença.
               </p>
-
               <div className="pt-4">
                 <div className="flex flex-col items-start gap-4 sm:flex-row">
-                  <Link
-                    to="/pre-launch?scroll=lista"
-                    className="inline-flex items-center justify-center rounded-full bg-primary px-8 py-4 text-sm font-semibold text-black hover:bg-primary/90"
-                  >
-                    Garantir acesso antecipado
-                  </Link>
+              <Link
+                to="/products"
+                className="inline-flex items-center justify-center rounded-full bg-primary px-8 py-4 text-sm font-semibold text-black hover:bg-primary/90"
+              >
+              Conhecer o sistema
+              </Link>
 
-                  <Link
-                    to="/benefits"
-                    className="inline-flex items-center justify-center rounded-full border border-white/20 px-8 py-4 text-sm font-semibold text-white transition hover:border-primary hover:text-primary"
-                  >
-                    Conhecer a proposta
-                  </Link>
-                </div>
-
-                <p className="mt-4 text-sm text-white/40">
-                  Seja um dos primeiros a conhecer a BaldShield.
-                </p>
-
-                <p className="mt-2 text-xs text-primary">
-                  Acesso antecipado ao primeiro lançamento
-                </p>
+              <a
+              href="https://loja.baldshield.com"
+              className="inline-flex items-center justify-center rounded-full border border-white/20 px-8 py-4 text-sm font-semibold text-white transition hover:border-primary hover:text-primary"
+              >
+              Ir para a loja
+              </a>
               </div>
+            </div>
             </div>
 
             <div className="relative">
