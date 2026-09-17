@@ -34,15 +34,26 @@ const CTASection = () => {
             o couro cabeludo exposto ao longo do dia.
           </p>
 
-          <Button
-            asChild
-            size="lg"
-            className="bg-primary hover:bg-primary/90 text-black font-semibold text-lg px-12 py-6 h-auto transition-all duration-200 active:scale-[0.98]"
-          >
-            <Link to="/products">
-              Conhecer o Scalp Defense System™
-            </Link>
-          </Button>
+      <Button
+      asChild
+      size="lg"
+      className="bg-primary hover:bg-primary/90 text-black font-semibold
+                text-base sm:text-lg
+                w-full sm:w-auto max-w-[360px]
+                px-5 sm:px-12 py-5 sm:py-6 h-auto
+                whitespace-normal
+                transition-all duration-200 active:scale-[0.98]"
+      >
+      <Link
+        to="/products"
+        className="flex w-full items-center justify-center text-center leading-snug whitespace-normal"
+      >
+        <span>
+          Conhecer o Scalp Defense
+          <span className="block sm:inline"> System™</span>
+        </span>
+      </Link>
+</Button>
         </motion.div>
       </div>
     </section>
