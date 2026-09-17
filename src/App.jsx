@@ -72,7 +72,10 @@ function App() {
           <Route path="/success" element={<SuccessPage />} />
           <Route path="/about" element={<AboutPage />} />
           <Route path="/embaixador" element={<EmbaixadorPage />} />
-          <Route path="/pre-launch" element={<PreLaunchPage />} />
+          <Route
+            path="/pre-launch"
+            element={<Navigate to="/" replace />}
+          />
           <Route path="/cosmetique" element={<CosmetiquePage />} />
 
           {/* Blog */}
