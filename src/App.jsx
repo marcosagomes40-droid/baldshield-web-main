@@ -34,16 +34,15 @@ import BlogPostCouroCabeludoExposto from "@/pages/blog/BlogPostCouroCabeludoExpo
 import BlogPostAcidoHialuronico from "@/pages/blog/BlogPostAcidoHialuronico";
 import BlogPostBoneCouroCabeludo from "@/pages/blog/BlogPostBoneCouroCabeludo";
 import BlogPostProtetorSolarCareca from "@/pages/blog/BlogPostProtetorSolarCareca";
-
 import { Toaster } from '@/components/ui/toaster';
 import { CartProvider } from '@/hooks/useCart.jsx';
-
 import WhatsAppButton from "./components/WhatsAppButton";
 import EmbaixadorPage from './pages/EmbaixadorPage.jsx';
 import CosmetiquePage from '@/pages/CosmetiquePage.jsx';
 import CleanLanding from "./pages/CleanLanding";
 import HydrateLanding from "./pages/HydrateLanding";
 import ProtectLanding from "./pages/ProtectLanding";
+import CleanProductPage from "./pages/CleanProductPage";
 
 function App() {
   return (
@@ -66,6 +65,7 @@ function App() {
 
           {/* Páginas principais */}
           <Route path="/products" element={<ProductsPage />} />
+          <Route path="/products/clean" element={<CleanProductPage />} />
           <Route path="/product/:id" element={<ProductDetailPage />} />
           <Route path="/benefits" element={<BenefitsPage />} />
           <Route path="/contact" element={<ContactPage />} />
