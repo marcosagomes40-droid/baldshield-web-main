@@ -209,7 +209,11 @@ const ProductsPage = () => {
           </div>
         </section>
 
-        <CTASection />
+        <CTASection
+          buttonText="Ir para a loja"
+          buttonTo="https://loja.baldshield.com"
+          external
+        />
         <Footer />
       </div>
     </>

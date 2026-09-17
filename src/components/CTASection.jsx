@@ -4,7 +4,11 @@ import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
 import { Shield } from 'lucide-react';
 
-const CTASection = () => {
+const CTASection = ({
+  buttonText = 'Conhecer o Scalp Defense System™',
+  buttonTo = '/products',
+  external = false,
+}) => {
   return (
     <section className="py-20 bg-gradient-to-b from-black to-card">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -34,26 +38,32 @@ const CTASection = () => {
             o couro cabeludo exposto ao longo do dia.
           </p>
 
-      <Button
-      asChild
-      size="lg"
-      className="bg-primary hover:bg-primary/90 text-black font-semibold
-                text-base sm:text-lg
-                w-full sm:w-auto max-w-[360px]
-                px-5 sm:px-12 py-5 sm:py-6 h-auto
-                whitespace-normal
-                transition-all duration-200 active:scale-[0.98]"
-      >
-      <Link
-        to="/products"
-        className="flex w-full items-center justify-center text-center leading-snug whitespace-normal"
-      >
-        <span>
-          Conhecer o Scalp Defense
-          <span className="block sm:inline"> System™</span>
-        </span>
-      </Link>
-</Button>
+          <Button
+            asChild
+            size="lg"
+            className="bg-primary hover:bg-primary/90 text-black font-semibold
+                       text-base sm:text-lg
+                       w-full sm:w-auto max-w-[360px]
+                       px-5 sm:px-12 py-5 sm:py-6 h-auto
+                       whitespace-normal
+                       transition-all duration-200 active:scale-[0.98]"
+          >
+            {external ? (
+              <a
+                href={buttonTo}
+                className="flex w-full items-center justify-center text-center leading-snug whitespace-normal"
+              >
+                <span>{buttonText}</span>
+              </a>
+            ) : (
+              <Link
+                to={buttonTo}
+                className="flex w-full items-center justify-center text-center leading-snug whitespace-normal"
+              >
+                <span>{buttonText}</span>
+              </Link>
+            )}
+          </Button>
         </motion.div>
       </div>
     </section>
