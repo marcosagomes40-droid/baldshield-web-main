@@ -44,6 +44,7 @@ import HydrateLanding from "./pages/HydrateLanding";
 import ProtectLanding from "./pages/ProtectLanding";
 import CleanProductPage from "./pages/CleanProductPage";
 import HydrateProductPage from "./pages/HydrateProductPage";
+import DefenseProductPage from "./pages/DefenseProductPage";
 
 function App() {
   return (
@@ -68,6 +69,7 @@ function App() {
           <Route path="/products" element={<ProductsPage />} />
           <Route path="/products/clean" element={<CleanProductPage />} />
           <Route path="/products/hydrate" element={<HydrateProductPage />} />
+          <Route path="/products/defense" element={<DefenseProductPage />} />
           <Route path="/product/:id" element={<ProductDetailPage />} />
           <Route path="/benefits" element={<BenefitsPage />} />
           <Route path="/contact" element={<ContactPage />} />
