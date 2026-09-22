@@ -229,10 +229,12 @@ const BlogPostQuantosBrasileiros = () => {
                 />
               </figure>
 
-              <div className="rounded-[2rem] border border-primary/30 bg-zinc-950 p-8 text-center">
-                <p className="mb-3 text-sm font-semibold uppercase tracking-[0.3em] text-primary">
-                  Um cuidado com os números
+                <div className="rounded-[2rem] border border-primary/30 bg-zinc-950 p-8 text-center">
+                    <p className="mx-auto mb-3 max-w-3xl text-center text-sm font-semibold uppercase tracking-[0.3em] text-primary">
+                    Um cuidado com os números
                 </p>
+              
+                  
 
                 <p
                   className="text-2xl font-bold leading-tight text-white md:text-3xl"
@@ -360,12 +362,12 @@ const BlogPostQuantosBrasileiros = () => {
                 informação:
               </p>
 
-              <h2
-                className="my-10 text-center text-4xl font-bold text-white md:text-5xl"
+                <h2
+                className="mb-5 mt-14 text-left text-3xl font-bold text-white md:text-4xl"
                 style={{ fontFamily: "Playfair Display, serif" }}
-              >
+                >
                 O que acontece depois?
-              </h2>
+                </h2>
 
               <p>
                 Como quem vive com pouco ou nenhum cabelo cuida do couro
@@ -397,7 +399,7 @@ const BlogPostQuantosBrasileiros = () => {
                 pele quando o cabelo deixa de ser o protagonista.
               </p>
 
-              <div className="rounded-[2rem] border border-primary/30 bg-zinc-950 p-8 text-center md:p-10">
+              <div className="my-10 rounded-[2rem] border border-primary/30 bg-zinc-950 px-8 py-12 text-center md:my-12 md:px-12 md:py-16">
                 <p
                   className="text-2xl font-bold leading-tight text-white md:text-4xl"
                   style={{ fontFamily: "Playfair Display, serif" }}
@@ -432,7 +434,7 @@ const BlogPostQuantosBrasileiros = () => {
                 </a>
                 , entender por que{" "}
                 <a
-                  href="/blog/protetor-solar-na-careca"
+                  href="/blog/protetor-solar-careca-couro-cabeludo"
                   className="font-semibold text-primary underline-offset-4 hover:underline"
                 >
                   o protetor solar não deveria terminar na testa
@@ -480,7 +482,7 @@ const BlogPostQuantosBrasileiros = () => {
                 successDescription="Você está na lista para receber novidades sobre o próximo levantamento BaldShield."
               />
 
-              <p className="mt-5 text-center text-xs leading-relaxed text-zinc-500">
+              <p className="mx-auto mt-5 max-w-2xl text-center text-xs leading-relaxed text-zinc-500">
                 Sem spam. Usaremos seus dados apenas para comunicações relacionadas à BaldShield e a este levantamento.
             </p>
             </section>
