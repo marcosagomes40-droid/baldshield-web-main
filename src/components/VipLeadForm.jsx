@@ -9,7 +9,16 @@ import { Send } from "lucide-react";
 const SCRIPT_URL =
   "https://script.google.com/macros/s/AKfycbwrA99Uyr3o6lC-mbMTqL1jxZk0BEzNUKkqqyo1Muhx2Tn0UQHZT_jmkhPfBh4GADTPLw/exec";
 
-const VipLeadForm = () => {
+const VipLeadForm = ({
+  assunto = "Lista VIP",
+  mensagem = "Cadastro realizado pela página de Pré-lançamento.",
+  origem = "pre-launch-vip",
+  buttonText = "Quero entrar para a Lista VIP",
+  successTitle = "Bem-vindo à Lista VIP! 🎉",
+  successDescription =
+    "Seu cadastro foi realizado com sucesso. Em breve você receberá novidades da BaldShield.",
+}) => {
+
   const { toast } = useToast();
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [turnstileToken, setTurnstileToken] = useState("");
@@ -48,9 +57,9 @@ const VipLeadForm = () => {
       const payload = {
         nome: formData.name.trim(),
         email: formData.email.trim().toLowerCase(),
-        assunto: "Lista VIP",
-        mensagem: "Cadastro realizado pela página de Pré-lançamento.",
-        origem: "pre-launch-vip",
+        assunto,
+        mensagem,
+        origem,
         turnstileToken,
       };
 
@@ -64,9 +73,8 @@ const VipLeadForm = () => {
       });
 
       toast({
-        title: "Bem-vindo à Lista VIP! 🎉",
-        description:
-          "Seu cadastro foi realizado com sucesso. Em breve você receberá novidades da BaldShield.",
+        title: successTitle,
+        description: successDescription,
       });
 
       setFormData({
@@ -155,8 +163,8 @@ const VipLeadForm = () => {
           "Cadastrando..."
         ) : (
           <>
-            <Send className="mr-2 h-4 w-4" />
-            Quero entrar para a Lista VIP
+        <Send className="mr-2 h-4 w-4" />
+        {buttonText}
           </>
         )}
       </Button>

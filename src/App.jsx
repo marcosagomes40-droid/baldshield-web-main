@@ -33,6 +33,7 @@ import BlogPostSkincareCareca from "@/pages/blog/BlogPostSkincareCareca";
 import BlogPostCouroCabeludoExposto from "@/pages/blog/BlogPostCouroCabeludoExposto";
 import BlogPostAcidoHialuronico from "@/pages/blog/BlogPostAcidoHialuronico";
 import BlogPostBoneCouroCabeludo from "@/pages/blog/BlogPostBoneCouroCabeludo";
+import BlogPostQuantosBrasileiros from "@/pages/blog/BlogPostQuantosBrasileiros";
 import BlogPostProtetorSolarCareca from "@/pages/blog/BlogPostProtetorSolarCareca";
 
 import { Toaster } from '@/components/ui/toaster';
@@ -166,6 +167,11 @@ function App() {
           <Route
           path="/blog/bone-protege-ou-prejudica-couro-cabeludo-exposto"
           element={<BlogPostBoneCouroCabeludo />}
+          />
+
+          <Route
+          path="/blog/quantos-brasileiros-vivem-com-pouco-ou-nenhum-cabelo"
+          element={<BlogPostQuantosBrasileiros />}
           />
 
           {/* 404 */}

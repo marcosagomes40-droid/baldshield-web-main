@@ -4,7 +4,20 @@ import { Helmet } from 'react-helmet';
 import Header from '@/components/Header.jsx';
 import Footer from '@/components/Footer.jsx';
 
-const posts = [
+  const posts = [
+  {
+    slug: "/blog/quantos-brasileiros-vivem-com-pouco-ou-nenhum-cabelo",
+    title: "Quantos brasileiros vivem com pouco ou nenhum cabelo?",
+    excerpt:
+      "Milhões de brasileiros convivem com algum grau de perda capilar. Mas quantos vivem hoje com o couro cabeludo parcial ou totalmente exposto?",
+    category: "Comportamento & Scalp Care",
+    date: "22 set. 2026",
+    isNew: true,
+    image:
+      "/Blog/quantos-brasileiros-cabelo/quantos-brasileiros-pouco-nenhum-cabelo-baldshield.webp",
+  },
+
+  
   {
   slug: "/blog/bone-protege-ou-prejudica-couro-cabeludo-exposto",
   title: "Boné protege ou prejudica o couro cabeludo exposto?",
@@ -24,7 +37,7 @@ const posts = [
     "Um dos ativos mais conhecidos do skincare também pode fazer parte do cuidado do couro cabeludo exposto. Entenda sua relação com hidratação, formulação e scalp care.",
   category: "Ciência & Scalp Care",
   date: "07 set. 2026",
-  isNew: true,
+  isNew: false,
   image:
     "/Blog/acido-hialuronico/acido-hialuronico-couro-cabeludo-exposto-baldshield.webp",
   },
