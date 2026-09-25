@@ -7,9 +7,7 @@ import {
   Droplet,
   Shield,
   Sparkles,
-  Sun,
-  Wind,
-  Activity,
+  
 } from 'lucide-react';
 
 import Header from '@/components/Header.jsx';
@@ -21,84 +19,44 @@ const ProductsPage = () => {
       number: '01',
       name: 'CLEAN',
       verb: 'LIMPAR',
-      role: 'Limpeza',
-      description:
-        'Limpa o couro cabeludo exposto e prepara a pele para as próximas etapas do cuidado.',
       icon: Sparkles,
       accent: '#FFB81C',
       textAccent: 'text-[#FFB81C]',
-      border: 'border-[#FFB81C]/35',
       href: '/products/clean',
-      status: 'DISPONÍVEL',
+      
     },
     {
       number: '02',
       name: 'HYDRATE',
       verb: 'HIDRATAR',
       role: 'Hidratação',
-      description:
-        'Hidrata o couro cabeludo exposto como parte da rotina de cuidado.',
       icon: Droplet,
       accent: '#008FDA',
       textAccent: 'text-[#008FDA]',
-      border: 'border-[#008FDA]/35',
       href: '/products/hydrate',
-      status: 'DISPONÍVEL',
     },
     {
       number: '03',
       name: 'DEFENSE',
       verb: 'PROTEGER',
       role: 'Hidratação + proteção',
-      description:
-        'Combina hidratação e alta proteção para o couro cabeludo exposto.',
       icon: Shield,
       accent: '#B5BD00',
       textAccent: 'text-[#B5BD00]',
-      border: 'border-[#B5BD00]/35',
-      href: '/products/defense',
-      status: 'DISPONÍVEL',
+      href: '/products/defense',     
     },
     {
       number: '04',
       name: 'WIPES',
       verb: 'ACOMPANHAR',
-      role: 'Cuidado ao longo do dia',
-      description:
-        'Uma etapa portátil para acompanhar o cuidado do couro cabeludo exposto durante o dia.',
       icon: Droplet,
       accent: '#D4D4D8',
       textAccent: 'text-zinc-300',
-      border: 'border-white/15',
       href: null,
-      status: 'EM BREVE',
-    },
+      },
   ];
 
-  const exposures = [
-    {
-      icon: Sun,
-      label: 'SOL',
-      text: 'Exposição direta',
-    },
-    {
-      icon: Activity,
-      label: 'SUOR',
-      text: 'Parte da rotina',
-    },
-    {
-      icon: Droplet,
-      label: 'OLEOSIDADE',
-      text: 'Equilíbrio diário',
-    },
-    {
-      icon: Wind,
-      label: 'RESSECAMENTO',
-      text: 'Cuidado contínuo',
-    },
-  ];
-
-  return (
+   return (
     <>
       <Helmet>
         <title>Scalp Defense System™ | Produtos BaldShield</title>
@@ -123,561 +81,692 @@ const ProductsPage = () => {
         <Header />
 
         {/* =========================================================
-            HERO — PRESERVADO / EVOLUÍDO COM MICROINTERAÇÕES
+            HERO V2 — MOCKUP PRODUCTS APROVADO
         ========================================================= */}
-        <section className="relative flex min-h-[82vh] items-center overflow-hidden border-b border-white/10 bg-black">
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_78%_30%,rgba(255,115,0,0.18),transparent_28%),radial-gradient(circle_at_15%_85%,rgba(255,115,0,0.07),transparent_30%)]" />
+        <section className="relative min-h-[820px] overflow-hidden border-b border-white/10 bg-black lg:min-h-[calc(100vh-72px)]">
+          {/* Atmosfera */}
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_72%_42%,rgba(255,115,0,0.12),transparent_27%),radial-gradient(circle_at_12%_78%,rgba(255,115,0,0.06),transparent_28%)]" />
 
-          <div className="absolute inset-0 opacity-[0.025] bg-[linear-gradient(to_right,#ffffff_1px,transparent_1px),linear-gradient(to_bottom,#ffffff_1px,transparent_1px)] bg-[size:80px_80px]" />
+          <div className="absolute inset-0 opacity-[0.022] bg-[linear-gradient(to_right,#ffffff_1px,transparent_1px),linear-gradient(to_bottom,#ffffff_1px,transparent_1px)] bg-[size:80px_80px]" />
 
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,transparent_25%,rgba(0,0,0,0.82)_100%)]" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,transparent_18%,rgba(0,0,0,0.88)_100%)]" />
 
-          <div className="relative z-10 mx-auto w-full max-w-7xl px-6 py-24 sm:px-8 lg:px-10">
-            <div className="grid items-center gap-16 lg:grid-cols-[1.05fr_0.95fr]">
-              <div className="max-w-3xl">
-                <motion.p
-                  initial={{ opacity: 0, y: 16 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6 }}
-                  className="mb-7 text-xs font-semibold uppercase tracking-[0.5em] text-primary md:text-sm"
-                >
-                  Scalp Defense System™
-                </motion.p>
+          {/* Imagem central */}
+          <motion.div
+            initial={{ opacity: 0, scale: 1.035 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 1.15, ease: 'easeOut' }}
+            className="pointer-events-none absolute inset-x-0 bottom-0 top-[34%] z-[1] md:top-[20%] lg:left-[22%] lg:right-[27%] lg:top-[5%] lg:bottom-0"
+          >
+            <img
+              src="/baldshield-products-hero-man-v2.webp"
+              alt="Homem com couro cabeludo exposto representando o universo BaldShield"
+              className="h-full w-full object-contain object-[52%_center] opacity-75 sm:object-[55%_center] lg:object-contain lg:object-center lg:opacity-90"
+              style={{
+                WebkitMaskImage:
+                  'linear-gradient(to right, black 0%, black 82%, transparent 100%)',
+                maskImage:
+                  'linear-gradient(to right, black 0%, black 82%, transparent 100%)',
+              }}
+            />
 
-                <motion.h1
-                  initial={{ opacity: 0, y: 22 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.75, delay: 0.08 }}
-                  className="text-5xl font-bold leading-[1.03] text-white md:text-6xl lg:text-7xl"
+            {/* Fusão da fotografia com o fundo */}
+            <div className="absolute inset-0 bg-gradient-to-r from-black via-black/15 to-black/75 lg:from-black lg:via-transparent lg:to-black" />
+
+            <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-transparent to-black" />
+
+            <div className="absolute inset-y-0 left-0 w-[38%] bg-gradient-to-r from-black to-transparent" />
+
+            <div className="absolute inset-y-0 right-0 w-[3%] bg-gradient-to-l from-black to-transparent" />
+          </motion.div>
+
+          {/* brilho no personagem */}
+          <div className="pointer-events-none absolute left-[48%] top-[25%] z-[2] hidden h-[420px] w-[420px] rounded-full bg-primary/[0.06] blur-[120px] lg:block" />
+
+          {/* Conteúdo principal */}
+          <div className="relative z-10 mx-auto flex min-h-[900px] w-full max-w-[1500px] items-center px-6 pb-20 pt-28 sm:px-8 lg:min-h-[calc(100vh-72px)] lg:px-12 xl:px-16">
+            <div className="grid w-full items-center gap-16 lg:grid-cols-[0.92fr_0.78fr_1fr] xl:grid-cols-[0.9fr_0.82fr_1.08fr]">
+
+              {/* =====================================================
+                  COLUNA ESQUERDA — POSICIONAMENTO
+              ===================================================== */}
+              <motion.div
+                initial={{ opacity: 0, x: -28 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.75, delay: 0.12 }}
+                className="relative z-20 max-w-xl"
+              >
+                <p className="mb-7 text-[10px] font-bold uppercase tracking-[0.5em] text-primary sm:text-xs">
+                  SCALP DEFENSE SYSTEM™
+                </p>
+
+                <h1
+                  className="text-[3.15rem] font-bold leading-[0.98] text-white sm:text-6xl lg:text-[4.2rem] xl:text-[4.75rem]"
                   style={{ fontFamily: 'Playfair Display, serif' }}
                 >
                   Seu couro cabeludo
-                  <span className="block text-primary">
+                  <span className="mt-1 block text-primary">
                     está exposto.
                   </span>
-                </motion.h1>
+                </h1>
 
-                <motion.p
-                  initial={{ opacity: 0, y: 22 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.75, delay: 0.16 }}
-                  className="mt-8 max-w-2xl text-xl leading-relaxed text-white/70 md:text-2xl"
-                >
+                <p className="mt-8 max-w-lg text-lg leading-relaxed text-white/70 md:text-xl">
                   Agora existe um sistema pensado para cuidar dele.
-                </motion.p>
+                </p>
 
-                <motion.p
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  transition={{ duration: 0.75, delay: 0.25 }}
-                  className="mt-5 text-sm uppercase tracking-[0.2em] text-white/40"
-                >
-                  Quatro etapas. Uma rotina. Um novo território de cuidado.
-                </motion.p>
+                <p className="mt-5 max-w-md text-xs font-medium uppercase leading-relaxed tracking-[0.22em] text-white/35">
+                  Quatro etapas. Uma rotina.
+                  <span className="block">
+                    Um novo território de cuidado.
+                  </span>
+                </p>
 
-                <motion.div
-                  initial={{ opacity: 0, y: 18 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.7, delay: 0.32 }}
-                  className="mt-10 flex flex-col gap-4 sm:flex-row"
-                >
+                <div className="mt-10 flex flex-col items-stretch gap-3 sm:flex-row sm:items-center sm:gap-4">
                   <a
                     href="#system"
-                    className="inline-flex items-center justify-center gap-2 rounded-full bg-primary px-8 py-4 text-sm font-semibold text-black transition duration-300 hover:scale-[1.02] hover:bg-primary/90"
+                    className="group inline-flex h-[58px] w-full sm:w-auto sm:min-w-[220px] items-center justify-between gap-5 whitespace-nowrap rounded-full bg-primary px-7 text-[10px] font-bold uppercase tracking-[0.12em] text-black transition duration-300 hover:scale-[1.02] hover:bg-primary/90"
                   >
-                    Descobrir o sistema
-                    <ArrowDown className="h-4 w-4" />
+                    <span>DESCOBRIR O SISTEMA</span>
+                    <ArrowDown className="h-3.5 w-3.5 shrink-0 transition-transform duration-300 group-hover:translate-y-1" />
                   </a>
 
                   <a
                     href="https://loja.baldshield.com"
-                    className="inline-flex items-center justify-center gap-2 rounded-full border border-white/20 px-8 py-4 text-sm font-semibold text-white transition duration-300 hover:border-primary hover:text-primary"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="group inline-flex h-[58px] w-full sm:w-auto sm:min-w-[190px] items-center justify-between gap-5 whitespace-nowrap rounded-full border border-white/25 px-7 text-[10px] font-bold uppercase tracking-[0.12em] text-white transition duration-300 hover:border-primary/70 hover:text-primary"
                   >
-                    Ir para a loja
-                    <ArrowRight className="h-4 w-4" />
+                    <span>IR PARA A LOJA</span>
+                    <ArrowRight className="h-3.5 w-3.5 shrink-0 transition-transform duration-300 group-hover:translate-x-1" />
                   </a>
-                </motion.div>
-              </div>
+                </div>
 
-              {/* THE SYSTEM */}
+                <div className="mt-12 flex items-center gap-4">
+                  <div className="h-px w-10 bg-primary/60" />
+
+                  <p className="text-[9px] font-semibold uppercase tracking-[0.38em] text-white/30">
+                    Confidence for the Bold
+                  </p>
+                </div>
+              </motion.div>
+
+              {/* Coluna física do personagem.
+                  A fotografia está em position absolute para permitir
+                  integração cinematográfica sem quebrar o grid. */}
+              <div
+                className="pointer-events-none hidden min-h-[620px] lg:block"
+                aria-hidden="true"
+              />
+
+              {/* =====================================================
+                  COLUNA DIREITA — SDS ORBITAL
+              ===================================================== */}
               <motion.div
-                initial={{ opacity: 0, scale: 0.97, y: 24 }}
-                animate={{ opacity: 1, scale: 1, y: 0 }}
-                transition={{ duration: 0.85, delay: 0.2 }}
-                className="relative hidden lg:block"
+                initial={{ opacity: 0, x: 30, scale: 0.96 }}
+                animate={{ opacity: 1, x: 0, scale: 1 }}
+                transition={{ duration: 0.9, delay: 0.28 }}
+                className="relative z-20 mx-auto w-full max-w-[520px]"
               >
-                <div className="absolute inset-10 rounded-full bg-primary/15 blur-[100px]" />
+                
 
-                <div className="relative overflow-hidden rounded-[2.25rem] border border-white/10 bg-gradient-to-br from-white/[0.07] via-white/[0.025] to-black p-8 shadow-[0_30px_120px_rgba(0,0,0,0.72)]">
-                  <div className="mb-9 flex items-center justify-between">
-                    <div>
-                      <p className="text-[10px] font-semibold uppercase tracking-[0.35em] text-primary">
-                        The System
-                      </p>
+                {/* MOBILE/TABLET — fluxo linear premium */}
+                <div className="grid gap-3 lg:hidden">
+                  {steps.map((step, index) => (
+                    <div
+                      key={step.name}
+                      className="relative overflow-hidden rounded-2xl border border-white/10 bg-black/65 px-5 py-4 backdrop-blur-md"
+                    >
+                      <div
+                        className="absolute inset-y-0 left-0 w-[2px]"
+                        style={{ backgroundColor: step.accent }}
+                      />
 
-                      <p className="mt-2 text-sm text-white/40">
-                        Cuidado em quatro etapas
-                      </p>
+                      <div className="flex items-center gap-4">
+                        <span
+                          className="text-xs font-bold"
+                          style={{ color: step.accent }}
+                        >
+                          {step.number}
+                        </span>
+
+                        <div
+                          className="flex h-9 w-9 items-center justify-center rounded-full border"
+                          style={{
+                            borderColor: `${step.accent}55`,
+                            backgroundColor: `${step.accent}12`,
+                          }}
+                        >
+                          <step.icon
+                            className="h-4 w-4"
+                            style={{ color: step.accent }}
+                          />
+                        </div>
+
+                        <div className="min-w-0 flex-1">
+                          <p className="text-[9px] font-semibold uppercase tracking-[0.24em] text-white/35">
+                            {step.verb}
+                          </p>
+
+                          <p className="mt-1 text-sm font-bold tracking-[0.14em] text-white">
+                            {step.name}
+                          </p>
+                        </div>
+
+                        {step.href ? (
+                          <a
+                            href={step.href}
+                            aria-label={`Conhecer ${step.name}`}
+                            className="flex h-9 w-9 items-center justify-center rounded-full border border-white/10 text-white/50 transition hover:border-white/25 hover:text-white"
+                          >
+                            <ArrowRight className="h-4 w-4" />
+                          </a>
+                        ) : (
+                          <span className="text-[8px] font-bold uppercase tracking-[0.14em] text-white/25">
+                            Em breve
+                          </span>
+                        )}
+                      </div>
                     </div>
+                  ))}
+                </div>
+
+                {/* DESKTOP — SISTEMA ORBITAL */}
+               <div className="relative mx-auto hidden aspect-square w-full max-w-[420px] lg:translate-x-10 lg:-translate-y-10 lg:block">
+
+                  {/* halos */}
+                  <div className="absolute inset-[7%] rounded-full border border-white/[0.06]" />
+
+                  <div className="absolute inset-[18%] rounded-full border border-primary/20 shadow-[0_0_80px_rgba(255,115,0,0.05)]" />
+
+                  <div className="absolute inset-[30%] rounded-full border border-white/[0.07]" />
+
+                  {/* linhas do sistema */}
+                  <div className="absolute left-1/2 top-[15%] h-[70%] w-px -translate-x-1/2 bg-gradient-to-b from-transparent via-white/10 to-transparent" />
+
+                  <div className="absolute left-[15%] top-1/2 h-px w-[70%] -translate-y-1/2 bg-gradient-to-r from-transparent via-white/10 to-transparent" />
+
+                  {/* glow central */}
+                  <div className="absolute left-1/2 top-1/2 h-[210px] w-[210px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-primary/[0.11] blur-[70px]" />
+
+                  {/* NÚCLEO BALDSHIELD */}
+                  <div className="absolute left-1/2 top-1/2 z-20 flex h-[150px] w-[150px] -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full border border-primary/30 bg-black/80 shadow-[0_0_70px_rgba(255,115,0,0.13)] backdrop-blur-xl">
+                    <div className="absolute inset-3 rounded-full border border-white/[0.07]" />
 
                     <img
                       src="/escudo.png"
                       alt="BaldShield"
-                      className="h-10 w-10 object-contain"
+                      className="relative z-10 h-[82px] w-[82px] object-contain drop-shadow-[0_0_20px_rgba(255,115,0,0.18)]"
                     />
                   </div>
 
-                  <div className="space-y-3">
-                    {steps.map((step, index) => {
-                      const systemRow = (
-                        <>
-                          <span
-                            className={`text-xs font-semibold ${step.textAccent}`}
-                          >
-                            {step.number}
-                          </span>
+                  {/* 01 — CLEAN */}
+                  <a
+                    href="/products/clean"
+                    aria-label="Conhecer CLEAN"
+                    className="group absolute left-[2%] top-[9%] z-30 w-[150px]"
+                  >
+                    <div className="flex items-center gap-3">
+                      <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full border border-[#FFB81C]/40 bg-[#FFB81C]/10 text-[#FFB81C] transition duration-300 group-hover:scale-110 group-hover:bg-[#FFB81C]/15">
+                        <Sparkles className="h-4 w-4" />
+                      </div>
 
-                          <step.icon
-                            className={`h-5 w-5 ${step.textAccent}`}
-                          />
+                      <div>
+                        <p className="text-[9px] font-bold uppercase tracking-[0.22em] text-[#FFB81C]">
+                          01 · LIMPAR
+                        </p>
 
-                          <div className="min-w-0 flex-1">
-                            <p className="text-sm font-semibold tracking-[0.2em] text-white">
-                              {step.name}
-                            </p>
+                        <p className="mt-1 text-sm font-bold tracking-[0.16em] text-white">
+                          CLEAN
+                        </p>
+                      </div>
+                    </div>
+                  </a>
 
-                            <p className="mt-1 text-xs text-white/40">
-                              {step.role}
-                            </p>
-                          </div>
+                  {/* 02 — HYDRATE */}
+                  <a
+                    href="/products/hydrate"
+                    aria-label="Conhecer HYDRATE"
+                    className="group absolute right-[0%] top-[12%] z-30 w-[165px]"
+                  >
+                    <div className="flex items-center justify-end gap-3 text-right">
+                      <div>
+                        <p className="text-[9px] font-bold uppercase tracking-[0.22em] text-[#008FDA]">
+                          02 · HIDRATAR
+                        </p>
 
-                          {step.href ? (
-                            <ArrowRight
-                              className={`h-4 w-4 ${step.textAccent} opacity-60 transition-all duration-300 group-hover:translate-x-1 group-hover:opacity-100`}
-                            />
-                          ) : (
-                            <span className="text-[9px] font-semibold uppercase tracking-[0.16em] text-white/25">
-                              Em breve
-                            </span>
-                          )}
-                        </>
-                      );
+                        <p className="mt-1 text-sm font-bold tracking-[0.16em] text-white">
+                          HYDRATE
+                        </p>
+                      </div>
 
-                      return (
-                        <motion.div
-                          key={step.name}
-                          initial={{ opacity: 0, x: 20 }}
-                          animate={{ opacity: 1, x: 0 }}
-                          transition={{
-                            duration: 0.5,
-                            delay: 0.35 + index * 0.1,
-                          }}
-                        >
-                          {step.href ? (
-                            <a
-                              href={step.href}
-                              aria-label={`Conhecer ${step.name}`}
-                              className={`group flex items-center gap-5 rounded-2xl border ${step.border} bg-gradient-to-r from-white/[0.035] to-transparent px-5 py-4 transition duration-300 hover:-translate-y-0.5 hover:bg-white/[0.055]`}
-                            >
-                              {systemRow}
-                            </a>
-                          ) : (
-                            <div
-                              className={`flex items-center gap-5 rounded-2xl border ${step.border} bg-white/[0.02] px-5 py-4`}
-                            >
-                              {systemRow}
-                            </div>
-                          )}
-                        </motion.div>
-                      );
-                    })}
+                      <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full border border-[#008FDA]/40 bg-[#008FDA]/10 text-[#008FDA] transition duration-300 group-hover:scale-110 group-hover:bg-[#008FDA]/15">
+                        <Droplet className="h-4 w-4" />
+                      </div>
+                    </div>
+                  </a>
+
+                  {/* 03 — DEFENSE */}
+                  <a
+                    href="/products/defense"
+                    aria-label="Conhecer DEFENSE"
+                    className="group absolute bottom-[10%] right-[0%] z-30 w-[170px]"
+                  >
+                    <div className="flex items-center justify-end gap-3 text-right">
+                      <div>
+                        <p className="text-[9px] font-bold uppercase tracking-[0.22em] text-[#B5BD00]">
+                          03 · PROTEGER
+                        </p>
+
+                        <p className="mt-1 text-sm font-bold tracking-[0.16em] text-white">
+                          DEFENSE
+                        </p>
+                      </div>
+
+                      <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full border border-[#B5BD00]/40 bg-[#B5BD00]/10 text-[#B5BD00] transition duration-300 group-hover:scale-110 group-hover:bg-[#B5BD00]/15">
+                        <Shield className="h-4 w-4" />
+                      </div>
+                    </div>
+                  </a>
+
+                  {/* 04 — WIPES */}
+                  <div className="absolute bottom-[10%] left-[1%] z-30 w-[175px]">
+                    <div className="flex items-center gap-3">
+                      <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full border border-zinc-300/20 bg-white/[0.04] text-zinc-300">
+                        <Droplet className="h-4 w-4" />
+                      </div>
+
+                      <div>
+                        <p className="text-[9px] font-bold uppercase tracking-[0.22em] text-zinc-400">
+                          04 · ACOMPANHAR
+                        </p>
+
+                        <p className="mt-1 text-sm font-bold tracking-[0.16em] text-white">
+                          WIPES
+                        </p>
+
+                        <p className="mt-1 text-[8px] font-semibold uppercase tracking-[0.16em] text-white/25">
+                          Em breve
+                        </p>
+                      </div>
+                    </div>
                   </div>
 
-                  <div className="mt-8 h-px bg-gradient-to-r from-transparent via-primary/40 to-transparent" />
+                  {/* pontos orbitais decorativos */}
+                  <div className="absolute left-[22%] top-[23%] h-1.5 w-1.5 rounded-full bg-[#FFB81C] shadow-[0_0_12px_#FFB81C]" />
 
-                  <p className="mt-6 text-center text-xs uppercase tracking-[0.28em] text-white/35">
-                    Limpar · Hidratar · Proteger · Acompanhar
-                  </p>
+                  <div className="absolute right-[22%] top-[25%] h-1.5 w-1.5 rounded-full bg-[#008FDA] shadow-[0_0_12px_#008FDA]" />
+
+                  <div className="absolute bottom-[23%] right-[23%] h-1.5 w-1.5 rounded-full bg-[#B5BD00] shadow-[0_0_12px_#B5BD00]" />
+
+                  <div className="absolute bottom-[23%] left-[23%] h-1.5 w-1.5 rounded-full bg-zinc-300 shadow-[0_0_10px_rgba(255,255,255,0.45)]" />
                 </div>
+
+                <p className="mt-7 text-center text-[9px] font-semibold uppercase tracking-[0.32em] text-white/25 lg:text-right">
+                  LIMPAR · HIDRATAR · PROTEGER · ACOMPANHAR
+                </p>
               </motion.div>
             </div>
           </div>
-        </section>
 
+          {/* scroll cue */}
+          <motion.a
+            href="#system"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.8, delay: 0.9 }}
+            className="absolute bottom-7 left-1/2 z-30 hidden -translate-x-1/2 flex-col items-center gap-2 text-white/25 transition hover:text-primary md:flex"
+            aria-label="Explorar Scalp Defense System"
+          >
+            <span className="text-[8px] font-semibold uppercase tracking-[0.32em]">
+              Explorar
+            </span>
+
+            <ArrowDown className="h-4 w-4 animate-bounce" />
+          </motion.a>
+        </section>
+        
         {/* =========================================================
-            MANIFESTO / PONTO DE PARTIDA
+              PRODUTOS — SCALP DEFENSE SYSTEM
+          ========================================================= */}
+          <section className="relative overflow-hidden bg-black py-8 md:py-12">
+              <div className="mx-auto grid w-full max-w-[1360px] grid-cols-1 overflow-hidden border border-white/10 md:grid-cols-2 lg:grid-cols-4">
+
+              {/* CLEAN */}
+              <a
+                href="/products/clean"
+                className="group relative min-h-[620px] lg:min-h-[620px] lg:aspect-auto overflow-hidden border-b border-white/10 md:border-r lg:border-b-0"
+              >
+                <img
+                  src="/baldshield-products-clean-v2.webp"
+                  alt="BaldShield CLEAN"
+                  className="absolute inset-x-0 top-0 h-full w-full object-cover object-[center_55%] transition duration-700 group-hover:scale-[1.03] lg:h-[580px]"
+                />
+
+                <div className="absolute inset-0 bg-gradient-to-t from-black via-black/55 from-0% via-32% to-transparent to-58%" />
+
+                <div className="absolute inset-x-0 bottom-0 z-10 flex flex-col justify-end bg-gradient-to-t from-black via-black/90 to-transparent px-2 pb-3 pt-24">
+                  <p className="text-[10px] font-bold uppercase tracking-[0.35em] text-[#FFB81C]">
+                    01 / LIMPAR
+                  </p>
+
+                  <h3 className="mt-2 text-3xl font-bold uppercase tracking-tight text-white">
+                    CLEAN
+                  </h3>
+
+                  <p className="mt-2 max-w-[260px] text-sm leading-relaxed text-white/70">
+                    Limpa e prepara o couro cabeludo exposto.
+                  </p>
+
+                  <div className="mt-5 flex flex-wrap items-center gap-2">
+                  <span className="inline-flex items-center gap-2 rounded-full border border-primary/70 px-4 py-2 text-[10px] font-bold uppercase tracking-[0.16em] text-white transition group-hover:border-primary">
+                    Conhecer CLEAN
+                    <ArrowRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-1" />
+                  </span>
+
+                  <a
+                    href="https://loja.baldshield.com/clean/"
+                    onClick={(e) => e.stopPropagation()}
+                    className="inline-flex items-center rounded-full bg-primary px-4 py-2 text-[10px] font-bold uppercase tracking-[0.16em] text-black transition hover:brightness-110"
+                  >
+                    Comprar
+                  </a>
+                </div>
+                </div>
+              </a>
+
+              {/* HYDRATE */}
+              <a
+                href="/products/hydrate"
+                className="group relative min-h-[620px] lg:min-h-[620px] lg:aspect-auto overflow-hidden border-b border-white/10 lg:border-b-0 lg:border-r"
+              >
+                <img
+                  src="/baldshield-products-hydrate-v2.webp"
+                  alt="BaldShield HYDRATE"
+                  className="absolute inset-x-0 top-0 h-full w-full object-cover object-[center_55%] transition duration-700 group-hover:scale-[1.03] lg:h-[580px]"
+                />
+
+                <div className="absolute inset-0 bg-gradient-to-t from-black via-black/55 from-0% via-32% to-transparent to-58%" />
+
+                <div className="absolute inset-x-0 bottom-0 z-10 flex flex-col justify-end bg-gradient-to-t from-black via-black/90 to-transparent px-2 pb-3 pt-24">
+                  <p className="text-[10px] font-bold uppercase tracking-[0.35em] text-[#00AEEF]">
+                    02 / HIDRATAR
+                  </p>
+
+                  <h3 className="mt-2 text-3xl font-bold uppercase tracking-tight text-white">
+                    HYDRATE
+                  </h3>
+
+                  <p className="mt-2 max-w-[260px] text-sm leading-relaxed text-white/70">
+                    Hidrata e equilibra a pele exposta.
+                  </p>
+
+                  <div className="mt-5 flex flex-wrap items-center gap-2">
+                  <span className="inline-flex items-center gap-2 rounded-full border border-primary/70 px-4 py-2 text-[10px] font-bold uppercase tracking-[0.16em] text-white transition group-hover:border-primary">
+                    Conhecer HYDRATE
+                    <ArrowRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-1" />
+                  </span>
+
+                  <a
+                    href="https://loja.baldshield.com/hydrate"
+                    onClick={(e) => e.stopPropagation()}
+                    className="inline-flex items-center rounded-full bg-primary px-4 py-2 text-[10px] font-bold uppercase tracking-[0.16em] text-black transition hover:brightness-110"
+                  >
+                    Comprar
+                  </a>
+                </div>
+                </div>
+              </a>
+
+              {/* DEFENSE */}
+              <a
+                href="/products/defense"
+                className="group relative min-h-[620px] lg:min-h-[620px] lg:aspect-auto overflow-hidden border-b border-white/10 md:border-r lg:border-b-0"
+              >
+                <img
+                  src="/baldshield-products-defense-v2.webp"
+                  alt="BaldShield DEFENSE"
+                  className="absolute inset-x-0 top-0 h-full w-full object-cover object-[center_55%] transition duration-700 group-hover:scale-[1.03] lg:h-[580px]"
+                />
+
+                <div className="absolute inset-0 bg-gradient-to-t from-black via-black/55 from-0% via-32% to-transparent to-58%" />
+
+                <div className="absolute inset-x-0 bottom-0 z-10 flex flex-col justify-end bg-gradient-to-t from-black via-black/90 to-transparent px-2 pb-3 pt-24">
+                  <p className="text-[10px] font-bold uppercase tracking-[0.35em] text-[#B5D900]">
+                    03 / PROTEGER
+                  </p>
+
+                  <h3 className="mt-2 text-3xl font-bold uppercase tracking-tight text-white">
+                    DEFENSE
+                  </h3>
+
+                  <p className="mt-2 max-w-[260px] text-sm leading-relaxed text-white/70">
+                    Hidrata e protege o couro cabeludo exposto.
+                  </p>
+
+                  <div className="mt-5 flex flex-wrap items-center gap-2">
+                  <span className="inline-flex items-center gap-2 rounded-full border border-primary/70 px-4 py-2 text-[10px] font-bold uppercase tracking-[0.16em] text-white transition group-hover:border-primary">
+                    Conhecer DEFENSE
+                    <ArrowRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-1" />
+                  </span>
+
+                  <a
+                    href="https://loja.baldshield.com/protect/"
+                    onClick={(e) => e.stopPropagation()}
+                    className="inline-flex items-center rounded-full bg-primary px-4 py-2 text-[10px] font-bold uppercase tracking-[0.16em] text-black transition hover:brightness-110"
+                  >
+                    Comprar
+                  </a>
+                </div>
+                </div>
+              </a>
+
+              {/* WIPES */}
+              <div className="group relative min-h-[620px] lg:min-h-[620px] lg:aspect-auto overflow-hidden">
+                <img
+                  src="/baldshield-products-wipes-v2.webp"
+                  alt="BaldShield WIPES"
+                  className="absolute inset-x-0 top-0 h-full w-full object-cover object-[center_55%] transition duration-700 group-hover:scale-[1.03] lg:h-[580px]"
+                />
+
+                <div className="absolute inset-0 bg-gradient-to-t from-black via-black/55 from-0% via-32% to-transparent to-58%" />
+
+                <div className="absolute inset-x-0 bottom-0 z-10 flex flex-col justify-end bg-gradient-to-t from-black via-black/90 to-transparent px-2 pb-3 pt-24">
+                  <p className="text-[10px] font-bold uppercase tracking-[0.35em] text-white/60">
+                    04 / CONTROLAR
+                  </p>
+
+                  <h3 className="mt-2 text-3xl font-bold uppercase tracking-tight text-white">
+                    WIPES
+                  </h3>
+
+                  <p className="mt-2 max-w-[260px] text-sm leading-relaxed text-white/70">
+                    Cuida ao longo do dia e ajuda no controle do brilho.
+                  </p>
+
+                  <div className="mt-5 inline-flex rounded-full border border-white/30 px-5 py-2 text-[10px] font-bold uppercase tracking-[0.22em] text-white/65">
+                    Em breve
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </section>
+
+
+       {/* =========================================================
+            4 PRODUTOS? NÃO. 1 SISTEMA.
         ========================================================= */}
-        <section className="relative overflow-hidden border-b border-white/5 bg-black py-24 md:py-32">
-          <div className="absolute left-1/2 top-1/2 h-[450px] w-[700px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-primary/[0.045] blur-[130px]" />
+        <section
+          id="system"
+          className="relative overflow-hidden border-b border-white/5 bg-black py-20 md:py-24"
+        >
+          {/* atmosfera */}
+          <div className="absolute left-1/2 top-1/2 h-[420px] w-[900px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-primary/[0.045] blur-[140px]" />
+
+          <div className="absolute inset-0 opacity-[0.018] bg-[linear-gradient(to_right,#ffffff_1px,transparent_1px),linear-gradient(to_bottom,#ffffff_1px,transparent_1px)] bg-[size:80px_80px]" />
 
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, amount: 0.3 }}
+            viewport={{ once: true, amount: 0.25 }}
             transition={{ duration: 0.75 }}
-            className="relative mx-auto max-w-5xl px-6 text-center"
+            className="relative mx-auto w-full max-w-[1400px] px-6 lg:px-10"
           >
-            <div className="mb-6 flex w-full justify-center">
-              <p className="m-0 text-center text-xs font-bold uppercase tracking-[0.45em] text-primary">
-                O PONTO DE PARTIDA
-              </p>
-            </div>
+            {/* CABEÇALHO */}
+            
+              <div className="relative w-full">
 
-            <h2
-              className="text-4xl font-bold leading-[1.08] text-white md:text-6xl lg:text-7xl"
-              style={{ fontFamily: 'Playfair Display, serif' }}
-            >
-              O cabelo saiu de cena.
-              <span className="mt-2 block text-white/40">
-                O cuidado não pode sair junto.
-              </span>
-            </h2>
-
-            <p className="mx-auto mt-9 max-w-3xl text-base leading-relaxed text-white/55 md:text-lg">
-              Quando o couro cabeludo fica exposto, ele passa a fazer parte
-              direta da rotina. Sol, calor, suor, oleosidade e ressecamento
-              deixam de ser detalhes.
-            </p>
-
-            <div className="mx-auto mt-12 h-px max-w-xl bg-gradient-to-r from-transparent via-primary/60 to-transparent" />
-
-            <p className="mx-auto mt-10 max-w-3xl text-xl font-medium leading-relaxed text-white md:text-2xl">
-              A BaldShield transforma essa realidade em uma
-              <span className="text-primary"> lógica de cuidado.</span>
-            </p>
-          </motion.div>
-        </section>
-
-        {/* =========================================================
-            EXPOSIÇÃO — NOVA SEÇÃO
-        ========================================================= */}
-        <section className="relative bg-[#080808] py-20 md:py-24">
-          <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-10">
-            <div className="grid gap-14 lg:grid-cols-[0.8fr_1.2fr] lg:items-end">
-              <motion.div
-                initial={{ opacity: 0, x: -25 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.65 }}
-              >
-                <p className="mb-5 text-xs font-semibold uppercase tracking-[0.4em] text-primary">
-                  Exposição é rotina
-                </p>
-
-                <h2
-                  className="text-4xl font-bold leading-tight text-white md:text-5xl"
-                  style={{ fontFamily: 'Playfair Display, serif' }}
-                >
-                  O ambiente muda.
-                  <span className="block text-white/45">
-                    A pele sente.
-                  </span>
-                </h2>
-              </motion.div>
-
-              <div className="grid grid-cols-2 gap-px overflow-hidden rounded-[2rem] border border-white/10 bg-white/10 md:grid-cols-4">
-                {exposures.map((item, index) => (
-                  <motion.div
-                    key={item.label}
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{
-                      duration: 0.5,
-                      delay: index * 0.08,
-                    }}
-                    className="group flex min-h-[190px] flex-col items-center justify-center bg-[#090909] p-6 text-center transition duration-300 hover:bg-white/[0.045] md:p-7"
-                  >
-                    <item.icon className="mb-6 h-5 w-5 text-primary transition duration-300 group-hover:scale-110" />
-
-                    <p className="text-[10px] font-semibold tracking-[0.22em] text-white">
-                      {item.label}
-                    </p>
-
-                    <p className="mt-2 text-xs text-white/35">
-                      {item.text}
-                    </p>
-                  </motion.div>
-                ))}
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* =========================================================
-            SYSTEM INTRO
-        ========================================================= */}
-        <section
-          id="system"
-          className="relative scroll-mt-24 overflow-hidden bg-black pt-28 md:pt-36"
-        >
-          <div className="absolute left-0 top-0 h-px w-full bg-gradient-to-r from-transparent via-primary/30 to-transparent" />
-
-          <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-10">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.7 }}
-              className="mb-20 grid gap-8 lg:grid-cols-[1fr_0.75fr] lg:items-end"
-            >
-              <div>
-                <p className="mb-6 text-xs font-semibold uppercase tracking-[0.45em] text-primary">
-                  Scalp Defense System™
-                </p>
-
-                <h2
-                  className="max-w-4xl text-5xl font-bold leading-[1.02] text-white md:text-7xl"
-                  style={{ fontFamily: 'Playfair Display, serif' }}
-                >
-                  Não são apenas produtos.
-                  <span className="block text-white/35">
-                    É uma sequência.
-                  </span>
-                </h2>
-              </div>
-
-              <p className="max-w-xl text-base leading-relaxed text-white/50 lg:pb-2">
-                Cada etapa tem uma função dentro da rotina. A lógica é simples:
-                limpar, hidratar, proteger e acompanhar o couro cabeludo
-                exposto ao longo do dia.
-              </p>
-            </motion.div>
-          </div>
-
-          {/* =======================================================
-              PRODUCT STORIES — NOVO
-          ======================================================= */}
-          <div>
-            {steps.map((step, index) => {
-              const isAvailable = Boolean(step.href);
-
-              const content = (
-                <div className="relative mx-auto grid min-h-[520px] max-w-7xl items-center gap-10 px-6 py-16 sm:px-8 md:py-20 lg:grid-cols-[0.72fr_1.28fr] lg:px-10">
-                  <div className="relative z-10">
-                    <div className="flex items-center gap-4">
-                      <span
-                        className={`text-xs font-bold tracking-[0.25em] ${step.textAccent}`}
-                      >
-                        STEP {step.number}
-                      </span>
-
-                      <span className="h-px w-12 bg-white/15" />
-
-                      <span className="text-[10px] font-semibold uppercase tracking-[0.25em] text-white/30">
-                        {step.status}
-                      </span>
-                    </div>
-
-                    <div
-                      className="mt-10 flex h-16 w-16 items-center justify-center rounded-2xl border"
-                      style={{
-                        borderColor: `${step.accent}45`,
-                        background: `${step.accent}0D`,
-                      }}
-                    >
-                      <step.icon
-                        className="h-7 w-7"
-                        style={{ color: step.accent }}
-                      />
-                    </div>
-
-                    <p
-                      className="mt-8 text-xs font-semibold uppercase tracking-[0.35em]"
-                      style={{ color: step.accent }}
-                    >
-                      {step.verb}
-                    </p>
-                  </div>
-
-                  <div className="relative z-10">
-                    <p className="mb-4 text-sm font-semibold uppercase tracking-[0.28em] text-white/35">
-                      {step.role}
-                    </p>
-
-                    <h3
-                      className="text-6xl font-bold leading-none text-white sm:text-7xl md:text-8xl lg:text-[7rem]"
-                      style={{ fontFamily: 'Playfair Display, serif' }}
-                    >
-                      {step.name}
-                    </h3>
-
-                    <p className="mt-8 max-w-2xl text-lg leading-relaxed text-white/55 md:text-xl">
-                      {step.description}
-                    </p>
-
-                    {isAvailable ? (
-                      <div className="mt-10 flex flex-wrap gap-4">
-                        <span
-                          className="inline-flex items-center gap-3 text-sm font-semibold uppercase tracking-[0.14em]"
-                          style={{ color: step.accent }}
-                        >
-                          Conhecer {step.name}
-                          <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-2" />
-                        </span>
-                      </div>
-                    ) : (
-                      <div className="mt-10 inline-flex rounded-full border border-white/10 px-5 py-2 text-xs font-semibold uppercase tracking-[0.18em] text-white/35">
-                        Em desenvolvimento
-                      </div>
-                    )}
-                  </div>
-
-                  <div
-                    className="pointer-events-none absolute -right-20 top-1/2 h-[360px] w-[360px] -translate-y-1/2 rounded-full opacity-10 blur-[110px]"
-                    style={{ backgroundColor: step.accent }}
-                  />
-
-                  <div
-                    className="pointer-events-none absolute -right-4 bottom-[-60px] select-none text-[15rem] font-bold leading-none opacity-[0.025] md:text-[22rem]"
-                    style={{
-                      fontFamily: 'Playfair Display, serif',
-                      color: step.accent,
-                    }}
-                  >
-                    {step.number}
-                  </div>
+                {/* Eyebrow — independente, como no mockup */}
+                <div className="mb-5 flex w-full justify-center">
+                  <p className="m-0 text-center text-[10px] font-bold uppercase tracking-[0.45em] text-white/55 md:text-xs">
+                    SCALP DEFENSE SYSTEM™
+                  </p>
                 </div>
-              );
 
-              return (
-                <motion.div
-                  key={step.name}
-                  initial={{ opacity: 0 }}
-                  whileInView={{ opacity: 1 }}
-                  viewport={{ once: true, amount: 0.15 }}
-                  transition={{ duration: 0.7 }}
-                  className={`group relative overflow-hidden border-t ${step.border} ${
-                    index === steps.length - 1
-                      ? 'border-b border-b-white/10'
-                      : ''
-                  }`}
-                  style={{
-                    background: `linear-gradient(110deg, #050505 0%, #050505 55%, ${step.accent}0B 100%)`,
-                  }}
-                >
-                  {isAvailable ? (
-                    <a
-                      href={step.href}
-                      aria-label={`Conhecer ${step.name}`}
-                      className="block transition duration-500 hover:bg-white/[0.012]"
-                    >
-                      {content}
-                    </a>
-                  ) : (
-                    content
-                  )}
-                </motion.div>
-              );
-            })}
-          </div>
-        </section>
+                {/* Título — centralização independente */}
+                <div className="flex w-full flex-col items-center text-center">
+                  <h2
+                    className="m-0 text-center text-4xl font-bold uppercase leading-[0.94] tracking-[-0.035em] text-white md:text-6xl lg:text-7xl"
+                    style={{ fontFamily: 'Playfair Display, serif' }}
+                  >
+                    <span className="block">4 PRODUTOS?</span>
 
-        {/* =========================================================
-            ROTINA — SYSTEM FLOW
-        ========================================================= */}
-        <section className="relative overflow-hidden bg-[#080808] py-28 md:py-36">
-          <div className="absolute inset-0 opacity-[0.018] bg-[linear-gradient(to_right,#ffffff_1px,transparent_1px),linear-gradient(to_bottom,#ffffff_1px,transparent_1px)] bg-[size:70px_70px]" />
+                    <span className="mt-2 block">
+                      <span className="text-primary">NÃO.</span>{' '}
+                      <span className="text-white">1 SISTEMA.</span>
+                    </span>
+                  </h2>
 
-          <div className="relative mx-auto max-w-7xl px-6 sm:px-8 lg:px-10">
-            <motion.div
-              initial={{ opacity: 0, y: 25 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.65 }}
-              className="mx-auto mb-16 max-w-4xl text-center"
-            >
-              <div className="mb-6 flex w-full justify-center">
-                <p className="m-0 text-center text-xs font-semibold uppercase tracking-[0.45em] text-primary">
-                  A ROTINA
-                </p>
+                  <p className="mt-6 text-center text-sm uppercase tracking-[0.20em] text-white/55 md:text-base">
+                    Uma lógica para cada momento da pele exposta.
+                  </p>
+                </div>
+
               </div>
 
-              <h2
-                className="text-4xl font-bold leading-tight text-white md:text-6xl"
-                style={{ fontFamily: 'Playfair Display, serif' }}
-              >
-                Um sistema só funciona
-                <span className="block text-primary">
-                  quando cabe na vida real.
-                </span>
-              </h2>
+              {/* DESKTOP — JORNADA DO SISTEMA */}
+              <div className="relative mx-auto mt-12 hidden max-w-[1200px] md:block">
+                {/* linha conectora */}
+                <div className="absolute left-[10%] right-[10%] top-[28px] h-px bg-gradient-to-r from-[#FFB81C]/50 via-[#00AEEF]/50 via-50% to-[#B5D900]/50" />
 
-              <p className="mx-auto mt-7 max-w-2xl text-base leading-relaxed text-white/50">
-                Por isso, o Scalp Defense System™ organiza o cuidado em uma
-                sequência fácil de entender e incorporar à rotina.
-              </p>
-            </motion.div>
+                <div className="relative z-10 grid grid-cols-4 gap-6">
+                  {/* 01 */}
+                  <div className="text-center">
+                    <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-full border border-[#FFB81C]/60 bg-black text-lg font-bold text-[#FFB81C] shadow-[0_0_30px_rgba(255,184,28,0.08)]">
+                      01
+                    </div>
 
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.7 }}
-              className="overflow-hidden rounded-[2.5rem] border border-white/10 bg-black/80 shadow-[0_30px_100px_rgba(0,0,0,0.45)]"
-            >
-              <div className="border-b border-white/10 px-7 py-6 md:px-10">
-                <div className="flex items-center justify-between">
-                  <p className="text-[10px] font-semibold uppercase tracking-[0.35em] text-white/35">
-                    Daily protocol
-                  </p>
+                    <p className="mt-5 text-[10px] font-bold uppercase tracking-[0.25em] text-white/45">
+                      LIMPAR
+                    </p>
 
-                  <p className="text-[10px] font-semibold uppercase tracking-[0.3em] text-primary">
-                    SDS™
-                  </p>
+                    <p className="mt-1 text-lg font-black uppercase tracking-[0.08em] text-[#FFB81C]">
+                      CLEAN
+                    </p>
+
+                    <p className="mx-auto mt-3 max-w-[190px] text-sm leading-relaxed text-white/45">
+                      Limpa e prepara.
+                    </p>
+                  </div>
+
+                  {/* 02 */}
+                  <div className="text-center">
+                    <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-full border border-[#00AEEF]/60 bg-black text-lg font-bold text-[#00AEEF] shadow-[0_0_30px_rgba(0,174,239,0.08)]">
+                      02
+                    </div>
+
+                    <p className="mt-5 text-[10px] font-bold uppercase tracking-[0.25em] text-white/45">
+                      HIDRATAR
+                    </p>
+
+                    <p className="mt-1 text-lg font-black uppercase tracking-[0.08em] text-[#00AEEF]">
+                      HYDRATE
+                    </p>
+
+                    <p className="mx-auto mt-3 max-w-[190px] text-sm leading-relaxed text-white/45">
+                      Hidrata e equilibra.
+                    </p>
+                  </div>
+
+                  {/* 03 */}
+                  <div className="text-center">
+                    <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-full border border-[#B5D900]/60 bg-black text-lg font-bold text-[#B5D900] shadow-[0_0_30px_rgba(181,217,0,0.08)]">
+                      03
+                    </div>
+
+                    <p className="mt-5 text-[10px] font-bold uppercase tracking-[0.25em] text-white/45">
+                      PROTEGER
+                    </p>
+
+                    <p className="mt-1 text-lg font-black uppercase tracking-[0.08em] text-[#B5D900]">
+                      DEFENSE
+                    </p>
+
+                    <p className="mx-auto mt-3 max-w-[190px] text-sm leading-relaxed text-white/45">
+                      Hidrata e protege.
+                    </p>
+                  </div>
+
+                  {/* 04 */}
+                  <div className="text-center">
+                    <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-full border border-white/35 bg-black text-lg font-bold text-white/80">
+                      04
+                    </div>
+
+                    <p className="mt-5 text-[10px] font-bold uppercase tracking-[0.25em] text-white/45">
+                      CONTROLAR
+                    </p>
+
+                    <p className="mt-1 text-lg font-black uppercase tracking-[0.08em] text-white/75">
+                      WIPES
+                    </p>
+
+                    <p className="mx-auto mt-3 max-w-[190px] text-sm leading-relaxed text-white/45">
+                      Cuida ao longo do dia.
+                    </p>
+                  </div>
                 </div>
               </div>
 
-              <div className="grid md:grid-cols-4">
-                {steps.map((step, index) => (
+              {/* MOBILE — JORNADA COMPACTA */}
+              <div className="mx-auto mt-12 grid max-w-md gap-3 md:hidden">
+                {[
+                  ['01', 'LIMPAR', 'CLEAN', '#FFB81C'],
+                  ['02', 'HIDRATAR', 'HYDRATE', '#00AEEF'],
+                  ['03', 'PROTEGER', 'DEFENSE', '#B5D900'],
+                  ['04', 'CONTROLAR', 'WIPES', '#D4D4D8'],
+                ].map(([number, verb, product, color]) => (
                   <div
-                    key={step.name}
-                    className={`relative p-7 md:min-h-[270px] md:p-8 ${
-                      index !== steps.length - 1
-                        ? 'border-b border-white/10 md:border-b-0 md:border-r'
-                        : ''
-                    }`}
+                    key={number}
+                    className="flex items-center rounded-2xl border border-white/10 bg-white/[0.025] px-5 py-4"
                   >
-                    <div className="flex items-center justify-between">
-                      <span
-                        className={`text-xs font-bold ${step.textAccent}`}
+                    <span
+                      className="w-12 text-lg font-black"
+                      style={{ color }}
+                    >
+                      {number}
+                    </span>
+
+                    <div className="h-8 w-px bg-white/10" />
+
+                    <div className="ml-5">
+                      <p className="text-[9px] font-bold uppercase tracking-[0.25em] text-white/35">
+                        {verb}
+                      </p>
+
+                      <p
+                        className="mt-1 text-base font-black uppercase tracking-[0.08em]"
+                        style={{ color }}
                       >
-                        {step.number}
-                      </span>
-
-                      <step.icon
-                        className={`h-5 w-5 ${step.textAccent}`}
-                      />
+                        {product}
+                      </p>
                     </div>
-
-                    <p className="mt-12 text-[10px] font-semibold uppercase tracking-[0.25em] text-white/30">
-                      {step.verb}
-                    </p>
-
-                    <p className="mt-3 text-xl font-bold tracking-[0.08em] text-white">
-                      {step.name}
-                    </p>
-
-                    <p className="mt-3 text-sm leading-relaxed text-white/40">
-                      {step.role}
-                    </p>
-
-                    {index < steps.length - 1 && (
-                      <div className="absolute -right-3 top-1/2 z-10 hidden h-6 w-6 -translate-y-1/2 items-center justify-center rounded-full border border-white/10 bg-black md:flex">
-                        <ArrowRight className="h-3 w-3 text-white/30" />
-                      </div>
-                    )}
                   </div>
                 ))}
               </div>
             </motion.div>
-
-            <p className="mt-8 text-center text-xs uppercase tracking-[0.3em] text-white/25">
-              CLEAN → HYDRATE → DEFENSE → WIPES
-            </p>
-          </div>
-        </section>
-
+          </section>
+        
         {/* =========================================================
             BRAND STATEMENT
         ========================================================= */}
