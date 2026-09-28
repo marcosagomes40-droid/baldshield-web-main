@@ -34,6 +34,7 @@ import BlogPostCouroCabeludoExposto from "@/pages/blog/BlogPostCouroCabeludoExpo
 import BlogPostAcidoHialuronico from "@/pages/blog/BlogPostAcidoHialuronico";
 import BlogPostBoneCouroCabeludo from "@/pages/blog/BlogPostBoneCouroCabeludo";
 import BlogPostQuantosBrasileiros from "@/pages/blog/BlogPostQuantosBrasileiros";
+import BlogPostCoceiraCouroCabeludo from "@/pages/blog/BlogPostCoceiraCouroCabeludo";
 import BlogPostProtetorSolarCareca from "@/pages/blog/BlogPostProtetorSolarCareca";
 
 import { Toaster } from '@/components/ui/toaster';
@@ -172,6 +173,11 @@ function App() {
           <Route
           path="/blog/quantos-brasileiros-vivem-com-pouco-ou-nenhum-cabelo"
           element={<BlogPostQuantosBrasileiros />}
+          />
+
+          <Route
+            path="/blog/coceira-couro-cabeludo-exposto"
+            element={<BlogPostCoceiraCouroCabeludo />}
           />
 
           {/* 404 */}

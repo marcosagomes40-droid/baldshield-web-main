@@ -5,7 +5,19 @@ import Header from '@/components/Header.jsx';
 import Footer from '@/components/Footer.jsx';
 
   const posts = [
-  {
+    {
+      slug: "/blog/coceira-couro-cabeludo-exposto",
+      title: "Por que o couro cabeludo exposto pode coçar?",
+      excerpt:
+        "Nem toda coceira significa pele seca. Entenda alguns dos fatores que podem estar por trás do incômodo no couro cabeludo exposto.",
+      category: "Cuidados & Scalp Care",
+      date: "28 set. 2026",
+      isNew: true,
+      image:
+        "/Blog/coceira-couro-cabeludo-exposto/coceira-couro-cabeludo-exposto-baldshield.webp",
+    },
+  
+    {
     slug: "/blog/quantos-brasileiros-vivem-com-pouco-ou-nenhum-cabelo",
     title: "Quantos brasileiros vivem com pouco ou nenhum cabelo?",
     excerpt:
@@ -25,7 +37,7 @@ import Footer from '@/components/Footer.jsx';
     "Estilo, proteção e conforto. Entenda o que o boné realmente faz pelo couro cabeludo exposto — e quais são os seus limites.",
   category: "Comportamento & Scalp Care",
   date: "13 set. 2026",
-  isNew: true,
+  isNew: false,
   image:
     "/Blog/bone-couro-cabeludo/bone-protege-couro-cabeludo-exposto-baldshield.webp",
   },
