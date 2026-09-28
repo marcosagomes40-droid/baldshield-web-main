@@ -178,8 +178,8 @@ const HomePage = () => {
               </h1>
 
               <p className="max-w-xl text-lg text-zinc-300">
-                  Cuidado especializado para o couro cabeludo exposto, pensado para
-                  limpar, hidratar, proteger e acompanhar sua rotina.
+                  Cuidado especializado para o couro cabeludo exposto,
+                  pensado para limpar, hidratar, proteger e controlar ao longo do dia.
               </p>
 
               <p className="text-sm uppercase tracking-[0.25em] text-zinc-400">

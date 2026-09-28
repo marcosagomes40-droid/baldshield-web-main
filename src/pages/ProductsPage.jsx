@@ -172,8 +172,6 @@ const ProductsPage = () => {
 
                   <a
                     href="https://loja.baldshield.com"
-                    target="_blank"
-                    rel="noopener noreferrer"
                     className="group inline-flex h-[58px] w-full sm:w-auto sm:min-w-[190px] items-center justify-between gap-5 whitespace-nowrap rounded-full border border-white/25 px-7 text-[10px] font-bold uppercase tracking-[0.12em] text-white transition duration-300 hover:border-primary/70 hover:text-primary"
                   >
                     <span>IR PARA A LOJA</span>
@@ -842,8 +840,6 @@ const ProductsPage = () => {
               <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
                 <a
                   href="https://loja.baldshield.com"
-                   target="_blank"
-                   rel="noopener noreferrer"
                   className="group inline-flex min-w-[220px] items-center justify-center gap-3 rounded-full bg-primary px-8 py-4 text-sm font-bold text-black transition duration-300 hover:scale-[1.03] hover:bg-primary/90"
                 >
                   Ir para a loja
