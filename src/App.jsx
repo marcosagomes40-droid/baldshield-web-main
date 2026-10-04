@@ -35,6 +35,7 @@ import BlogPostAcidoHialuronico from "@/pages/blog/BlogPostAcidoHialuronico";
 import BlogPostBoneCouroCabeludo from "@/pages/blog/BlogPostBoneCouroCabeludo";
 import BlogPostQuantosBrasileiros from "@/pages/blog/BlogPostQuantosBrasileiros";
 import BlogPostCoceiraCouroCabeludo from "@/pages/blog/BlogPostCoceiraCouroCabeludo";
+import BlogPostExposedScalpCare from "@/pages/blog/BlogPostExposedScalpCare";
 import BlogPostProtetorSolarCareca from "@/pages/blog/BlogPostProtetorSolarCareca";
 
 import { Toaster } from '@/components/ui/toaster';
@@ -179,6 +180,13 @@ function App() {
             path="/blog/coceira-couro-cabeludo-exposto"
             element={<BlogPostCoceiraCouroCabeludo />}
           />
+          
+          <Route
+            path="/blog/exposed-scalp-care-couro-cabeludo-exposto"
+            element={<BlogPostExposedScalpCare />}
+          />
+
+
 
           {/* 404 */}
           <Route

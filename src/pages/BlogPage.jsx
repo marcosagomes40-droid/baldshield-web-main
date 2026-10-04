@@ -6,6 +6,18 @@ import Footer from '@/components/Footer.jsx';
 
   const posts = [
     {
+      slug: "/blog/exposed-scalp-care-couro-cabeludo-exposto",
+      title: "Exposed Scalp Care: o cuidado com o couro cabeludo exposto",
+      excerpt:
+        "Quando o cabelo deixa de ser a cobertura permanente do couro cabeludo, a condição de exposição muda. Conheça o conceito de Exposed Scalp Care.",
+      category: "Scalp Care & BaldShield",
+      date: "04 out. 2026",
+      isNew: true,
+      image:
+        "/Blog/exposed-scalp-care/exposed-scalp-care-baldshield.webp",
+    },
+
+    {
       slug: "/blog/coceira-couro-cabeludo-exposto",
       title: "Por que o couro cabeludo exposto pode coçar?",
       excerpt:
@@ -24,7 +36,7 @@ import Footer from '@/components/Footer.jsx';
       "Milhões de brasileiros convivem com algum grau de perda capilar. Mas quantos vivem hoje com o couro cabeludo parcial ou totalmente exposto?",
     category: "Comportamento & Scalp Care",
     date: "22 set. 2026",
-    isNew: true,
+    isNew: false,
     image:
       "/Blog/quantos-brasileiros-cabelo/quantos-brasileiros-pouco-nenhum-cabelo-baldshield.webp",
   },
