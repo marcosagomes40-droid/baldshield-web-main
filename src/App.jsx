@@ -36,6 +36,7 @@ import BlogPostBoneCouroCabeludo from "@/pages/blog/BlogPostBoneCouroCabeludo";
 import BlogPostQuantosBrasileiros from "@/pages/blog/BlogPostQuantosBrasileiros";
 import BlogPostCoceiraCouroCabeludo from "@/pages/blog/BlogPostCoceiraCouroCabeludo";
 import BlogPostExposedScalpCare from "@/pages/blog/BlogPostExposedScalpCare";
+import BlogPostOutubroRosa from "@/pages/blog/BlogPostOutubroRosa";
 import BlogPostProtetorSolarCareca from "@/pages/blog/BlogPostProtetorSolarCareca";
 
 import { Toaster } from '@/components/ui/toaster';
@@ -186,7 +187,10 @@ function App() {
             element={<BlogPostExposedScalpCare />}
           />
 
-
+          <Route
+            path="/blog/outubro-rosa-cuidado-couro-cabeludo"
+            element={<BlogPostOutubroRosa />}
+          />
 
           {/* 404 */}
           <Route

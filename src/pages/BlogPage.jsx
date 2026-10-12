@@ -5,6 +5,20 @@ import Header from '@/components/Header.jsx';
 import Footer from '@/components/Footer.jsx';
 
   const posts = [
+    
+    {
+      slug: "/blog/outubro-rosa-cuidado-couro-cabeludo",
+      title: "Outubro Rosa: quando o cabelo cai, o cuidado com a pele continua",
+      excerpt:
+        "Entre as transformações que podem acompanhar o tratamento do câncer de mama, a perda dos cabelos é uma experiência profundamente pessoal. Um olhar sobre identidade, sensibilidade e acolhimento.",
+      category: "Saúde & Bem-estar",
+      date: "12 out. 2026",
+      isNew: true,
+      image:
+        "/Blog/outubro-rosa-2026/outubro-rosa-cuidado-couro-cabeludo-baldshield.webp",
+    },
+
+
     {
       slug: "/blog/exposed-scalp-care-couro-cabeludo-exposto",
       title: "Exposed Scalp Care: o cuidado com o couro cabeludo exposto",
@@ -24,7 +38,7 @@ import Footer from '@/components/Footer.jsx';
         "Nem toda coceira significa pele seca. Entenda alguns dos fatores que podem estar por trás do incômodo no couro cabeludo exposto.",
       category: "Cuidados & Scalp Care",
       date: "28 set. 2026",
-      isNew: true,
+      isNew: false,
       image:
         "/Blog/coceira-couro-cabeludo-exposto/coceira-couro-cabeludo-exposto-baldshield.webp",
     },
