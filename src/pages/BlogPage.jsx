@@ -4,7 +4,58 @@ import { Helmet } from 'react-helmet';
 import Header from '@/components/Header.jsx';
 import Footer from '@/components/Footer.jsx';
 
-const posts = [
+  const posts = [
+    
+    {
+      slug: "/blog/outubro-rosa-cuidado-couro-cabeludo",
+      title: "Outubro Rosa: quando o cabelo cai, o cuidado com a pele continua",
+      excerpt:
+        "Entre as transformações que podem acompanhar o tratamento do câncer de mama, a perda dos cabelos é uma experiência profundamente pessoal. Um olhar sobre identidade, sensibilidade e acolhimento.",
+      category: "Saúde & Bem-estar",
+      date: "12 out. 2026",
+      isNew: true,
+      image:
+       "/Blog/outubro-rosa-2026/outubro-rosa-acolhimento-apoio-mulheres-baldshield.webp",
+    },
+
+
+    {
+      slug: "/blog/exposed-scalp-care-couro-cabeludo-exposto",
+      title: "Exposed Scalp Care: o cuidado com o couro cabeludo exposto",
+      excerpt:
+        "Quando o cabelo deixa de ser a cobertura permanente do couro cabeludo, a condição de exposição muda. Conheça o conceito de Exposed Scalp Care.",
+      category: "Scalp Care & BaldShield",
+      date: "04 out. 2026",
+      isNew: true,
+      image:
+        "/Blog/exposed-scalp-care/exposed-scalp-care-baldshield.webp",
+    },
+
+    {
+      slug: "/blog/coceira-couro-cabeludo-exposto",
+      title: "Por que o couro cabeludo exposto pode coçar?",
+      excerpt:
+        "Nem toda coceira significa pele seca. Entenda alguns dos fatores que podem estar por trás do incômodo no couro cabeludo exposto.",
+      category: "Cuidados & Scalp Care",
+      date: "28 set. 2026",
+      isNew: false,
+      image:
+        "/Blog/coceira-couro-cabeludo-exposto/coceira-couro-cabeludo-exposto-baldshield.webp",
+    },
+  
+    {
+    slug: "/blog/quantos-brasileiros-vivem-com-pouco-ou-nenhum-cabelo",
+    title: "Quantos brasileiros vivem com pouco ou nenhum cabelo?",
+    excerpt:
+      "Milhões de brasileiros convivem com algum grau de perda capilar. Mas quantos vivem hoje com o couro cabeludo parcial ou totalmente exposto?",
+    category: "Comportamento & Scalp Care",
+    date: "22 set. 2026",
+    isNew: false,
+    image:
+      "/Blog/quantos-brasileiros-cabelo/quantos-brasileiros-pouco-nenhum-cabelo-baldshield.webp",
+  },
+
+  
   {
   slug: "/blog/bone-protege-ou-prejudica-couro-cabeludo-exposto",
   title: "Boné protege ou prejudica o couro cabeludo exposto?",
@@ -12,7 +63,7 @@ const posts = [
     "Estilo, proteção e conforto. Entenda o que o boné realmente faz pelo couro cabeludo exposto — e quais são os seus limites.",
   category: "Comportamento & Scalp Care",
   date: "13 set. 2026",
-  isNew: true,
+  isNew: false,
   image:
     "/Blog/bone-couro-cabeludo/bone-protege-couro-cabeludo-exposto-baldshield.webp",
   },
@@ -24,7 +75,7 @@ const posts = [
     "Um dos ativos mais conhecidos do skincare também pode fazer parte do cuidado do couro cabeludo exposto. Entenda sua relação com hidratação, formulação e scalp care.",
   category: "Ciência & Scalp Care",
   date: "07 set. 2026",
-  isNew: true,
+  isNew: false,
   image:
     "/Blog/acido-hialuronico/acido-hialuronico-couro-cabeludo-exposto-baldshield.webp",
   },
