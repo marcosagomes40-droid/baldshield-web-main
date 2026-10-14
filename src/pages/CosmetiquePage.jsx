@@ -103,7 +103,7 @@ const CosmetiquePage = () => {
                   </a>
 
                   <a
-                    href="https://wa.me/5511939441361"
+                    href="https://wa.me/5511939228622"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-flex items-center justify-center gap-3 px-10 py-5 rounded-full border border-primary/60 text-primary font-semibold tracking-wide hover:bg-primary/10 hover:border-primary/80 transition-all duration-300"
@@ -271,7 +271,7 @@ const CosmetiquePage = () => {
               </a>
 
               <a
-                href="https://wa.me/5511939441361"
+                href="https://wa.me/5511939228622"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center gap-3 px-10 py-5 rounded-full border border-primary/60 text-primary font-semibold tracking-wide hover:bg-primary/10 hover:border-primary/80 transition-all duration-300"
