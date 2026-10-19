@@ -62,7 +62,7 @@ const HomePage = () => {
       url: "https://www.baldshield.com/escudo.png",
     },
     description:
-      "A primeira marca brasileira dedicada ao cuidado do couro cabeludo exposto.",
+      "Marca brasileira especializada em cuidados para o couro cabeludo exposto, com soluções de limpeza, hidratação e proteção.",
     sameAs: ["https://www.instagram.com/baldshield.br"],
   };
 
@@ -87,7 +87,7 @@ const HomePage = () => {
 
         <meta
           name="description"
-          content="A primeira marca brasileira dedicada ao cuidado do couro cabeludo exposto. Conheça o Scalp Defense System™, uma rotina de limpeza, hidratação, proteção e cuidado ao longo do dia."
+          content="BaldShield: cuidado especializado para o couro cabeludo exposto. Conheça o Scalp Defense System™, uma rotina de limpeza, hidratação e proteção."
         />
 
         <meta
@@ -111,7 +111,7 @@ const HomePage = () => {
         />
         <meta
           property="og:description"
-          content="A primeira marca brasileira dedicada ao cuidado do couro cabeludo exposto. Conheça o Scalp Defense System™."
+          content="Marca brasileira especializada em cuidados para o couro cabeludo exposto, com soluções de limpeza, hidratação e proteção. Conheça o Scalp Defense System™."
         />
         <meta property="og:url" content="https://www.baldshield.com/" />
         <meta
@@ -135,7 +135,7 @@ const HomePage = () => {
         />
         <meta
           name="twitter:description"
-          content="Conheça a primeira marca brasileira dedicada ao cuidado do couro cabeludo exposto."
+          content="Conheça a BaldShield e o Scalp Defense System™: uma rotina de cuidados para o couro cabeludo exposto."
         />
         <meta
           name="twitter:image"
@@ -168,23 +168,20 @@ const HomePage = () => {
                 BaldShield
               </span>
 
-              <h1 className="text-4xl font-bold leading-tight text-white sm:text-5xl lg:text-5xl">
-              A primeira marca brasileira
-              
-              <span className="block text-primary">
-              para o cuidado do couro cabeludo exposto.
-              </span>
-              
+              <h1 className="text-5xl font-bold leading-[1.08] tracking-tight text-white sm:text-6xl lg:text-6xl">
+                Sem cabelo.
+                <span className="block text-primary">Sem improviso.</span>
               </h1>
 
-              <p className="max-w-xl text-lg text-zinc-300">
-                  Cuidado especializado para o couro cabeludo exposto,
-                  pensado para limpar, hidratar, proteger e controlar ao longo do dia.
+              <p className="max-w-xl pt-3 text-lg font-normal leading-relaxed text-zinc-100 sm:text-xl">
+                Sua pele continua exposta. Seu cuidado precisa acompanhar.
               </p>
 
-              <p className="text-sm uppercase tracking-[0.25em] text-zinc-400">
-                Sem brilho. Sem improviso. Com presença.
+              <p className="max-w-xl pt-2 text-base leading-relaxed text-zinc-400">
+                Conheça o Scalp Defense System™: uma rotina desenvolvida para limpar,
+                hidratar e proteger o couro cabeludo exposto.
               </p>
+
               <div className="pt-4">
                 <div className="flex flex-col items-start gap-4 sm:flex-row">
               <Link
