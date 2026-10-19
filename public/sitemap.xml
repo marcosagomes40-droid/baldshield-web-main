@@ -82,12 +82,20 @@
 
   <url>
     <loc>https://www.baldshield.com/blog</loc>
-    <lastmod>2026-10-12</lastmod>
+    <lastmod>2026-10-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   
   
+  <url>
+    <loc>https://www.baldshield.com/blog/como-escolher-produtos-couro-cabeludo-exposto</loc>
+    <lastmod>2026-10-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.90</priority>
+  </url>
+
+
   <url>
     <loc>https://www.baldshield.com/blog/outubro-rosa-cuidado-couro-cabeludo</loc>
     <lastmod>2026-10-12</lastmod>

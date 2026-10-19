@@ -5,7 +5,19 @@ import Header from '@/components/Header.jsx';
 import Footer from '@/components/Footer.jsx';
 
   const posts = [
-    
+    {
+      slug: "/blog/como-escolher-produtos-couro-cabeludo-exposto",
+      title: "Como escolher produtos para o couro cabeludo exposto? 7 critérios antes de comprar",
+      excerpt:
+        "Entre skincare e haircare, como escolher produtos para o couro cabeludo exposto? Conheça 7 critérios para avaliar formulação, procedência, segurança e regularização na Anvisa.",
+      category: "Cuidados & Scalp Care",
+      date: "19 out. 2026",
+      isNew: true,
+      image:
+        "/Blog/como-escolher-produtos-2026/baldshield-como-escolher-produtos-couro-cabeludo-exposto.webp",
+    },
+
+
     {
       slug: "/blog/outubro-rosa-cuidado-couro-cabeludo",
       title: "Outubro Rosa: quando o cabelo cai, o cuidado com a pele continua",
@@ -26,7 +38,7 @@ import Footer from '@/components/Footer.jsx';
         "Quando o cabelo deixa de ser a cobertura permanente do couro cabeludo, a condição de exposição muda. Conheça o conceito de Exposed Scalp Care.",
       category: "Scalp Care & BaldShield",
       date: "04 out. 2026",
-      isNew: true,
+      isNew: false,
       image:
         "/Blog/exposed-scalp-care/exposed-scalp-care-baldshield.webp",
     },
