@@ -161,14 +161,14 @@ const HomePage = () => {
         {/* HERO */}
         <section className="relative overflow-hidden bg-black">
           <div className="absolute inset-0 bg-gradient-to-b from-black via-black to-zinc-950" />
-
-          <div className="relative mx-auto grid min-h-[90vh] max-w-7xl items-center gap-12 px-6 py-20 md:px-10 lg:grid-cols-2 lg:gap-16 lg:py-28">
-            <div className="max-w-2xl space-y-6">
+          <div className="relative mx-auto grid min-h-[90vh] max-w-7xl items-center gap-8 px-6 pt-10 pb-12 md:gap-12 md:px-10 md:py-20 lg:grid-cols-2 lg:gap-16 lg:py-28">
+          
+            <div className="max-w-2xl space-y-4 md:space-y-6">
               <span className="inline-block text-xs font-semibold uppercase tracking-[0.35em] text-primary">
                 BaldShield
               </span>
 
-              <h1 className="text-5xl font-bold leading-[1.08] tracking-tight text-white sm:text-6xl lg:text-6xl">
+              <h1 className="text-[2.65rem] font-bold leading-[1.08] tracking-tight text-white sm:text-6xl lg:text-6xl">
                 Sem cabelo.
                 <span className="block text-primary">Sem improviso.</span>
               </h1>
