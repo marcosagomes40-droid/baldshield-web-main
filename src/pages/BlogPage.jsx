@@ -5,6 +5,19 @@ import Header from '@/components/Header.jsx';
 import Footer from '@/components/Footer.jsx';
 
   const posts = [
+    
+    {
+      slug: "/blog/como-reaplicar-protetor-solar-na-careca",
+      title: "Protetor solar na careca: quando e como reaplicar ao longo do dia?",
+      excerpt:
+        "Aplicar protetor solar pela manhã é suficiente? Entenda quando e como reaplicar no couro cabeludo exposto, mesmo usando FPS elevado, e descubra como incluir a proteção na rotina.",
+      category: "Cuidados & Scalp Care",
+      date: "28 out. 2026",
+      isNew: true,
+      image:
+        "/Blog/reaplicacao-protetor-solar-2026/baldshield-protetor-solar-careca-reaplicacao-2026.webp",
+    },
+
     {
       slug: "/blog/como-escolher-produtos-couro-cabeludo-exposto",
       title: "Como escolher produtos para o couro cabeludo exposto? 7 critérios antes de comprar",
@@ -25,7 +38,7 @@ import Footer from '@/components/Footer.jsx';
         "Entre as transformações que podem acompanhar o tratamento do câncer de mama, a perda dos cabelos é uma experiência profundamente pessoal. Um olhar sobre identidade, sensibilidade e acolhimento.",
       category: "Saúde & Bem-estar",
       date: "12 out. 2026",
-      isNew: true,
+      isNew: false,
       image:
         "/Blog/outubro-rosa-2026/outubro-rosa-cuidado-couro-cabeludo-baldshield.webp",
     },

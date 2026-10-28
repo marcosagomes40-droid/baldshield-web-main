@@ -38,6 +38,7 @@ import BlogPostCoceiraCouroCabeludo from "@/pages/blog/BlogPostCoceiraCouroCabel
 import BlogPostExposedScalpCare from "@/pages/blog/BlogPostExposedScalpCare";
 import BlogPostOutubroRosa from "@/pages/blog/BlogPostOutubroRosa";
 import BlogPostComoEscolherProdutos from "./pages/blog/BlogPostComoEscolherProdutos";
+import BlogPostReaplicacaoProtetorSolar from "./pages/blog/BlogPostReaplicacaoProtetorSolar";
 import BlogPostProtetorSolarCareca from "@/pages/blog/BlogPostProtetorSolarCareca";
 
 import { Toaster } from '@/components/ui/toaster';
@@ -195,6 +196,11 @@ function App() {
           <Route
             path="/blog/como-escolher-produtos-couro-cabeludo-exposto"
             element={<BlogPostComoEscolherProdutos />}
+          />
+
+          <Route
+            path="/blog/como-reaplicar-protetor-solar-na-careca"
+            element={<BlogPostReaplicacaoProtetorSolar />}
           />
 
           {/* 404 */}
