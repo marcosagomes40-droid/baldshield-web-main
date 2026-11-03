@@ -39,6 +39,7 @@ import BlogPostExposedScalpCare from "@/pages/blog/BlogPostExposedScalpCare";
 import BlogPostOutubroRosa from "@/pages/blog/BlogPostOutubroRosa";
 import BlogPostComoEscolherProdutos from "./pages/blog/BlogPostComoEscolherProdutos";
 import BlogPostReaplicacaoProtetorSolar from "./pages/blog/BlogPostReaplicacaoProtetorSolar";
+import BlogPostNovembroAzul2026 from "@/pages/blog/BlogPostNovembroAzul2026";
 import BlogPostProtetorSolarCareca from "@/pages/blog/BlogPostProtetorSolarCareca";
 
 import { Toaster } from '@/components/ui/toaster';
@@ -201,6 +202,11 @@ function App() {
           <Route
             path="/blog/como-reaplicar-protetor-solar-na-careca"
             element={<BlogPostReaplicacaoProtetorSolar />}
+          />
+          
+          <Route
+            path="/blog/novembro-azul-coragem-cuidar-saude"
+            element={<BlogPostNovembroAzul2026 />}
           />
 
           {/* 404 */}

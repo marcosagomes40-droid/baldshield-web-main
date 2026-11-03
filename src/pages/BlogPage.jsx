@@ -7,6 +7,20 @@ import Footer from '@/components/Footer.jsx';
   const posts = [
     
     {
+      slug: "/blog/novembro-azul-coragem-cuidar-saude",
+      title: "Novembro Azul: coragem também é falar sobre a própria saúde",
+      excerpt:
+        "Existem conversas que exigem coragem. Entenda a importância do diagnóstico precoce, da informação e do cuidado com a saúde masculina.",
+      category: "Saúde Masculina",
+      date: "02 nov. 2026",
+      isNew: true,
+      image:
+        "/Blog/novembro-azul-2026/baldshield-novembro-azul-2026-coragem-saude-masculina.webp",
+    },
+
+
+
+    {
       slug: "/blog/como-reaplicar-protetor-solar-na-careca",
       title: "Protetor solar na careca: quando e como reaplicar ao longo do dia?",
       excerpt:
@@ -25,7 +39,7 @@ import Footer from '@/components/Footer.jsx';
         "Entre skincare e haircare, como escolher produtos para o couro cabeludo exposto? Conheça 7 critérios para avaliar formulação, procedência, segurança e regularização na Anvisa.",
       category: "Cuidados & Scalp Care",
       date: "19 out. 2026",
-      isNew: true,
+      isNew: false,
       image:
         "/Blog/como-escolher-produtos-2026/baldshield-como-escolher-produtos-couro-cabeludo-exposto.webp",
     },
