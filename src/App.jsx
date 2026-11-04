@@ -51,6 +51,7 @@ import CosmetiquePage from '@/pages/CosmetiquePage.jsx';
 import CleanLanding from "./pages/CleanLanding";
 import HydrateLanding from "./pages/HydrateLanding";
 import ProtectLanding from "./pages/ProtectLanding";
+import MatteLanding from "./pages/MatteLanding";
 
 function App() {
   return (
@@ -70,6 +71,7 @@ function App() {
 
           <Route path="/hydrate" element={<HydrateLanding />} />
           <Route path="/clean" element={<CleanLanding />} />
+          <Route path="/matte" element={<MatteLanding />} />
 
           {/* Páginas principais */}
           <Route path="/products" element={<ProductsPage />} />
