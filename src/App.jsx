@@ -37,6 +37,9 @@ import BlogPostQuantosBrasileiros from "@/pages/blog/BlogPostQuantosBrasileiros"
 import BlogPostCoceiraCouroCabeludo from "@/pages/blog/BlogPostCoceiraCouroCabeludo";
 import BlogPostExposedScalpCare from "@/pages/blog/BlogPostExposedScalpCare";
 import BlogPostOutubroRosa from "@/pages/blog/BlogPostOutubroRosa";
+import BlogPostComoEscolherProdutos from "./pages/blog/BlogPostComoEscolherProdutos";
+import BlogPostReaplicacaoProtetorSolar from "./pages/blog/BlogPostReaplicacaoProtetorSolar";
+import BlogPostNovembroAzul2026 from "@/pages/blog/BlogPostNovembroAzul2026";
 import BlogPostProtetorSolarCareca from "@/pages/blog/BlogPostProtetorSolarCareca";
 import { Toaster } from '@/components/ui/toaster';
 import { CartProvider } from '@/hooks/useCart.jsx';
@@ -49,6 +52,7 @@ import ProtectLanding from "./pages/ProtectLanding";
 import CleanProductPage from "./pages/CleanProductPage";
 import HydrateProductPage from "./pages/HydrateProductPage";
 import DefenseProductPage from "./pages/DefenseProductPage";
+import MatteLanding from "./pages/MatteLanding";
 
 function App() {
   return (
@@ -68,6 +72,7 @@ function App() {
 
           <Route path="/hydrate" element={<HydrateLanding />} />
           <Route path="/clean" element={<CleanLanding />} />
+          <Route path="/matte" element={<MatteLanding />} />
 
           {/* Páginas principais */}
           <Route path="/products" element={<ProductsPage />} />
@@ -188,7 +193,7 @@ function App() {
             path="/blog/coceira-couro-cabeludo-exposto"
             element={<BlogPostCoceiraCouroCabeludo />}
           />
-
+          
           <Route
             path="/blog/exposed-scalp-care-couro-cabeludo-exposto"
             element={<BlogPostExposedScalpCare />}
@@ -197,6 +202,20 @@ function App() {
           <Route
             path="/blog/outubro-rosa-cuidado-couro-cabeludo"
             element={<BlogPostOutubroRosa />}
+          />
+          <Route
+            path="/blog/como-escolher-produtos-couro-cabeludo-exposto"
+            element={<BlogPostComoEscolherProdutos />}
+          />
+
+          <Route
+            path="/blog/como-reaplicar-protetor-solar-na-careca"
+            element={<BlogPostReaplicacaoProtetorSolar />}
+          />
+          
+          <Route
+            path="/blog/novembro-azul-coragem-cuidar-saude"
+            element={<BlogPostNovembroAzul2026 />}
           />
 
           {/* 404 */}
