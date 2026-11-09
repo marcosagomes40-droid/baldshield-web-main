@@ -19,7 +19,7 @@ const benefits = [
   },
   {
     title: "Equilibra",
-    text: "Promove uma limpeza diária confortável, respeitando o equilíbrio natural da pele.",
+    text: "Combina limpeza suave e cuidado com o conforto da pele no uso diário.",
   },
   {
     title: "Prepara",
@@ -31,7 +31,7 @@ const formulaItems = [
   {
     tag: "NI",
     title: "Niacinamida",
-    text: "Ativo cosmético que auxilia no controle da oleosidade e contribui para melhorar o aspecto geral da pele.",
+    text: "Ingrediente cosmético associado ao cuidado da barreira cutânea e à melhora da aparência da pele, complementando a rotina de limpeza.",
   },
   {
     tag: "ZN",
@@ -41,12 +41,12 @@ const formulaItems = [
   {
     tag: "AV",
     title: "Aloe Vera",
-    text: "Ingrediente conhecido por sua ação hidratante e calmante, contribuindo para uma sensação de conforto após a limpeza.",
+    text: "Ingrediente tradicionalmente utilizado em cuidados com a pele, associado à hidratação e à sensação de conforto após a limpeza.",
   },
   {
     tag: "LS",
     title: "Sistema de limpeza suave",
-    text: "Combinação de agentes de limpeza desenvolvida para remover impurezas e excesso de oleosidade sem tornar o cuidado diário agressivo.",
+    text: "Combinação de agentes de limpeza para remover impurezas e excesso de oleosidade, com foco em uma experiência de uso confortável.",
   },
 ];
 
@@ -137,7 +137,7 @@ export default function CleanProductPage() {
 
         <meta
           name="description"
-          content="Conheça BaldShield CLEAN, STEP 01 do Scalp Defense System™: emulsão de limpeza diária para o couro cabeludo exposto, com controle da oleosidade e brilho."
+          content="Conheça BaldShield CLEAN 120 ml, com Niacinamida e Aloe Vera: limpeza suave para o couro cabeludo exposto e cuidado diário com a oleosidade."
         />
 
         <link
@@ -192,8 +192,9 @@ export default function CleanProductPage() {
               </p>
 
               <p className="clean-hero__support">
-                Uma emulsão de limpeza desenvolvida para integrar o cuidado
-                diário do couro cabeludo exposto.
+                Com Niacinamida e Aloe Vera, CLEAN ajuda a remover impurezas
+                e o excesso de oleosidade, oferecendo uma limpeza suave
+                para o cuidado diário do couro cabeludo exposto.
               </p>
 
               <div className="clean-hero__actions">
@@ -318,9 +319,9 @@ export default function CleanProductPage() {
               </h2>
 
               <p>
-                O BALDSHIELD CLEAN combina ativos selecionados para remover
-                impurezas, auxiliar no controle da oleosidade e preservar o
-                conforto do couro cabeludo exposto.
+                Com Niacinamida, Aloe Vera e um sistema de limpeza suave, o
+                BALDSHIELD CLEAN ajuda a remover impurezas e o excesso de
+                oleosidade, valorizando o conforto do couro cabeludo exposto.
               </p>
             </header>
 
@@ -343,8 +344,8 @@ export default function CleanProductPage() {
                   <span>STEP 01 · CLEAN</span>
                   <strong>Limpeza eficaz sem agressão.</strong>
                   <p>
-                    Uma emulsão pensada para integrar purificação, equilíbrio e
-                    conforto à rotina diária.
+                    Uma emulsão com Niacinamida e Aloe Vera que integra limpeza,
+                    cuidado com a oleosidade e conforto à rotina diária.
                   </p>
                 </div>
               </div>
