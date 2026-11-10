@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, X, ShoppingBag } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -6,6 +6,20 @@ import { motion, AnimatePresence } from 'framer-motion';
 
 const Header = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+
+useEffect(() => {
+  const handleScroll = () => {
+    setIsScrolled(window.scrollY > 30);
+  };
+
+  handleScroll();
+
+  window.addEventListener('scroll', handleScroll, { passive: true });
+
+  return () => window.removeEventListener('scroll', handleScroll);
+}, []);
+  
   const location = useLocation();
 
   const navLinks = [
@@ -24,14 +38,24 @@ const Header = () => {
     <>
       <header className="sticky top-0 z-40 bg-black/90 border-b border-border/40 backdrop-blur-md">
         <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between h-24">
-            <Link to="/" className="flex items-center group py-2">
-              <img
-                src="/logo.png"
-                alt="BaldShield Logo"
-                className="h-20 w-auto object-contain transition-transform duration-200 group-hover:scale-105"
-              />
-            </Link>
+         <div
+          className={`flex items-center justify-between transition-[height] duration-[250ms] ease-in-out ${
+            isScrolled
+              ? 'h-[72px] md:h-[80px]'
+              : 'h-[100px] md:h-[116px]'
+          }`}
+        >
+          <Link to="/" className="flex items-center group py-1">
+            <img
+              src="/logo.png"
+              alt="BaldShield Logo"
+              className={`w-auto object-contain transition-[height] duration-[250ms] ease-in-out ${
+                isScrolled
+                    ? 'h-[52px] md:h-[64px]'
+                    : 'h-[84px] md:h-[106px]'
+              }`}
+            />
+          </Link>
 
             <div className="hidden md:flex items-center space-x-8">
               {navLinks.map((link) => (
