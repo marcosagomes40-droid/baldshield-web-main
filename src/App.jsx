@@ -40,6 +40,7 @@ import BlogPostOutubroRosa from "@/pages/blog/BlogPostOutubroRosa";
 import BlogPostComoEscolherProdutos from "./pages/blog/BlogPostComoEscolherProdutos";
 import BlogPostReaplicacaoProtetorSolar from "./pages/blog/BlogPostReaplicacaoProtetorSolar";
 import BlogPostNovembroAzul2026 from "@/pages/blog/BlogPostNovembroAzul2026";
+import BlogPostBaldShieldNossaHistoria from "@/pages/blog/BlogPostBaldShieldNossaHistoria";
 import BlogPostProtetorSolarCareca from "@/pages/blog/BlogPostProtetorSolarCareca";
 import { Toaster } from '@/components/ui/toaster';
 import { CartProvider } from '@/hooks/useCart.jsx';
@@ -216,6 +217,11 @@ function App() {
           <Route
             path="/blog/novembro-azul-coragem-cuidar-saude"
             element={<BlogPostNovembroAzul2026 />}
+          />
+
+          <Route
+          path="/blog/baldshield-nossa-historia-finalmente-ser-visto"
+          element={<BlogPostBaldShieldNossaHistoria />}
           />
 
           {/* 404 */}

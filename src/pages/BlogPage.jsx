@@ -5,6 +5,20 @@ import Header from '@/components/Header.jsx';
 import Footer from '@/components/Footer.jsx';
 
   const posts = [
+
+
+    {
+      slug: "/blog/baldshield-nossa-historia-finalmente-ser-visto",
+      title: "BaldShield: não é sobre ter cabelo. É sobre finalmente ser visto.",
+      excerpt:
+        "Nove meses de dedicação, escolhas e sonhos. Conheça a história de como nasceu a BaldShield, uma marca brasileira criada para quem sempre mereceu ser visto e cuidado.",
+      category: "Nossa História",
+      date: "13 nov. 2026",
+      isNew: true,
+      image:
+        "/Blog/lancamento-baldshield-2026/blog-baldshield-capa-finalmente-ser-visto.webp",
+    },
+
     
     {
       slug: "/blog/novembro-azul-coragem-cuidar-saude",
@@ -27,7 +41,7 @@ import Footer from '@/components/Footer.jsx';
         "Aplicar protetor solar pela manhã é suficiente? Entenda quando e como reaplicar no couro cabeludo exposto, mesmo usando FPS elevado, e descubra como incluir a proteção na rotina.",
       category: "Cuidados & Scalp Care",
       date: "28 out. 2026",
-      isNew: true,
+      isNew: false,
       image:
         "/Blog/reaplicacao-protetor-solar-2026/baldshield-protetor-solar-careca-reaplicacao-2026.webp",
     },
