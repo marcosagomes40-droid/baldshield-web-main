@@ -154,7 +154,7 @@ const BlogPostBaldShieldNossaHistoria = () => {
               {[
                 ["01", "CLEAN", "O começo de tudo: limpar.", "Um cuidado pensado para transformar um gesto cotidiano em uma rotina de atenção ao couro cabeludo exposto."],
                 ["02", "HYDRATE", "O conforto de cuidar.", "Porque a hidratação não deveria ser esquecida justamente em uma região tão exposta às condições do dia a dia."],
-                ["03", "DEFENSE", "Proteção também é cuidado.", "Nosso protetor solar FPS 70 nasceu para colocar a proteção contra a radiação solar no centro dessa rotina."],
+                ["03", "DEFENSE", "Proteção também é cuidado.", "Nossa loção multifuncional com fator de proteção solar FPS 70 foi desenvolvida para colocar a proteção contra a radiação solar no centro dessa rotina de cuidados."],
                 ["04", "WIPES", "Praticidade para acompanhar a vida real.", "Uma proposta de cuidado portátil, desenvolvida para complementar a experiência de quem está sempre em movimento."],
               ].map(([number, name, lead, detail]) => (
                 <div key={number} className="flex gap-5 rounded-2xl border border-zinc-800 bg-zinc-950 p-5">
